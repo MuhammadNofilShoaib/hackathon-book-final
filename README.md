@@ -709,9 +709,40 @@ rm gcm-linux_amd64.2.6.1.deb
 - Den Delimarsky ([@localden](https://github.com/localden))
 - John Lam ([@jflam](https://github.com/jflam))
 
+## 🤝 Contributing
+
+We welcome contributions from the community! SpecifyPlus uses a **test-first contribution model** where you develop and validate commands in your own projects before contributing them to the core repository.
+
+### Quick Contribution Guide
+
+```bash
+# 1. Create and test your command locally
+specifyplus init my-test-project --ai claude
+cd my-test-project
+# Develop your command in .specify/templates/commands/
+# Test thoroughly with /sp.your-command
+
+# 2. Contribute to the core repository
+git clone https://github.com/panaversity/spec-kit-plus.git
+# Copy your tested files and submit a PR
+```
+
+### Contribution Resources
+
+- **🔧 [Contributing Guide](CONTRIBUTING.md)** - Setup, testing, and submission process
+- **⚡ [Quick Reference](#quick-reference)** - Common command patterns and examples
+
+### Popular Contribution Areas
+
+- **New slash commands** (`/sp.deploy`, `/sp.test`, `/sp.docs`, etc.)
+- **Template improvements** for specifications, plans, and tasks
+- **Shell scripts** for automation (Bash/PowerShell)
+- **Documentation** and guides
+- **Bug fixes** and performance improvements
+
 ## 💬 Support
 
-For support, please open a [GitHub issue](https://github.com/github/spec-kit/issues/new). We welcome bug reports, feature requests, and questions about using Spec-Driven Development.
+For support, please open a [GitHub issue](https://github.com/panaversity/spec-kit-plus/issues/new). We welcome bug reports, feature requests, and questions about using Spec-Driven Development.
 
 ## 🙏 Acknowledgements
 
