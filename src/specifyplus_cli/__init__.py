@@ -458,14 +458,15 @@ def show_banner():
 
 def get_version() -> str:
     """Get the current version of specifyplus."""
+    import importlib.metadata
     try:
         # Try specifyplus first (PyPI package name)
-        return version("specifyplus")
-    except PackageNotFoundError:
+        return importlib.metadata.version("specifyplus")
+    except importlib.metadata.PackageNotFoundError:
         try:
             # Fallback to specify-cli for local development
-            return version("specify-cli")
-        except PackageNotFoundError:
+            return importlib.metadata.version("specify-cli")
+        except importlib.metadata.PackageNotFoundError:
             return "unknown (not installed as package)"
 
 def version_callback(value: bool):
