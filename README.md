@@ -41,8 +41,8 @@ The developers who build the next generation of transformative software might no
 Use `specifyplus` or `sp` commands instead of `specify`.
 
 <div align="center">
-    <img src="./media/logo_small.webp" alt="Spec Kit Logo"/>
-    <h1>🌱 Spec Ki+t</h1>
+    <img src="./media/logo_large.webp" alt="Spec Kit Plus Logo" width="200" height="200"/>
+    <h1>🌱 Spec Kit Plus</h1>
     <h3><em>Build high-quality software faster.</em></h3>
 </div>
 
@@ -117,15 +117,23 @@ uv tool uninstall specifyplus
 Then use the tool directly:
 
 ```bash
+# Create new project
 specifyplus init <PROJECT_NAME>
 # or
 sp init <PROJECT_NAME>
+
+# Or initialize in existing project
+specifyplus init . --ai claude
+# or
+sp init --here --ai claude
+
+# Check installed tools
 specifyplus check
 # or
 sp check
 ```
 
-To upgrade specify run:
+To upgrade Specify, see the [Upgrade Guide](./docs/upgrade.md) for detailed instructions. Quick upgrade:
 
 ```bash
 uv tool install specify-cli --force --from git+https://github.com/github/spec-kit.git
@@ -199,22 +207,26 @@ Want to see Spec Kit in action? Watch our [video overview](https://www.youtube.c
 
 ## 🤖 Supported AI Agents
 
-| Agent                                                     | Support | Notes                                             |
-|-----------------------------------------------------------|---------|---------------------------------------------------|
-| [Claude Code](https://www.anthropic.com/claude-code)      | ✅ |                                                   |
-| [GitHub Copilot](https://code.visualstudio.com/)          | ✅ |                                                   |
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli) | ✅ |                                                   |
-| [Cursor](https://cursor.sh/)                              | ✅ |                                                   |
-| [Qwen Code](https://github.com/QwenLM/qwen-code)          | ✅ |                                                   |
-| [opencode](https://opencode.ai/)                          | ✅ |                                                   |
-| [Windsurf](https://windsurf.com/)                         | ✅ |                                                   |
-| [Kilo Code](https://github.com/Kilo-Org/kilocode)         | ✅ |                                                   |
-| [Auggie CLI](https://docs.augmentcode.com/cli/overview)   | ✅ |                                                   |
-| [CodeBuddy CLI](https://www.codebuddy.ai/cli)             | ✅ |                                                   |
-| [Roo Code](https://roocode.com/)                          | ✅ |                                                   |
-| [Codex CLI](https://github.com/openai/codex)              | ✅ |                                                   |
-| [Amazon Q Developer CLI](https://aws.amazon.com/developer/learning/q-developer-cli/) | ⚠️ | Amazon Q Developer CLI [does not support](https://github.com/aws/amazon-q-developer-cli/issues/3064) custom arguments for slash commands. |
-| [Amp](https://ampcode.com/) | ✅ | |
+| Agent                                                                                | Support | Notes                                                                                                                                     |
+| ------------------------------------------------------------------------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| [Qoder CLI](https://qoder.com/cli)                                                   | ✅      |                                                                                                                                           |
+| [Amazon Q Developer CLI](https://aws.amazon.com/developer/learning/q-developer-cli/) | ⚠️      | Amazon Q Developer CLI [does not support](https://github.com/aws/amazon-q-developer-cli/issues/3064) custom arguments for slash commands. |
+| [Amp](https://ampcode.com/)                                                          | ✅      |                                                                                                                                           |
+| [Auggie CLI](https://docs.augmentcode.com/cli/overview)                              | ✅      |                                                                                                                                           |
+| [Claude Code](https://www.anthropic.com/claude-code)                                 | ✅      |                                                                                                                                           |
+| [CodeBuddy CLI](https://www.codebuddy.ai/cli)                                        | ✅      |                                                                                                                                           |
+| [Codex CLI](https://github.com/openai/codex)                                         | ✅      |                                                                                                                                           |
+| [Cursor](https://cursor.sh/)                                                         | ✅      |                                                                                                                                           |
+| [Gemini CLI](https://github.com/google-gemini/gemini-cli)                            | ✅      |                                                                                                                                           |
+| [GitHub Copilot](https://code.visualstudio.com/)                                     | ✅      |                                                                                                                                           |
+| [IBM Bob](https://www.ibm.com/products/bob)                                          | ✅      | IDE-based agent with slash command support                                                                                                |
+| [Jules](https://jules.google.com/)                                                   | ✅      |                                                                                                                                           |
+| [Kilo Code](https://github.com/Kilo-Org/kilocode)                                    | ✅      |                                                                                                                                           |
+| [opencode](https://opencode.ai/)                                                     | ✅      |                                                                                                                                           |
+| [Qwen Code](https://github.com/QwenLM/qwen-code)                                     | ✅      |                                                                                                                                           |
+| [Roo Code](https://roocode.com/)                                                     | ✅      |                                                                                                                                           |
+| [SHAI (OVHcloud)](https://github.com/ovh/shai)                                       | ✅      |                                                                                                                                           |
+| [Windsurf](https://windsurf.com/)                                                    | ✅      |                                                                                                                                           |
 
 ## 🔧 Specify CLI Reference
 
@@ -229,25 +241,26 @@ The `specify` command supports the following options:
 
 ### Commands
 
-| Command | Description                                                                                                                            |
-| ------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `init`  | Initialize a new Specify project from the latest template                                                                              |
-| `check` | Check for installed tools (`git`, `claude`, `gemini`, `code`/`code-insiders`, `cursor-agent`, `windsurf`, `qwen`, `opencode`, `codex`) |
+| Command   | Description                                                                                                                                             |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `init`    | Initialize a new Specify project from the latest template                                                                                               |
+| `check`   | Check for installed tools (`git`, `claude`, `gemini`, `code`/`code-insiders`, `cursor-agent`, `windsurf`, `qwen`, `opencode`, `codex`, `shai`, `qoder`) |
+| `version` | Display version and system information                                                                                                                  |
 
 ### `specifyplus init` Arguments & Options
 
-| Argument/Option        | Type     | Description                                                                |
-|------------------------|----------|------------------------------------------------------------------------------|
-| `<project-name>`       | Argument | Name for your new project directory (optional if using `--here`, or use `.` for current directory) |
-| `--ai`                 | Option   | AI assistant to use: `claude`, `gemini`, `copilot`, `cursor-agent`, `qwen`, `opencode`, `codex`, `windsurf`, `kilocode`, `auggie`, `roo`, `codebuddy`, `amp`, or `q` |
-| `--script`             | Option   | Script variant to use: `sh` (bash/zsh) or `ps` (PowerShell)                 |
-| `--ignore-agent-tools` | Flag     | Skip checks for AI agent tools like Claude Code                             |
-| `--no-git`             | Flag     | Skip git repository initialization                                          |
-| `--here`               | Flag     | Initialize project in the current directory instead of creating a new one   |
-| `--force`              | Flag     | Force merge/overwrite when initializing in current directory (skip confirmation) |
-| `--skip-tls`           | Flag     | Skip SSL/TLS verification (not recommended)                                 |
-| `--debug`              | Flag     | Enable detailed debug output for troubleshooting                            |
-| `--github-token`       | Option   | GitHub token for API requests (or set GH_TOKEN/GITHUB_TOKEN env variable)  |
+| Argument/Option        | Type     | Description                                                                                                                                                                                  |
+| ---------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<project-name>`       | Argument | Name for your new project directory (optional if using `--here`, or use `.` for current directory)                                                                                           |
+| `--ai`                 | Option   | AI assistant to use: `claude`, `gemini`, `copilot`, `cursor-agent`, `qwen`, `opencode`, `codex`, `windsurf`, `kilocode`, `auggie`, `roo`, `codebuddy`, `amp`, `shai`, `q`, `bob`, or `qoder` |
+| `--script`             | Option   | Script variant to use: `sh` (bash/zsh) or `ps` (PowerShell)                                                                                                                                  |
+| `--ignore-agent-tools` | Flag     | Skip checks for AI agent tools like Claude Code                                                                                                                                              |
+| `--no-git`             | Flag     | Skip git repository initialization                                                                                                                                                           |
+| `--here`               | Flag     | Initialize project in the current directory instead of creating a new one                                                                                                                    |
+| `--force`              | Flag     | Force merge/overwrite when initializing in current directory (skip confirmation)                                                                                                             |
+| `--skip-tls`           | Flag     | Skip SSL/TLS verification (not recommended)                                                                                                                                                  |
+| `--debug`              | Flag     | Enable detailed debug output for troubleshooting                                                                                                                                             |
+| `--github-token`       | Option   | GitHub token for API requests (or set GH_TOKEN/GITHUB_TOKEN env variable)                                                                                                                    |
 
 ### Examples
 
@@ -261,11 +274,20 @@ specifyplus init my-project --ai claude
 # Initialize with Cursor support
 specifyplus init my-project --ai cursor
 
+# Initialize with Qoder support
+specify init my-project --ai qoder
+
 # Initialize with Windsurf support
 specifyplus init my-project --ai windsurf
 
 # Initialize with Amp support
 specify init my-project --ai amp
+
+# Initialize with SHAI support
+specify init my-project --ai shai
+
+# Initialize with IBM Bob support
+specify init my-project --ai bob
 
 # Initialize with PowerShell scripts (Windows/cross-platform)
 specifyplus init my-project --ai copilot --script ps
@@ -449,7 +471,7 @@ sp init --here --ai claude
 sp init . --force --ai claude
 ```
 
-The CLI will check if you have Claude Code, Gemini CLI, Cursor CLI, Qwen CLI, opencode, Codex CLI, or Amazon Q Developer CLI installed. If you do not, or you prefer to get the templates without checking for the right tools, use `--ignore-agent-tools` with your command:
+The CLI will check if you have Claude Code, Gemini CLI, Cursor CLI, Qwen CLI, opencode, Codex CLI, Qoder CLI, or Amazon Q Developer CLI installed. If you do not, or you prefer to get the templates without checking for the right tools, use `--ignore-agent-tools` with your command:
 
 ```bash
 specifyplus init <project_name> --ai claude --ignore-agent-tools
@@ -478,7 +500,7 @@ This step creates or updates the `.specify/memory/constitution.md` file with you
 With your project principles established, you can now create the functional specifications. Use the `/sp.specify` command and then provide the concrete requirements for the project you want to develop.
 
 > [!IMPORTANT]
-> Be as explicit as possible about _what_ you are trying to build and _why_. **Do not focus on the tech stack at this point**.
+> Be as explicit as possible about *what* you are trying to build and *why*. **Do not focus on the tech stack at this point**.
 
 An example prompt:
 

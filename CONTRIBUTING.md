@@ -57,6 +57,9 @@ On [GitHub Codespaces](https://github.com/features/codespaces) it's even simpler
 
 ## 🎯 Types of Contributions
 
+> [!NOTE]
+> If your pull request introduces a large change that materially impacts the work of the CLI or the rest of the repository (e.g., you're introducing new templates, arguments, or otherwise major changes), make sure that it was **discussed and agreed upon** by the project maintainers. Pull requests with large changes that did not have a prior conversation and agreement will be closed.
+
 We welcome several types of contributions:
 
 ### 1. New Slash Commands (Most Common)
@@ -95,6 +98,16 @@ SpecifyPlus uses the **Thin Scripts + AI Content Generation** pattern:
 
 - **Scripts**: Create directory structure, copy templates with placeholders, return JSON metadata
 - **AI**: Fill placeholders with generated content based on context and requirements
+
+You can also test package generation locally:
+
+```bash
+# Generate the local packages
+./.github/workflows/scripts/create-release-packages.sh v1.0.0
+
+# Copy to test project
+cp -r .genreleases/sdd-copilot-package-sh/. <path-to-test-project>/
+```
 
 #### Step 3: Cross-Agent Testing
 ```bash

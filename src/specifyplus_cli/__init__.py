@@ -52,6 +52,7 @@ from typer.core import TyperGroup
 import readchar
 import ssl
 import truststore
+from datetime import datetime, timezone
 
 ssl_context = truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
 client = httpx.Client(verify=ssl_context)
@@ -64,6 +65,63 @@ def _github_auth_headers(cli_token: str | None = None) -> dict:
     """Return Authorization header dict only when a non-empty token exists."""
     token = _github_token(cli_token)
     return {"Authorization": f"Bearer {token}"} if token else {}
+
+def _parse_rate_limit_headers(headers: httpx.Headers) -> dict:
+    """Extract and parse GitHub rate-limit headers."""
+    info = {}
+
+    # Standard GitHub rate-limit headers
+    if "X-RateLimit-Limit" in headers:
+        info["limit"] = headers.get("X-RateLimit-Limit")
+    if "X-RateLimit-Remaining" in headers:
+        info["remaining"] = headers.get("X-RateLimit-Remaining")
+    if "X-RateLimit-Reset" in headers:
+        reset_epoch = int(headers.get("X-RateLimit-Reset", "0"))
+        if reset_epoch:
+            reset_time = datetime.fromtimestamp(reset_epoch, tz=timezone.utc)
+            info["reset_epoch"] = reset_epoch
+            info["reset_time"] = reset_time
+            info["reset_local"] = reset_time.astimezone()
+
+    # Retry-After header (seconds or HTTP-date)
+    if "Retry-After" in headers:
+        retry_after = headers.get("Retry-After")
+        try:
+            info["retry_after_seconds"] = int(retry_after)
+        except ValueError:
+            # HTTP-date format - not implemented, just store as string
+            info["retry_after"] = retry_after
+
+    return info
+
+def _format_rate_limit_error(status_code: int, headers: httpx.Headers, url: str) -> str:
+    """Format a user-friendly error message with rate-limit information."""
+    rate_info = _parse_rate_limit_headers(headers)
+
+    lines = [f"GitHub API returned status {status_code} for {url}"]
+    lines.append("")
+
+    if rate_info:
+        lines.append("[bold]Rate Limit Information:[/bold]")
+        if "limit" in rate_info:
+            lines.append(f"  • Rate Limit: {rate_info['limit']} requests/hour")
+        if "remaining" in rate_info:
+            lines.append(f"  • Remaining: {rate_info['remaining']}")
+        if "reset_local" in rate_info:
+            reset_str = rate_info["reset_local"].strftime("%Y-%m-%d %H:%M:%S %Z")
+            lines.append(f"  • Resets at: {reset_str}")
+        if "retry_after_seconds" in rate_info:
+            lines.append(f"  • Retry after: {rate_info['retry_after_seconds']} seconds")
+        lines.append("")
+
+    # Add troubleshooting guidance
+    lines.append("[bold]Troubleshooting Tips:[/bold]")
+    lines.append("  • If you're on a shared CI or corporate environment, you may be rate-limited.")
+    lines.append("  • Consider using a GitHub token via --github-token or the GH_TOKEN/GITHUB_TOKEN")
+    lines.append("    environment variable to increase rate limits.")
+    lines.append("  • Authenticated requests have a limit of 5,000/hour vs 60/hour for unauthenticated.")
+
+    return "\n".join(lines)
 
 # Agent configuration with name, folder, install URL, and CLI tool requirement
 AGENT_CONFIG = {
@@ -150,6 +208,24 @@ AGENT_CONFIG = {
         "folder": ".agents/",
         "install_url": "https://ampcode.com/manual#install",
         "requires_cli": True,
+    },
+    "qoder": {
+        "name": "Qoder CLI",
+        "folder": ".qoder/",
+        "install_url": "https://qoder.com/cli",
+        "requires_cli": True,
+    },
+    "shai": {
+        "name": "OVHcloud SHAI",
+        "folder": ".shai/",
+        "install_url": "https://github.com/ovh/shai-cli",
+        "requires_cli": True,
+    },
+    "bob": {
+        "name": "IBM Bob IDE",
+        "folder": ".bob/",
+        "install_url": "https://ibm.com/bob",
+        "requires_cli": False,  # IDE-based
     },
 }
 
@@ -600,10 +676,11 @@ def download_template_from_github(ai_assistant: str, download_dir: Path, *, scri
         )
         status = response.status_code
         if status != 200:
-            msg = f"GitHub API returned {status} for {api_url}"
+            # Format detailed error message with rate-limit info
+            error_msg = _format_rate_limit_error(status, response.headers, api_url)
             if debug:
-                msg += f"\nResponse headers: {response.headers}\nBody (truncated 500): {response.text[:500]}"
-            raise RuntimeError(msg)
+                error_msg += f"\n\n[dim]Response body (truncated 500):[/dim]\n{response.text[:500]}"
+            raise RuntimeError(error_msg)
         try:
             release_data = response.json()
         except ValueError as je:
@@ -650,8 +727,8 @@ def download_template_from_github(ai_assistant: str, download_dir: Path, *, scri
             headers=_github_auth_headers(github_token),
         ) as response:
             if response.status_code != 200:
-                body_sample = response.text[:400]
-                raise RuntimeError(f"Download failed with {response.status_code}\nHeaders: {response.headers}\nBody (truncated): {body_sample}")
+                error_msg = _format_rate_limit_error(response.status_code, response.headers, download_url)
+                raise RuntimeError(error_msg)
             total_size = int(response.headers.get('content-length', 0))
             with open(zip_path, 'wb') as f:
                 if total_size == 0:
@@ -1225,23 +1302,86 @@ def check():
     if not any(agent_results.values()):
         console.print("[dim]Tip: Install an AI assistant for the best experience[/dim]")
 
-@app.command(name="version")
-def version_cmd():
-    """Show the version of SpecifyPlus CLI."""
+@app.command()
+def version():
+    """Display version and system information."""
+    import platform
+    import importlib.metadata
+
     show_banner()
-    pkg_version = get_version()
-    
-    version_panel = Panel(
-        f"[bold cyan]SpecifyPlus CLI[/bold cyan]\n"
-        f"Version: [green]{pkg_version}[/green]\n\n"
-        f"[dim]Panaversity SpecKit Plus - Spec-Driven Development Toolkit[/dim]",
-        title="[bold]Version Information[/bold]",
+
+    # Get CLI version from package metadata
+    cli_version = "unknown"
+    try:
+        cli_version = importlib.metadata.version("specifyplus")
+    except Exception:
+        try:
+            cli_version = importlib.metadata.version("specify-cli")
+        except Exception:
+            # Fallback: try reading from pyproject.toml if running from source
+            try:
+                import tomllib
+                pyproject_path = Path(__file__).parent.parent.parent / "pyproject.toml"
+                if pyproject_path.exists():
+                    with open(pyproject_path, "rb") as f:
+                        data = tomllib.load(f)
+                        cli_version = data.get("project", {}).get("version", "unknown")
+            except Exception:
+                pass
+
+    # Fetch latest template release version from panaversity fork
+    repo_owner = "panaversity"
+    repo_name = "spec-kit-plus"
+    api_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/releases/latest"
+
+    template_version = "unknown"
+    release_date = "unknown"
+
+    try:
+        response = client.get(
+            api_url,
+            timeout=10,
+            follow_redirects=True,
+            headers=_github_auth_headers(),
+        )
+        if response.status_code == 200:
+            release_data = response.json()
+            template_version = release_data.get("tag_name", "unknown")
+            # Remove 'v' prefix if present
+            if template_version.startswith("v"):
+                template_version = template_version[1:]
+            release_date = release_data.get("published_at", "unknown")
+            if release_date != "unknown":
+                # Format the date nicely
+                try:
+                    dt = datetime.fromisoformat(release_date.replace('Z', '+00:00'))
+                    release_date = dt.strftime("%Y-%m-%d")
+                except Exception:
+                    pass
+    except Exception:
+        pass
+
+    info_table = Table(show_header=False, box=None, padding=(0, 2))
+    info_table.add_column("Key", style="cyan", justify="right")
+    info_table.add_column("Value", style="white")
+
+    info_table.add_row("CLI Version", cli_version)
+    info_table.add_row("Template Version", template_version)
+    info_table.add_row("Released", release_date)
+    info_table.add_row("", "")
+    info_table.add_row("Python", platform.python_version())
+    info_table.add_row("Platform", platform.system())
+    info_table.add_row("Architecture", platform.machine())
+    info_table.add_row("OS Version", platform.version())
+
+    panel = Panel(
+        info_table,
+        title="[bold cyan]SpecifyPlus CLI Information[/bold cyan]",
         border_style="cyan",
         padding=(1, 2)
     )
-    
-    console.print()
-    console.print(version_panel)
+
+    console.print(panel)
     console.print()
 
 def main():

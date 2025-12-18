@@ -6,7 +6,7 @@ set -euo pipefail
 # Usage: .github/workflows/scripts/create-release-packages.sh <version>
 #   Version argument should include leading 'v'.
 #   Optionally set AGENTS and/or SCRIPTS env vars to limit what gets built.
-#     AGENTS  : space or comma separated subset of: claude gemini copilot cursor-agent qwen opencode windsurf codex amp (default: all)
+#     AGENTS  : space or comma separated subset of: claude gemini copilot cursor-agent qwen opencode windsurf codex amp shai bob (default: all)
 #     SCRIPTS : space or comma separated subset of: sh ps (default: both)
 #   Examples:
 #     AGENTS=claude SCRIPTS=sh $0 v0.2.0
@@ -110,9 +110,29 @@ generate_commands() {
         { echo "description = \"$description\""; echo; echo "prompt = \"\"\""; echo "$body"; echo "\"\"\""; } > "$output_dir/sp.$name.$ext" ;;
       md)
         echo "$body" > "$output_dir/sp.$name.$ext" ;;
-      prompt.md)
+      agent.md)
         echo "$body" > "$output_dir/sp.$name.$ext" ;;
     esac
+  done
+}
+
+generate_copilot_prompts() {
+  local agents_dir=$1 prompts_dir=$2
+  mkdir -p "$prompts_dir"
+  
+  # Generate a .prompt.md file for each .agent.md file
+  for agent_file in "$agents_dir"/speckit.*.agent.md; do
+    [[ -f "$agent_file" ]] || continue
+    
+    local basename=$(basename "$agent_file" .agent.md)
+    local prompt_file="$prompts_dir/${basename}.prompt.md"
+    
+    # Create prompt file with agent frontmatter
+    cat > "$prompt_file" <<EOF
+---
+agent: ${basename}
+---
+EOF
   done
 }
 
@@ -200,6 +220,9 @@ build_variant() {
       codebuddy) agent_name="CodeBuddy" ;;
       amp) agent_name="AWS Amplify AI" ;;
       q) agent_name="Amazon Q Developer CLI" ;;
+      qoder) agent_name="Qoder" ;;
+      shai) agent_name="OVHcloud SHAI" ;;
+      bob) agent_name="IBM Bob IDE" ;;
       *) agent_name="$agent" ;;
     esac
     
@@ -274,6 +297,20 @@ This file is generated during init for the selected agent.
         echo "$full_content" > "$base_dir/AMP.md"
         echo "Generated AMP.md"
         ;;
+      qoder)
+        mkdir -p "$base_dir/.qoder/rules"
+        echo "$full_content" > "$base_dir/.qoder/rules/guidelines.md"
+        echo "Generated .qoder/rules/guidelines.md"
+        ;;
+      shai)
+        echo "$full_content" > "$base_dir/SHAI.md"
+        echo "Generated SHAI.md"
+        ;;
+      bob)
+        mkdir -p "$base_dir/.bob/rules"
+        echo "$full_content" > "$base_dir/.bob/rules/guidelines.md"
+        echo "Generated .bob/rules/guidelines.md"
+        ;;
     esac
   }
 
@@ -287,8 +324,10 @@ This file is generated during init for the selected agent.
       generate_commands gemini toml "{{args}}" "$base_dir/.gemini/commands" "$script"
       generate_agent_rules gemini "$base_dir" ;;
     copilot)
-      mkdir -p "$base_dir/.github/prompts"
-      generate_commands copilot prompt.md "\$ARGUMENTS" "$base_dir/.github/prompts" "$script"
+      mkdir -p "$base_dir/.github/agents"
+      generate_commands copilot agent.md "\$ARGUMENTS" "$base_dir/.github/agents" "$script"
+      # Generate companion prompt files
+      generate_copilot_prompts "$base_dir/.github/agents" "$base_dir/.github/prompts"
       # Create VS Code workspace settings
       mkdir -p "$base_dir/.vscode"
       [[ -f templates/vscode-settings.json ]] && cp templates/vscode-settings.json "$base_dir/.vscode/settings.json"
@@ -329,40 +368,52 @@ This file is generated during init for the selected agent.
       mkdir -p "$base_dir/.codebuddy/commands"
       generate_commands codebuddy md "\$ARGUMENTS" "$base_dir/.codebuddy/commands" "$script"
       generate_agent_rules codebuddy "$base_dir" ;;
+    qoder)
+      mkdir -p "$base_dir/.qoder/commands"
+      generate_commands qoder md "\$ARGUMENTS" "$base_dir/.qoder/commands" "$script"
+      generate_agent_rules qoder "$base_dir" ;;
     amp)
       mkdir -p "$base_dir/.agents/commands"
       generate_commands amp md "\$ARGUMENTS" "$base_dir/.agents/commands" "$script"
       generate_agent_rules amp "$base_dir" ;;
+    shai)
+      mkdir -p "$base_dir/.shai/commands"
+      generate_commands shai md "\$ARGUMENTS" "$base_dir/.shai/commands" "$script"
+      generate_agent_rules shai "$base_dir" ;;
     q)
       mkdir -p "$base_dir/.amazonq/prompts"
       generate_commands q md "\$ARGUMENTS" "$base_dir/.amazonq/prompts" "$script"
       generate_agent_rules q "$base_dir" ;;
+    bob)
+      mkdir -p "$base_dir/.bob/commands"
+      generate_commands bob md "\$ARGUMENTS" "$base_dir/.bob/commands" "$script"
+      generate_agent_rules bob "$base_dir" ;;
   esac
   ( cd "$base_dir" && zip -r "../spec-kit-template-${agent}-${script}-${NEW_VERSION}.zip" . )
   echo "Created $GENRELEASES_DIR/spec-kit-template-${agent}-${script}-${NEW_VERSION}.zip"
 }
 
 # Determine agent list
-ALL_AGENTS=(claude gemini copilot cursor-agent qwen opencode windsurf codex kilocode auggie roo codebuddy amp q)
+ALL_AGENTS=(claude gemini copilot cursor-agent qwen opencode windsurf codex kilocode auggie roo codebuddy amp shai q bob qoder)
 ALL_SCRIPTS=(sh ps)
 
 norm_list() {
-  # convert comma+space separated -> space separated unique while preserving order of first occurrence
-  tr ',\n' '  ' | awk '{for(i=1;i<=NF;i++){if(!seen[$i]++){printf((out?" ":"") $i)}}}END{printf("\n")}'
+  # convert comma+space separated -> line separated unique while preserving order of first occurrence
+  tr ',\n' '  ' | awk '{for(i=1;i<=NF;i++){if(!seen[$i]++){printf((out?"\n":"") $i);out=1}}}END{printf("\n")}'
 }
 
 validate_subset() {
   local type=$1; shift; local -n allowed=$1; shift; local items=("$@")
-  local ok=1
+  local invalid=0
   for it in "${items[@]}"; do
     local found=0
     for a in "${allowed[@]}"; do [[ $it == "$a" ]] && { found=1; break; }; done
     if [[ $found -eq 0 ]]; then
       echo "Error: unknown $type '$it' (allowed: ${allowed[*]})" >&2
-      ok=0
+      invalid=1
     fi
   done
-  return $ok
+  return $invalid
 }
 
 if [[ -n ${AGENTS:-} ]]; then
