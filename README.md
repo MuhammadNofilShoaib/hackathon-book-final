@@ -77,6 +77,29 @@ Use `specifyplus` or `sp` commands instead of `specify`.
 - [💬 Support](#-support)
 - [🙏 Acknowledgements](#-acknowledgements)
 - [📄 License](#-license)
+- [🤖 AI-Native Authoring Pipeline](#-ai-native-authoring-pipeline)
+
+## 🤖 AI-Native Authoring Pipeline
+
+### Claude Code Router (CCR)
+
+The Claude Code Router (CCR) serves as the intelligent orchestration layer that manages the flow of content generation requests to the most appropriate AI models. CCR analyzes the nature of each authoring task and routes it to the optimal model based on content type, complexity requirements, and performance characteristics. This ensures that documentation, code, and specifications are generated with the highest quality and consistency across the entire project lifecycle.
+
+### Prompt-Driven Development
+
+Our approach emphasizes prompt-driven development where carefully crafted prompts serve as the primary mechanism for content generation. This methodology allows for precise control over the output quality, style, and structure. By developing standardized prompt templates, we ensure consistent content generation across different topics and authors while maintaining the flexibility to adapt to specific requirements.
+
+### Qwen as the Primary Authoring Model
+
+Qwen serves as our primary authoring model due to its exceptional performance in generating technical documentation, educational content, and structured specifications. Its strong capabilities in understanding and producing code examples, combined with its proficiency in multiple programming languages, make it ideal for creating robotics and AI educational materials. Qwen's ability to follow complex instructions and maintain context across long-form content ensures high-quality output for our technical documentation needs.
+
+### Spec-Driven Content Generation
+
+Content generation follows a specification-driven approach where reusable templates define the structure, tone, and requirements for different types of content. These specifications ensure consistency across all educational materials while providing clear guidelines for content creators. The spec-driven methodology enables rapid generation of high-quality content that adheres to pedagogical best practices and technical accuracy requirements.
+
+### Reusability of Prompts for Personalization and Translation
+
+The prompt templates developed for our pipeline are designed with reusability in mind, enabling easy personalization for different audiences and translation into multiple languages. This approach allows for the creation of localized educational content while maintaining the structural integrity and pedagogical effectiveness of the original materials. The modular nature of our prompts facilitates adaptation to various learning styles, technical backgrounds, and cultural contexts.
 
 ## 🤔 What is Spec-Driven Development?
 

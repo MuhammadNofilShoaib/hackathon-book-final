@@ -20,7 +20,7 @@ Usage:
 Or install globally:
     uv tool install --from specify-cli.py specify-cli
     specify init <project-name>
-    specify init .
+    specify init .  
     specify init --here
 """
 
