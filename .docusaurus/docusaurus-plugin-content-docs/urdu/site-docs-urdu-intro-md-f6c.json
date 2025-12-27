@@ -1,0 +1,23 @@
+{
+  "id": "intro",
+  "title": "intro",
+  "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+  "source": "@site/docs-urdu/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/docs/urdu/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "autonomous-humanoid",
+    "permalink": "/docs/urdu/capstone/autonomous-humanoid"
+  },
+  "next": {
+    "title": "module1-the-robotic-nervous-system",
+    "permalink": "/docs/urdu/module1-the-robotic-nervous-system"
+  }
+}

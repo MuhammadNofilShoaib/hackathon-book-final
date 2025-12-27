@@ -1,0 +1,341 @@
+{
+  "pluginId": "urdu",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "tutorialSidebar": [
+      {
+        "type": "category",
+        "label": "capstone",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "autonomous-humanoid",
+            "href": "/docs/urdu/capstone/autonomous-humanoid",
+            "docId": "capstone/autonomous-humanoid",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "intro",
+        "href": "/docs/urdu/intro",
+        "docId": "intro",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "module1-the-robotic-nervous-system",
+        "href": "/docs/urdu/module1-the-robotic-nervous-system",
+        "docId": "module1-the-robotic-nervous-system",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "module2-the-digital-twin",
+        "href": "/docs/urdu/module2-the-digital-twin",
+        "docId": "module2-the-digital-twin",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "module3-the-ai-robot-brain",
+        "href": "/docs/urdu/module3-the-ai-robot-brain",
+        "docId": "module3-the-ai-robot-brain",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "module4-vision-language-action",
+        "href": "/docs/urdu/module4-vision-language-action",
+        "docId": "module4-vision-language-action",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "module5-capstone-project-the-autonomous-humanoid",
+        "href": "/docs/urdu/module5-capstone-project-the-autonomous-humanoid",
+        "docId": "module5-capstone-project-the-autonomous-humanoid",
+        "unlisted": false
+      },
+      {
+        "type": "category",
+        "label": "nvidia-isaac",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "isaac-ros",
+            "href": "/docs/urdu/nvidia-isaac/isaac-ros",
+            "docId": "nvidia-isaac/isaac-ros",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "isaac-sim",
+            "href": "/docs/urdu/nvidia-isaac/isaac-sim",
+            "docId": "nvidia-isaac/isaac-sim",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "nav2",
+            "href": "/docs/urdu/nvidia-isaac/nav2",
+            "docId": "nvidia-isaac/nav2",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "urdf-humanoids",
+            "href": "/docs/urdu/nvidia-isaac/urdf-humanoids",
+            "docId": "nvidia-isaac/urdf-humanoids",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "physical-ai",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "embodied-intelligence",
+            "href": "/docs/urdu/physical-ai/embodied-intelligence",
+            "docId": "physical-ai/embodied-intelligence",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "sensors",
+            "href": "/docs/urdu/physical-ai/sensors",
+            "docId": "physical-ai/sensors",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "ros2",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "nodes-topics-services",
+            "href": "/docs/urdu/ros2/nodes-topics-services",
+            "docId": "ros2/nodes-topics-services",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "ros2-basics",
+            "href": "/docs/urdu/ros2/ros2-basics",
+            "docId": "ros2/ros2-basics",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "urdf-humanoids",
+            "href": "/docs/urdu/ros2/urdf-humanoids",
+            "docId": "ros2/urdf-humanoids",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "simulation",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "gazebo",
+            "href": "/docs/urdu/simulation/gazebo",
+            "docId": "simulation/gazebo",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "unity",
+            "href": "/docs/urdu/simulation/unity",
+            "docId": "simulation/unity",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "vla",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "llm-planning",
+            "href": "/docs/urdu/vla/llm-planning",
+            "docId": "vla/llm-planning",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "vision-language-action",
+            "href": "/docs/urdu/vla/vision-language-action",
+            "docId": "vla/vision-language-action",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "whisper-voice",
+            "href": "/docs/urdu/vla/whisper-voice",
+            "docId": "vla/whisper-voice",
+            "unlisted": false
+          }
+        ]
+      }
+    ],
+    "personalizedBeginnerSidebar": [],
+    "personalizedIntermediateSidebar": [],
+    "personalizedAdvancedSidebar": [],
+    "urduSidebar": []
+  },
+  "docs": {
+    "capstone/autonomous-humanoid": {
+      "id": "capstone/autonomous-humanoid",
+      "title": "autonomous-humanoid",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "intro": {
+      "id": "intro",
+      "title": "intro",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "module1-the-robotic-nervous-system": {
+      "id": "module1-the-robotic-nervous-system",
+      "title": "module1-the-robotic-nervous-system",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "module2-the-digital-twin": {
+      "id": "module2-the-digital-twin",
+      "title": "module2-the-digital-twin",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "module3-the-ai-robot-brain": {
+      "id": "module3-the-ai-robot-brain",
+      "title": "module3-the-ai-robot-brain",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "module4-vision-language-action": {
+      "id": "module4-vision-language-action",
+      "title": "module4-vision-language-action",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "module5-capstone-project-the-autonomous-humanoid": {
+      "id": "module5-capstone-project-the-autonomous-humanoid",
+      "title": "module5-capstone-project-the-autonomous-humanoid",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "nvidia-isaac/isaac-ros": {
+      "id": "nvidia-isaac/isaac-ros",
+      "title": "isaac-ros",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "nvidia-isaac/isaac-sim": {
+      "id": "nvidia-isaac/isaac-sim",
+      "title": "isaac-sim",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "nvidia-isaac/nav2": {
+      "id": "nvidia-isaac/nav2",
+      "title": "nav2",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "nvidia-isaac/urdf-humanoids": {
+      "id": "nvidia-isaac/urdf-humanoids",
+      "title": "urdf-humanoids",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "physical-ai/embodied-intelligence": {
+      "id": "physical-ai/embodied-intelligence",
+      "title": "embodied-intelligence",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "physical-ai/sensors": {
+      "id": "physical-ai/sensors",
+      "title": "sensors",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "ros2/nodes-topics-services": {
+      "id": "ros2/nodes-topics-services",
+      "title": "nodes-topics-services",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "ros2/ros2-basics": {
+      "id": "ros2/ros2-basics",
+      "title": "ros2-basics",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "ros2/urdf-humanoids": {
+      "id": "ros2/urdf-humanoids",
+      "title": "urdf-humanoids",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "simulation/gazebo": {
+      "id": "simulation/gazebo",
+      "title": "gazebo",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "simulation/unity": {
+      "id": "simulation/unity",
+      "title": "unity",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "vla/llm-planning": {
+      "id": "vla/llm-planning",
+      "title": "llm-planning",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "vla/vision-language-action": {
+      "id": "vla/vision-language-action",
+      "title": "vision-language-action",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    },
+    "vla/whisper-voice": {
+      "id": "vla/whisper-voice",
+      "title": "whisper-voice",
+      "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+      "sidebar": "tutorialSidebar"
+    }
+  }
+}

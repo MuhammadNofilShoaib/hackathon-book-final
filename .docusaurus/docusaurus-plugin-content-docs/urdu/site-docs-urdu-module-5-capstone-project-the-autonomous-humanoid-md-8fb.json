@@ -1,0 +1,23 @@
+{
+  "id": "module5-capstone-project-the-autonomous-humanoid",
+  "title": "module5-capstone-project-the-autonomous-humanoid",
+  "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+  "source": "@site/docs-urdu/module5-capstone-project-the-autonomous-humanoid.md",
+  "sourceDirName": ".",
+  "slug": "/module5-capstone-project-the-autonomous-humanoid",
+  "permalink": "/docs/urdu/module5-capstone-project-the-autonomous-humanoid",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "module4-vision-language-action",
+    "permalink": "/docs/urdu/module4-vision-language-action"
+  },
+  "next": {
+    "title": "isaac-ros",
+    "permalink": "/docs/urdu/nvidia-isaac/isaac-ros"
+  }
+}

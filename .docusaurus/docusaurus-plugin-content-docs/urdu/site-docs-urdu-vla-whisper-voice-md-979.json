@@ -1,0 +1,19 @@
+{
+  "id": "vla/whisper-voice",
+  "title": "whisper-voice",
+  "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+  "source": "@site/docs-urdu/vla/whisper-voice.md",
+  "sourceDirName": "vla",
+  "slug": "/vla/whisper-voice",
+  "permalink": "/docs/urdu/vla/whisper-voice",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "vision-language-action",
+    "permalink": "/docs/urdu/vla/vision-language-action"
+  }
+}

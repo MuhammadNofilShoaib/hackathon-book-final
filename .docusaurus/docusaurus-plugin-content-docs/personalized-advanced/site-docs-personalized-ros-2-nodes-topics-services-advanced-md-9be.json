@@ -1,0 +1,23 @@
+{
+  "id": "ros2/nodes-topics-services-advanced",
+  "title": "ROS 2 Nodes, Topics, Services & Actions (Advanced Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/ros2/nodes-topics-services-advanced.md",
+  "sourceDirName": "ros2",
+  "slug": "/ros2/nodes-topics-services-advanced",
+  "permalink": "/docs/personalized-advanced/ros2/nodes-topics-services-advanced",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Sensors in Physical AI & Humanoid Robotics (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/physical-ai/sensors-advanced"
+  },
+  "next": {
+    "title": "ROS 2 Basics for Physical AI (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/ros2/ros2-basics-advanced"
+  }
+}

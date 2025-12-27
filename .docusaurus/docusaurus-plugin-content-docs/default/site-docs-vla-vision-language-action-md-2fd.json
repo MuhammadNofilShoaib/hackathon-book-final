@@ -1,0 +1,24 @@
+{
+  "id": "vla/vision-language-action",
+  "title": "Vision-Language-Action Models in Robotics",
+  "description": "Concept",
+  "source": "@site/docs/vla/vision-language-action.md",
+  "sourceDirName": "vla",
+  "slug": "/vla/vision-language-action",
+  "permalink": "/docs/vla/vision-language-action",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/physical-ai-hackathon/spec-kit-plus/edit/main/docs/vla/vision-language-action.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Using Large Language Models for Cognitive Planning in Robots",
+    "permalink": "/docs/vla/llm-planning"
+  },
+  "next": {
+    "title": "Voice-to-Action Systems Using Speech Recognition",
+    "permalink": "/docs/vla/whisper-voice"
+  }
+}

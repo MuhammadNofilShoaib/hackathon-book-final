@@ -179,9 +179,10 @@ module.exports = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Physical AI & Humanoid Robotics Project. Built with Docusaurus.`,
       },
-      prism: {
-        theme: require('prism-react-renderer/themes/github'),
-        darkTheme: require('prism-react-renderer/themes/dracula'),
-      },
+     prism: {
+  theme: require('prism-react-renderer/themes/github'),
+  darkTheme: require('prism-react-renderer/themes/dracula'),
+},
+
     }),
 };

@@ -1,0 +1,23 @@
+{
+  "id": "simulation/gazebo-advanced",
+  "title": "Gazebo Simulation for Physical AI (Advanced Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/simulation/gazebo-advanced.md",
+  "sourceDirName": "simulation",
+  "slug": "/simulation/gazebo-advanced",
+  "permalink": "/docs/personalized-advanced/simulation/gazebo-advanced",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "URDF for Humanoid Robotics (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/ros2/urdf-humanoids-advanced"
+  },
+  "next": {
+    "title": "Unity Simulation for Physical AI (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/simulation/unity-advanced"
+  }
+}

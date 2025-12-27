@@ -1,0 +1,23 @@
+{
+  "id": "ros2/urdf-humanoids-intermediate",
+  "title": "URDF for Humanoid Robotics (Intermediate Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/ros2/urdf-humanoids-intermediate.md",
+  "sourceDirName": "ros2",
+  "slug": "/ros2/urdf-humanoids-intermediate",
+  "permalink": "/docs/personalized-intermediate/ros2/urdf-humanoids-intermediate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ROS 2 Basics for Physical AI (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/ros2/ros2-basics-intermediate"
+  },
+  "next": {
+    "title": "Gazebo Simulation for Physical AI (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/simulation/gazebo-intermediate"
+  }
+}

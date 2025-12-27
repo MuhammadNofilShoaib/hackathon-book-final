@@ -1,0 +1,23 @@
+{
+  "id": "ros2/nodes-topics-services",
+  "title": "nodes-topics-services",
+  "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+  "source": "@site/docs-urdu/ros2/nodes-topics-services.md",
+  "sourceDirName": "ros2",
+  "slug": "/ros2/nodes-topics-services",
+  "permalink": "/docs/urdu/ros2/nodes-topics-services",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "sensors",
+    "permalink": "/docs/urdu/physical-ai/sensors"
+  },
+  "next": {
+    "title": "ros2-basics",
+    "permalink": "/docs/urdu/ros2/ros2-basics"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "nvidia-isaac/isaac-ros",
+  "title": "NVIDIA Isaac ROS for Physical AI",
+  "description": "Concept",
+  "source": "@site/docs/nvidia-isaac/isaac-ros.md",
+  "sourceDirName": "nvidia-isaac",
+  "slug": "/nvidia-isaac/isaac-ros",
+  "permalink": "/docs/nvidia-isaac/isaac-ros",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/physical-ai-hackathon/spec-kit-plus/edit/main/docs/nvidia-isaac/isaac-ros.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 5: The Autonomous Humanoid",
+    "permalink": "/docs/module5-capstone-project-the-autonomous-humanoid"
+  },
+  "next": {
+    "title": "NVIDIA Isaac Sim for Physical AI",
+    "permalink": "/docs/nvidia-isaac/isaac-sim"
+  }
+}

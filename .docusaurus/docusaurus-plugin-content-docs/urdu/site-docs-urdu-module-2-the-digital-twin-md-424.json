@@ -1,0 +1,23 @@
+{
+  "id": "module2-the-digital-twin",
+  "title": "module2-the-digital-twin",
+  "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+  "source": "@site/docs-urdu/module2-the-digital-twin.md",
+  "sourceDirName": ".",
+  "slug": "/module2-the-digital-twin",
+  "permalink": "/docs/urdu/module2-the-digital-twin",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "module1-the-robotic-nervous-system",
+    "permalink": "/docs/urdu/module1-the-robotic-nervous-system"
+  },
+  "next": {
+    "title": "module3-the-ai-robot-brain",
+    "permalink": "/docs/urdu/module3-the-ai-robot-brain"
+  }
+}

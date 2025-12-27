@@ -1,0 +1,23 @@
+{
+  "id": "intro-beginner",
+  "title": "Introduction to Physical AI & Humanoid Robotics (Beginner Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/intro-beginner.md",
+  "sourceDirName": ".",
+  "slug": "/intro-beginner",
+  "permalink": "/docs/personalized-beginner/intro-beginner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Capstone Project: Building an Autonomous Humanoid Robot (Beginner Level)",
+    "permalink": "/docs/personalized-beginner/capstone/autonomous-humanoid-beginner"
+  },
+  "next": {
+    "title": "Chapter 1: The Robotic Nervous System (Beginner Level)",
+    "permalink": "/docs/personalized-beginner/module1-the-robotic-nervous-system-beginner"
+  }
+}

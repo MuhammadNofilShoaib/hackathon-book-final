@@ -1,0 +1,23 @@
+{
+  "id": "simulation/unity",
+  "title": "unity",
+  "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+  "source": "@site/docs-urdu/simulation/unity.md",
+  "sourceDirName": "simulation",
+  "slug": "/simulation/unity",
+  "permalink": "/docs/urdu/simulation/unity",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "gazebo",
+    "permalink": "/docs/urdu/simulation/gazebo"
+  },
+  "next": {
+    "title": "llm-planning",
+    "permalink": "/docs/urdu/vla/llm-planning"
+  }
+}

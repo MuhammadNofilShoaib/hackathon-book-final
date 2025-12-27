@@ -1,0 +1,23 @@
+{
+  "id": "module5-capstone-project-the-autonomous-humanoid-advanced",
+  "title": "Chapter 5: The Autonomous Humanoid (Advanced Level)",
+  "description": "Introduction",
+  "source": "@site/docs-personalized/module5-capstone-project-the-autonomous-humanoid-advanced.md",
+  "sourceDirName": ".",
+  "slug": "/module5-capstone-project-the-autonomous-humanoid-advanced",
+  "permalink": "/docs/personalized-advanced/module5-capstone-project-the-autonomous-humanoid-advanced",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 4: Vision-Language-Action (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/module4-vision-language-action-advanced"
+  },
+  "next": {
+    "title": "NVIDIA Isaac ROS for Physical AI (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/nvidia-isaac/isaac-ros-advanced"
+  }
+}

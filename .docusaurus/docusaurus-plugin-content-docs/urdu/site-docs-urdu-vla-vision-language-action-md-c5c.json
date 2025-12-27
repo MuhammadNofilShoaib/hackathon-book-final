@@ -1,0 +1,23 @@
+{
+  "id": "vla/vision-language-action",
+  "title": "vision-language-action",
+  "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+  "source": "@site/docs-urdu/vla/vision-language-action.md",
+  "sourceDirName": "vla",
+  "slug": "/vla/vision-language-action",
+  "permalink": "/docs/urdu/vla/vision-language-action",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "llm-planning",
+    "permalink": "/docs/urdu/vla/llm-planning"
+  },
+  "next": {
+    "title": "whisper-voice",
+    "permalink": "/docs/urdu/vla/whisper-voice"
+  }
+}

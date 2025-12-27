@@ -1,0 +1,23 @@
+{
+  "id": "simulation/unity-beginner",
+  "title": "Unity Simulation for Physical AI (Beginner Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/simulation/unity-beginner.md",
+  "sourceDirName": "simulation",
+  "slug": "/simulation/unity-beginner",
+  "permalink": "/docs/personalized-beginner/simulation/unity-beginner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Gazebo Simulation for Physical AI (Beginner Level)",
+    "permalink": "/docs/personalized-beginner/simulation/gazebo-beginner"
+  },
+  "next": {
+    "title": "Using Large Language Models for Cognitive Planning in Robots (Beginner Level)",
+    "permalink": "/docs/personalized-beginner/vla/llm-planning-beginner"
+  }
+}

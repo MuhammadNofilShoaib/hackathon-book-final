@@ -1,0 +1,24 @@
+{
+  "id": "ros2/urdf-humanoids",
+  "title": "URDF for Humanoid Robotics",
+  "description": "Concept",
+  "source": "@site/docs/ros2/urdf-humanoids.md",
+  "sourceDirName": "ros2",
+  "slug": "/ros2/urdf-humanoids",
+  "permalink": "/docs/ros2/urdf-humanoids",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/physical-ai-hackathon/spec-kit-plus/edit/main/docs/ros2/urdf-humanoids.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ROS 2 Basics for Physical AI",
+    "permalink": "/docs/ros2/ros2-basics"
+  },
+  "next": {
+    "title": "Gazebo Simulation for Physical AI",
+    "permalink": "/docs/simulation/gazebo"
+  }
+}

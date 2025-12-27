@@ -1,0 +1,23 @@
+{
+  "id": "simulation/gazebo-intermediate",
+  "title": "Gazebo Simulation for Physical AI (Intermediate Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/simulation/gazebo-intermediate.md",
+  "sourceDirName": "simulation",
+  "slug": "/simulation/gazebo-intermediate",
+  "permalink": "/docs/personalized-intermediate/simulation/gazebo-intermediate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "URDF for Humanoid Robotics (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/ros2/urdf-humanoids-intermediate"
+  },
+  "next": {
+    "title": "Unity Simulation for Physical AI (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/simulation/unity-intermediate"
+  }
+}

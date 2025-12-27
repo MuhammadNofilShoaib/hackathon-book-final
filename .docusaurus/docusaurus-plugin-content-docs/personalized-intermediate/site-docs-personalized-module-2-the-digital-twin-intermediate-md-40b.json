@@ -1,0 +1,23 @@
+{
+  "id": "module2-the-digital-twin-intermediate",
+  "title": "Chapter 2: The Digital Twin (Intermediate Level)",
+  "description": "Introduction",
+  "source": "@site/docs-personalized/module2-the-digital-twin-intermediate.md",
+  "sourceDirName": ".",
+  "slug": "/module2-the-digital-twin-intermediate",
+  "permalink": "/docs/personalized-intermediate/module2-the-digital-twin-intermediate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 1: The Robotic Nervous System (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/module1-the-robotic-nervous-system-intermediate"
+  },
+  "next": {
+    "title": "Chapter 3: The AI-Robot Brain (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/module3-the-ai-robot-brain-intermediate"
+  }
+}

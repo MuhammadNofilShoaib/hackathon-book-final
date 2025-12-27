@@ -1,0 +1,24 @@
+{
+  "id": "local-development",
+  "title": "Local Development Guide",
+  "description": "This guide shows how to iterate on the specify CLI locally without publishing a release or committing to main first.",
+  "source": "@site/docs/local-development.md",
+  "sourceDirName": ".",
+  "slug": "/local-development",
+  "permalink": "/docs/local-development",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/physical-ai-hackathon/spec-kit-plus/edit/main/docs/local-development.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction to Physical AI & Humanoid Robotics",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "Chapter 1: The Robotic Nervous System",
+    "permalink": "/docs/module1-the-robotic-nervous-system"
+  }
+}

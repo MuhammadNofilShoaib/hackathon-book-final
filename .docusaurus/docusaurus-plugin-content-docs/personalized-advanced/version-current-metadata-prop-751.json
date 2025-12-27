@@ -1,0 +1,341 @@
+{
+  "pluginId": "personalized-advanced",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "tutorialSidebar": [
+      {
+        "type": "category",
+        "label": "capstone",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Capstone Project: Building an Autonomous Humanoid Robot (Advanced Level)",
+            "href": "/docs/personalized-advanced/capstone/autonomous-humanoid-advanced",
+            "docId": "capstone/autonomous-humanoid-advanced",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "link",
+        "label": "Introduction to Physical AI & Humanoid Robotics (Advanced Level)",
+        "href": "/docs/personalized-advanced/intro-advanced",
+        "docId": "intro-advanced",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "Chapter 1: The Robotic Nervous System (Advanced Level)",
+        "href": "/docs/personalized-advanced/module1-the-robotic-nervous-system-advanced",
+        "docId": "module1-the-robotic-nervous-system-advanced",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "Chapter 2: The Digital Twin (Advanced Level)",
+        "href": "/docs/personalized-advanced/module2-the-digital-twin-advanced",
+        "docId": "module2-the-digital-twin-advanced",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "Chapter 3: The AI-Robot Brain (Advanced Level)",
+        "href": "/docs/personalized-advanced/module3-the-ai-robot-brain-advanced",
+        "docId": "module3-the-ai-robot-brain-advanced",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "Chapter 4: Vision-Language-Action (Advanced Level)",
+        "href": "/docs/personalized-advanced/module4-vision-language-action-advanced",
+        "docId": "module4-vision-language-action-advanced",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "Chapter 5: The Autonomous Humanoid (Advanced Level)",
+        "href": "/docs/personalized-advanced/module5-capstone-project-the-autonomous-humanoid-advanced",
+        "docId": "module5-capstone-project-the-autonomous-humanoid-advanced",
+        "unlisted": false
+      },
+      {
+        "type": "category",
+        "label": "nvidia-isaac",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "NVIDIA Isaac ROS for Physical AI (Advanced Level)",
+            "href": "/docs/personalized-advanced/nvidia-isaac/isaac-ros-advanced",
+            "docId": "nvidia-isaac/isaac-ros-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "NVIDIA Isaac Sim for Physical AI (Advanced Level)",
+            "href": "/docs/personalized-advanced/nvidia-isaac/isaac-sim-advanced",
+            "docId": "nvidia-isaac/isaac-sim-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Navigation and Path Planning with Nav2 for Humanoid Robots (Advanced Level)",
+            "href": "/docs/personalized-advanced/nvidia-isaac/nav2-advanced",
+            "docId": "nvidia-isaac/nav2-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "URDF for Humanoid Robotics (Advanced Level)",
+            "href": "/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-advanced",
+            "docId": "nvidia-isaac/urdf-humanoids-advanced",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "physical-ai",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Embodied Intelligence in Physical AI (Advanced Level)",
+            "href": "/docs/personalized-advanced/physical-ai/embodied-intelligence-advanced",
+            "docId": "physical-ai/embodied-intelligence-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Sensors in Physical AI & Humanoid Robotics (Advanced Level)",
+            "href": "/docs/personalized-advanced/physical-ai/sensors-advanced",
+            "docId": "physical-ai/sensors-advanced",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "ros2",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "ROS 2 Nodes, Topics, Services & Actions (Advanced Level)",
+            "href": "/docs/personalized-advanced/ros2/nodes-topics-services-advanced",
+            "docId": "ros2/nodes-topics-services-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "ROS 2 Basics for Physical AI (Advanced Level)",
+            "href": "/docs/personalized-advanced/ros2/ros2-basics-advanced",
+            "docId": "ros2/ros2-basics-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "URDF for Humanoid Robotics (Advanced Level)",
+            "href": "/docs/personalized-advanced/ros2/urdf-humanoids-advanced",
+            "docId": "ros2/urdf-humanoids-advanced",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "simulation",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Gazebo Simulation for Physical AI (Advanced Level)",
+            "href": "/docs/personalized-advanced/simulation/gazebo-advanced",
+            "docId": "simulation/gazebo-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Unity Simulation for Physical AI (Advanced Level)",
+            "href": "/docs/personalized-advanced/simulation/unity-advanced",
+            "docId": "simulation/unity-advanced",
+            "unlisted": false
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "vla",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Using Large Language Models for Cognitive Planning in Robots (Advanced Level)",
+            "href": "/docs/personalized-advanced/vla/llm-planning-advanced",
+            "docId": "vla/llm-planning-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Vision-Language-Action Models in Robotics (Advanced Level)",
+            "href": "/docs/personalized-advanced/vla/vision-language-action-advanced",
+            "docId": "vla/vision-language-action-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Voice-to-Action Systems Using Speech Recognition (Advanced Level)",
+            "href": "/docs/personalized-advanced/vla/whisper-voice-advanced",
+            "docId": "vla/whisper-voice-advanced",
+            "unlisted": false
+          }
+        ]
+      }
+    ],
+    "personalizedBeginnerSidebar": [],
+    "personalizedIntermediateSidebar": [],
+    "personalizedAdvancedSidebar": [],
+    "urduSidebar": []
+  },
+  "docs": {
+    "capstone/autonomous-humanoid-advanced": {
+      "id": "capstone/autonomous-humanoid-advanced",
+      "title": "Capstone Project: Building an Autonomous Humanoid Robot (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "intro-advanced": {
+      "id": "intro-advanced",
+      "title": "Introduction to Physical AI & Humanoid Robotics (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "module1-the-robotic-nervous-system-advanced": {
+      "id": "module1-the-robotic-nervous-system-advanced",
+      "title": "Chapter 1: The Robotic Nervous System (Advanced Level)",
+      "description": "Introduction",
+      "sidebar": "tutorialSidebar"
+    },
+    "module2-the-digital-twin-advanced": {
+      "id": "module2-the-digital-twin-advanced",
+      "title": "Chapter 2: The Digital Twin (Advanced Level)",
+      "description": "Introduction",
+      "sidebar": "tutorialSidebar"
+    },
+    "module3-the-ai-robot-brain-advanced": {
+      "id": "module3-the-ai-robot-brain-advanced",
+      "title": "Chapter 3: The AI-Robot Brain (Advanced Level)",
+      "description": "Introduction",
+      "sidebar": "tutorialSidebar"
+    },
+    "module4-vision-language-action-advanced": {
+      "id": "module4-vision-language-action-advanced",
+      "title": "Chapter 4: Vision-Language-Action (Advanced Level)",
+      "description": "Introduction",
+      "sidebar": "tutorialSidebar"
+    },
+    "module5-capstone-project-the-autonomous-humanoid-advanced": {
+      "id": "module5-capstone-project-the-autonomous-humanoid-advanced",
+      "title": "Chapter 5: The Autonomous Humanoid (Advanced Level)",
+      "description": "Introduction",
+      "sidebar": "tutorialSidebar"
+    },
+    "nvidia-isaac/isaac-ros-advanced": {
+      "id": "nvidia-isaac/isaac-ros-advanced",
+      "title": "NVIDIA Isaac ROS for Physical AI (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "nvidia-isaac/isaac-sim-advanced": {
+      "id": "nvidia-isaac/isaac-sim-advanced",
+      "title": "NVIDIA Isaac Sim for Physical AI (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "nvidia-isaac/nav2-advanced": {
+      "id": "nvidia-isaac/nav2-advanced",
+      "title": "Navigation and Path Planning with Nav2 for Humanoid Robots (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "nvidia-isaac/urdf-humanoids-advanced": {
+      "id": "nvidia-isaac/urdf-humanoids-advanced",
+      "title": "URDF for Humanoid Robotics (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "physical-ai/embodied-intelligence-advanced": {
+      "id": "physical-ai/embodied-intelligence-advanced",
+      "title": "Embodied Intelligence in Physical AI (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "physical-ai/sensors-advanced": {
+      "id": "physical-ai/sensors-advanced",
+      "title": "Sensors in Physical AI & Humanoid Robotics (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "ros2/nodes-topics-services-advanced": {
+      "id": "ros2/nodes-topics-services-advanced",
+      "title": "ROS 2 Nodes, Topics, Services & Actions (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "ros2/ros2-basics-advanced": {
+      "id": "ros2/ros2-basics-advanced",
+      "title": "ROS 2 Basics for Physical AI (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "ros2/urdf-humanoids-advanced": {
+      "id": "ros2/urdf-humanoids-advanced",
+      "title": "URDF for Humanoid Robotics (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "simulation/gazebo-advanced": {
+      "id": "simulation/gazebo-advanced",
+      "title": "Gazebo Simulation for Physical AI (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "simulation/unity-advanced": {
+      "id": "simulation/unity-advanced",
+      "title": "Unity Simulation for Physical AI (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "vla/llm-planning-advanced": {
+      "id": "vla/llm-planning-advanced",
+      "title": "Using Large Language Models for Cognitive Planning in Robots (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "vla/vision-language-action-advanced": {
+      "id": "vla/vision-language-action-advanced",
+      "title": "Vision-Language-Action Models in Robotics (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    },
+    "vla/whisper-voice-advanced": {
+      "id": "vla/whisper-voice-advanced",
+      "title": "Voice-to-Action Systems Using Speech Recognition (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "tutorialSidebar"
+    }
+  }
+}

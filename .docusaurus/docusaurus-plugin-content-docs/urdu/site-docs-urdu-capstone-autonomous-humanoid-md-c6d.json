@@ -1,0 +1,19 @@
+{
+  "id": "capstone/autonomous-humanoid",
+  "title": "autonomous-humanoid",
+  "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+  "source": "@site/docs-urdu/capstone/autonomous-humanoid.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/autonomous-humanoid",
+  "permalink": "/docs/urdu/capstone/autonomous-humanoid",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "intro",
+    "permalink": "/docs/urdu/intro"
+  }
+}

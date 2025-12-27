@@ -1,0 +1,23 @@
+{
+  "id": "physical-ai/sensors-intermediate",
+  "title": "Sensors in Physical AI & Humanoid Robotics (Intermediate Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/physical-ai/sensors-intermediate.md",
+  "sourceDirName": "physical-ai",
+  "slug": "/physical-ai/sensors-intermediate",
+  "permalink": "/docs/personalized-intermediate/physical-ai/sensors-intermediate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Embodied Intelligence in Physical AI (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/physical-ai/embodied-intelligence-intermediate"
+  },
+  "next": {
+    "title": "ROS 2 Nodes, Topics, Services & Actions (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/ros2/nodes-topics-services-intermediate"
+  }
+}

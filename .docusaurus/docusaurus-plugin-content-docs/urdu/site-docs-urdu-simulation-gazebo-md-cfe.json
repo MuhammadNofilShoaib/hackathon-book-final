@@ -1,0 +1,23 @@
+{
+  "id": "simulation/gazebo",
+  "title": "gazebo",
+  "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
+  "source": "@site/docs-urdu/simulation/gazebo.md",
+  "sourceDirName": "simulation",
+  "slug": "/simulation/gazebo",
+  "permalink": "/docs/urdu/simulation/gazebo",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "urdf-humanoids",
+    "permalink": "/docs/urdu/ros2/urdf-humanoids"
+  },
+  "next": {
+    "title": "unity",
+    "permalink": "/docs/urdu/simulation/unity"
+  }
+}

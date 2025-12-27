@@ -1,0 +1,24 @@
+{
+  "id": "module1-the-robotic-nervous-system",
+  "title": "Chapter 1: The Robotic Nervous System",
+  "description": "Introduction",
+  "source": "@site/docs/module1-the-robotic-nervous-system.md",
+  "sourceDirName": ".",
+  "slug": "/module1-the-robotic-nervous-system",
+  "permalink": "/docs/module1-the-robotic-nervous-system",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/physical-ai-hackathon/spec-kit-plus/edit/main/docs/module1-the-robotic-nervous-system.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Local Development Guide",
+    "permalink": "/docs/local-development"
+  },
+  "next": {
+    "title": "Chapter 2: The Digital Twin",
+    "permalink": "/docs/module2-the-digital-twin"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "quickstart",
+  "title": "Quick Start Guide",
+  "description": "This guide will help you get started with Spec-Driven Development using Spec Kit.",
+  "source": "@site/docs/quickstart.md",
+  "sourceDirName": ".",
+  "slug": "/quickstart",
+  "permalink": "/docs/quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/physical-ai-hackathon/spec-kit-plus/edit/main/docs/quickstart.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Sensors in Physical AI & Humanoid Robotics",
+    "permalink": "/docs/physical-ai/sensors"
+  },
+  "next": {
+    "title": "ROS 2 Nodes, Topics, Services & Actions",
+    "permalink": "/docs/ros2/nodes-topics-services"
+  }
+}

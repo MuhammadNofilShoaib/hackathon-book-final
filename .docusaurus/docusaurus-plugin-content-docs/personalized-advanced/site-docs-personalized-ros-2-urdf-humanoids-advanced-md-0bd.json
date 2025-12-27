@@ -1,0 +1,23 @@
+{
+  "id": "ros2/urdf-humanoids-advanced",
+  "title": "URDF for Humanoid Robotics (Advanced Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/ros2/urdf-humanoids-advanced.md",
+  "sourceDirName": "ros2",
+  "slug": "/ros2/urdf-humanoids-advanced",
+  "permalink": "/docs/personalized-advanced/ros2/urdf-humanoids-advanced",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ROS 2 Basics for Physical AI (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/ros2/ros2-basics-advanced"
+  },
+  "next": {
+    "title": "Gazebo Simulation for Physical AI (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/simulation/gazebo-advanced"
+  }
+}

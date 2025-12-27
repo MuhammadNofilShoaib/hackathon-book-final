@@ -1,0 +1,24 @@
+{
+  "id": "ros2/nodes-topics-services",
+  "title": "ROS 2 Nodes, Topics, Services & Actions",
+  "description": "Concept",
+  "source": "@site/docs/ros2/nodes-topics-services.md",
+  "sourceDirName": "ros2",
+  "slug": "/ros2/nodes-topics-services",
+  "permalink": "/docs/ros2/nodes-topics-services",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/physical-ai-hackathon/spec-kit-plus/edit/main/docs/ros2/nodes-topics-services.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Quick Start Guide",
+    "permalink": "/docs/quickstart"
+  },
+  "next": {
+    "title": "ROS 2 Basics for Physical AI",
+    "permalink": "/docs/ros2/ros2-basics"
+  }
+}

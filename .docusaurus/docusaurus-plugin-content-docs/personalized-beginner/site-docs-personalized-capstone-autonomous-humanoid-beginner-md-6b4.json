@@ -1,0 +1,19 @@
+{
+  "id": "capstone/autonomous-humanoid-beginner",
+  "title": "Capstone Project: Building an Autonomous Humanoid Robot (Beginner Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/capstone/autonomous-humanoid-beginner.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/autonomous-humanoid-beginner",
+  "permalink": "/docs/personalized-beginner/capstone/autonomous-humanoid-beginner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Introduction to Physical AI & Humanoid Robotics (Beginner Level)",
+    "permalink": "/docs/personalized-beginner/intro-beginner"
+  }
+}

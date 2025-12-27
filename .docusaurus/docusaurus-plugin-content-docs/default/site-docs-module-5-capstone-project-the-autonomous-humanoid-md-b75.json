@@ -1,0 +1,24 @@
+{
+  "id": "module5-capstone-project-the-autonomous-humanoid",
+  "title": "Chapter 5: The Autonomous Humanoid",
+  "description": "Introduction",
+  "source": "@site/docs/module5-capstone-project-the-autonomous-humanoid.md",
+  "sourceDirName": ".",
+  "slug": "/module5-capstone-project-the-autonomous-humanoid",
+  "permalink": "/docs/module5-capstone-project-the-autonomous-humanoid",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/physical-ai-hackathon/spec-kit-plus/edit/main/docs/module5-capstone-project-the-autonomous-humanoid.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 4: Vision-Language-Action",
+    "permalink": "/docs/module4-vision-language-action"
+  },
+  "next": {
+    "title": "NVIDIA Isaac ROS for Physical AI",
+    "permalink": "/docs/nvidia-isaac/isaac-ros"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "nvidia-isaac/urdf-humanoids-advanced",
+  "title": "URDF for Humanoid Robotics (Advanced Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/nvidia-isaac/urdf-humanoids-advanced.md",
+  "sourceDirName": "nvidia-isaac",
+  "slug": "/nvidia-isaac/urdf-humanoids-advanced",
+  "permalink": "/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-advanced",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Navigation and Path Planning with Nav2 for Humanoid Robots (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/nvidia-isaac/nav2-advanced"
+  },
+  "next": {
+    "title": "Embodied Intelligence in Physical AI (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/physical-ai/embodied-intelligence-advanced"
+  }
+}

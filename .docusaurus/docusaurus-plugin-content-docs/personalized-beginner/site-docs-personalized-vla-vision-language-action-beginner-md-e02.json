@@ -1,0 +1,23 @@
+{
+  "id": "vla/vision-language-action-beginner",
+  "title": "Vision-Language-Action Models in Robotics (Beginner Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/vla/vision-language-action-beginner.md",
+  "sourceDirName": "vla",
+  "slug": "/vla/vision-language-action-beginner",
+  "permalink": "/docs/personalized-beginner/vla/vision-language-action-beginner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Using Large Language Models for Cognitive Planning in Robots (Beginner Level)",
+    "permalink": "/docs/personalized-beginner/vla/llm-planning-beginner"
+  },
+  "next": {
+    "title": "Voice-to-Action Systems Using Speech Recognition (Beginner Level)",
+    "permalink": "/docs/personalized-beginner/vla/whisper-voice-beginner"
+  }
+}

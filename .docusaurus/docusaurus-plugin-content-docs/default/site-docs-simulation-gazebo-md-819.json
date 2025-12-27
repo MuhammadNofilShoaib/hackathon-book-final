@@ -1,0 +1,24 @@
+{
+  "id": "simulation/gazebo",
+  "title": "Gazebo Simulation for Physical AI",
+  "description": "Concept",
+  "source": "@site/docs/simulation/gazebo.md",
+  "sourceDirName": "simulation",
+  "slug": "/simulation/gazebo",
+  "permalink": "/docs/simulation/gazebo",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/physical-ai-hackathon/spec-kit-plus/edit/main/docs/simulation/gazebo.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "URDF for Humanoid Robotics",
+    "permalink": "/docs/ros2/urdf-humanoids"
+  },
+  "next": {
+    "title": "Unity Simulation for Physical AI",
+    "permalink": "/docs/simulation/unity"
+  }
+}
