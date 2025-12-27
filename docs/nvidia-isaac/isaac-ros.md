@@ -1,916 +1,449 @@
-# Isaac ROS: Hardware-Accelerated Perception and VSLAM
+# NVIDIA Isaac ROS for Physical AI
 
 ## Concept
 
-Isaac ROS is a collection of hardware-accelerated perception and navigation packages that leverage NVIDIA's GPU computing capabilities to dramatically improve the performance of robotic perception tasks. Think of it as a specialized toolkit that takes traditional ROS 2 perception algorithms and supercharges them with GPU acceleration, enabling real-time processing of complex sensor data that would be impossible on CPU-only systems.
+NVIDIA Isaac ROS is a collection of hardware-accelerated software packages that extend the Robot Operating System (ROS) with GPU-accelerated perception, navigation, and manipulation capabilities. It bridges the gap between traditional robotics software and NVIDIA's GPU-accelerated computing platforms, enabling robots to process complex sensor data in real-time using AI and accelerated computing.
 
-In robotics, perception is the foundation of intelligent behavior - robots must understand their environment through sensors before they can make intelligent decisions. Traditional CPU-based perception algorithms often struggle with the computational demands of processing high-resolution camera images, dense LiDAR point clouds, and complex computer vision tasks in real-time. Isaac ROS solves this by utilizing NVIDIA GPUs and specialized accelerators to perform these computations at much higher speeds.
+Isaac ROS is particularly important for Physical AI because it provides:
+- GPU-accelerated perception algorithms for real-time sensor processing
+- Hardware-optimized computer vision and deep learning inference
+- Integration with NVIDIA's Jetson and EGX platforms for edge computing
+- ROS 2 native packages that leverage CUDA, TensorRT, and cuDNN
+- Accelerated SLAM, object detection, and manipulation algorithms
 
-Isaac ROS matters in Physical AI because it enables robots to process sensor data with the speed and accuracy required for real-world operation. For humanoid robots operating in dynamic environments, the ability to quickly process visual information, build accurate maps, and understand spatial relationships is crucial for safe and effective navigation and manipulation.
+The platform enables robots to perform complex AI tasks that would be computationally prohibitive on CPU-only systems, such as real-time semantic segmentation, 3D reconstruction, and simultaneous localization and mapping (SLAM). This is crucial for Physical AI systems that need to process large amounts of sensor data in real-time to make intelligent decisions about their environment and actions.
 
-If you're familiar with how graphics cards accelerate gaming and visualization applications, Isaac ROS applies similar principles to robotics perception. Just as GPUs can render complex 3D scenes in real-time, they can also process complex sensor data streams, perform computer vision algorithms, and run SLAM (Simultaneous Localization and Mapping) computations at dramatically improved speeds.
+Isaac ROS packages are designed to seamlessly integrate with existing ROS 2 ecosystems while taking advantage of NVIDIA's hardware acceleration. This allows developers to maintain their existing ROS workflows while benefiting from GPU acceleration for compute-intensive tasks.
 
-## ASCII Diagram
+The framework includes packages for:
+- Accelerated perception (stereo vision, LiDAR processing, image segmentation)
+- Navigation and mapping (GPU-accelerated SLAM)
+- Manipulation (GPU-accelerated inverse kinematics)
+- Sensor drivers optimized for NVIDIA hardware
+
+## Diagram
 
 ```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                    ISAAC ROS ARCHITECTURE                               │
-├─────────────────────────────────────────────────────────────────────────┤
-│                                                                         │
-│  ┌─────────────────┐    ROS 2 MESSAGES    ┌─────────────────────────┐   │
-│  │   ROS 2         │ ────────────────────▶│    ISAAC ROS            │   │
-│  │   NODES         │                      │    PACKAGES             │   │
-│  │                 │ ◀─────────────────── │                         │   │
-│  │  ┌──────────┐   │   CONTROL COMMANDS   │  ┌──────────────────┐   │   │
-│  │  │Navigation│   │                      │  │ Perception       │   │   │
-│  │  │Nodes     │───┼──────────────────────────│ (Hardware        │   │   │
-│  │  └──────────┘   │                      │  │  Accelerated)    │   │   │
-│  │                 │                      │  ├──────────────────┤   │   │
-│  │  ┌──────────┐   │                      │  │ VSLAM            │   │   │
-│  │  │Perception│   │                      │  │ (Visual SLAM)    │   │   │
-│  │  │Nodes     │───┼──────────────────────────│  Accelerated)    │   │   │
-│  │  └──────────┘   │                      │  └──────────────────┘   │   │
-│  └─────────────────┘                      └─────────────────────────┘   │
-│         │                                           │                   │
-│         ▼                                           ▼                   │
-│  ┌─────────────────┐                      ┌─────────────────────────┐   │
-│  │  SENSORS        │                      │    NVIDIA GPU           │   │
-│  │  (Cameras,      │                      │    COMPUTING            │   │
-│  │  LiDAR, IMU)    │─────────────────────▶│    PLATFORM             │   │
-│  │                 │    SENSOR DATA       │                         │   │
-│  └─────────────────┘                      │  ┌──────────────────┐   │   │
-│                                           │  │ CUDA Cores       │   │   │
-│                                           │  │ (Parallel        │   │   │
-│                                           │  │  Processing)     │   │   │
-│                                           │  ├──────────────────┤   │   │
-│                                           │  │ Tensor Cores     │   │   │
-│                                           │  │ (AI/ML           │   │   │
-│                                           │  │  Acceleration)   │   │   │
-│                                           │  ├──────────────────┤   │   │
-│                                           │  │ RT Cores         │   │   │
-│                                           │  │ (Ray Tracing/    │   │   │
-│                                           │  │  Computer Vision)│   │   │
-│                                           │  └──────────────────┘   │   │
-│                                           └─────────────────────────┘   │
-│                                                                         │
-├─────────────────────────────────────────────────────────────────────────┤
-│                ISAAC ROS PERCEPTION PIPELINE                            │
-│                                                                         │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────────┐ │
-│  │   CAMERA        │    │  Isaac ROS      │    │  Hardware         │ │
-│  │   INPUT         │───▶│  Stereo DNN     │───▶│  Accelerated      │ │
-│  │   (RGB)         │    │  (TensorRT)     │    │  Stereo          │ │
-│  └─────────────────┘    └─────────────────┘    │  Disparity)       │ │
-│                                                  └─────────────────────┘ │
-│                                                  │                     │ │
-│  ┌─────────────────┐    ┌─────────────────┐    │  ┌─────────────────┐│ │
-│  │   STEREO        │    │  Isaac ROS      │    │  │  Isaac ROS      ││ │
-│  │   CAMERAS       │───▶│  Stereo DNN     │───┼──│  Depth DNN      ││ │
-│  │   INPUT         │    │  (TensorRT)     │    │  │  (TensorRT)     ││ │
-│  └─────────────────┘    └─────────────────┘    │  └─────────────────┘│ │
-│                                                  │                     │ │
-│  ┌─────────────────┐    ┌─────────────────┐    │  ┌─────────────────┐│ │
-│  │   DEPTH         │    │  Isaac ROS      │    │  │  Hardware       ││ │
-│  │   SENSOR        │───▶│  Segmentation   │───┼──│  Accelerated    ││ │
-│  │   INPUT         │    │  (TensorRT)     │    │  │  Segmentation  ││ │
-│  └─────────────────┘    └─────────────────┘    │  │  (CUDA)         ││ │
-│                                                  └─────────────────────┘ │
-│                                                                         │
-├─────────────────────────────────────────────────────────────────────────┤
-│                VSLAM (VISUAL SLAM) FLOW                                 │
-│                                                                         │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────────┐ │
-│  │   MONOCULAR     │    │  Isaac ROS      │    │  Hardware         │ │
-│  │   CAMERA        │───▶│  Visual Odometry│───▶│  Accelerated      │ │
-│  │   INPUT         │    │  (CUDA/TensorRT)│    │  Feature         │ │
-│  └─────────────────┘    └─────────────────┘    │  Detection &     │ │
-│                                                  │  Tracking        │ │
-│  ┌─────────────────┐    ┌─────────────────┐    └─────────────────────┘ │
-│  │   STEREO        │    │  Isaac ROS      │                            │
-│  │   CAMERAS       │───▶│  Stereo Visual  │────────────────────────────┤
-│  │   INPUT         │    │  Odometry       │                            │
-│  └─────────────────┘    └─────────────────┘                            │
-│         │                       │                                       │
-│         ▼                       ▼                                       │
-│  ┌─────────────────┐    ┌─────────────────┐                            │
-│  │  Feature        │    │  Pose &         │                            │
-│  │  Extraction     │    │  Map Building   │                            │
-│  │  (Hardware      │    │  (Hardware      │                            │
-│  │  Accelerated)   │    │  Accelerated)   │                            │
-│  └─────────────────┘    └─────────────────┘                            │
-│         │                       │                                       │
-│         └───────────────────────┼───────────────────────────────────────┘
-│                                 │
-│                    ┌─────────────────┐
-│                    │  Global Map     │
-│                    │  Optimization   │
-│                    │  (Bundle        │
-│                    │  Adjustment)    │
-│                    └─────────────────┘
-│                                                                         │
-└─────────────────────────────────────────────────────────────────────────┘
+                    NVIDIA ISAAC ROS ARCHITECTURE
+                              │
+        ┌─────────────────────┼─────────────────────┐
+        │                     │                     │
+    HARDWARE ACCELERATION  ROS 2 INTEGRATION    AI INFERENCE
+        │                     │                     │
+    ┌───▼───┐            ┌─────▼─────┐         ┌───▼───┐
+    │CUDA    │            │ROS 2      │         │TensorRT│
+    │Core    │            │Messages   │         │Engine  │
+    │TensorRT│            │Topics     │         │Models  │
+    │cuDNN   │            │Services   │         │Inference│
+    │cuBLAS  │            │Actions    │         │Optimization│
+    └───────┬─┘            └─────────┬─┘         └─────┬─┘
+            │                        │                   │
+            ▼                        ▼                   ▼
+    ┌─────────────────────────────────────────────────────────┐
+    │                 ISAAC ROS CORE                          │
+    │  ┌─────────────┐   ┌─────────────┐   ┌─────────────┐  │
+    │  │  Perception │   │  Navigation │   │  Manipulation│  │
+    │  │  Packages   │   │  Packages   │   │  Packages   │  │
+    │  │             │   │             │   │             │  │
+    │  └─────────────┘   └─────────────┘   └─────────────┘  │
+    └─────────────────────────────────────────────────────────┘
+                              │
+                    ┌─────────▼─────────┐
+                    │   APPLICATION     │
+                    │   LAYER           │
+                    └───────────────────┘
 ```
-
-This diagram illustrates the Isaac ROS architecture with its hardware-accelerated perception capabilities, showing how sensor data flows through Isaac ROS packages to leverage NVIDIA GPU computing for enhanced performance.
 
 ## Real-world Analogy
 
-Think of Isaac ROS like a Formula 1 racing team's pit crew compared to a regular car repair shop. Both can perform the same basic functions, but the Formula 1 crew has specialized tools, techniques, and expertise that allow them to process tasks in seconds rather than minutes. Just as the racing team uses pneumatic wrenches, hydraulic lifts, and coordinated teamwork to change tires in under 2 seconds, Isaac ROS uses GPU acceleration, optimized algorithms, and parallel processing to process sensor data at speeds that enable real-time robotics applications.
+Think of NVIDIA Isaac ROS like a high-performance sports car engine combined with a GPS navigation system. Just as a sports car engine provides the raw power to accelerate quickly and handle complex driving situations, NVIDIA Isaac ROS provides the computational power to process sensor data and make decisions in real-time. And just as a GPS system helps the driver navigate efficiently through traffic, Isaac ROS provides navigation and mapping capabilities to help robots navigate through complex environments.
 
-A regular car shop might take several minutes to diagnose engine problems using basic tools and sequential processes. Similarly, traditional CPU-based ROS nodes might take hundreds of milliseconds to process a single camera image for object detection. But just as the Formula 1 pit crew can perform complex maintenance in seconds, Isaac ROS can process high-resolution images, build 3D maps, and track visual features in real-time using NVIDIA's specialized hardware.
+A high-performance sports car needs:
+- Powerful engine for rapid acceleration
+- Advanced navigation for optimal route planning
+- Responsive handling for quick maneuvers
+- Real-time performance monitoring
 
-Just as professional racing teams invest in specialized equipment to gain competitive advantages, robotics developers use Isaac ROS to gain performance advantages that enable more sophisticated robot behaviors. The difference is that instead of winning races, these performance gains enable robots to operate safely and effectively in complex real-world environments.
+Similarly, Isaac ROS for robotics:
+- Provides GPU-accelerated computing for rapid sensor processing
+- Offers advanced navigation algorithms for optimal path planning
+- Enables responsive manipulation for quick interactions
+- Provides real-time performance monitoring and optimization
 
-## Pseudo-code (Isaac ROS / Python style)
+Just as a sports car driver can focus on racing while the engine and navigation system handle the complex computations behind the scenes, robot operators can focus on high-level tasks while Isaac ROS handles the computationally intensive perception and navigation tasks. The key difference is that while a sports car operates in the physical world of roads and traffic, Isaac ROS enables robots to operate in complex physical environments with dynamic obstacles and interactions.
+
+## Pseudo-code (ROS 2 / Python)
 
 ```python
-# Isaac ROS example - Hardware-accelerated stereo vision pipeline
+# ROS 2 Node for Isaac ROS Integration
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Image, CameraInfo
-from stereo_msgs.msg import DisparityImage
+from std_msgs.msg import String, Bool
+from sensor_msgs.msg import Image, PointCloud2, CameraInfo
+from geometry_msgs.msg import Twist, Pose, Point
+from builtin_interfaces.msg import Time
+from std_srvs.srv import SetBool
 from cv_bridge import CvBridge
 import numpy as np
 import cv2
-from geometry_msgs.msg import PointStamped
-from visualization_msgs.msg import Marker, MarkerArray
-import message_filters
+import cuda  # Placeholder for CUDA integration
+from typing import Dict, List, Optional
 
-class IsaacROSPipeline(Node):
-    """Hardware-accelerated perception pipeline using Isaac ROS concepts"""
-
+class IsaacROSIntegrationNode(Node):
     def __init__(self):
-        super().__init__('isaac_ros_pipeline')
+        super().__init__('isaac_ros_integration')
 
-        # Create subscribers for stereo cameras
-        self.left_image_sub = message_filters.Subscriber(self, Image, '/camera/left/image_rect_color')
-        self.right_image_sub = message_filters.Subscriber(self, Image, '/camera/right/image_rect_color')
-        self.left_info_sub = message_filters.Subscriber(self, CameraInfo, '/camera/left/camera_info')
-        self.right_info_sub = message_filters.Subscriber(self, CameraInfo, '/camera/right/camera_info')
+        # Initialize CV Bridge for image processing
+        self.cv_bridge = CvBridge()
 
-        # Synchronize stereo image pairs
-        self.ts = message_filters.ApproximateTimeSynchronizer(
-            [self.left_image_sub, self.right_image_sub, self.left_info_sub, self.right_info_sub],
-            queue_size=10,
-            slop=0.1
-        )
-        self.ts.registerCallback(self.stereo_callback)
+        # Publishers for Isaac ROS accelerated perception
+        self.segmentation_pub = self.create_publisher(Image, '/isaac_segmentation', 10)
+        self.depth_pub = self.create_publisher(Image, '/isaac_depth', 10)
+        self.detection_pub = self.create_publisher(String, '/isaac_detections', 10)
 
-        # Publishers for processed data
-        self.disparity_pub = self.create_publisher(DisparityImage, '/disparity_map', 10)
-        self.depth_pub = self.create_publisher(Image, '/depth/image', 10)
-        self.obstacles_pub = self.create_publisher(MarkerArray, '/obstacles', 10)
-
-        # CV Bridge for image conversion
-        self.bridge = CvBridge()
-
-        # Stereo parameters (would be loaded from camera calibration)
-        self.baseline = 0.12  # Baseline in meters
-        self.focal_length = 320.0  # Focal length in pixels
-
-        # Hardware acceleration indicators
-        self.gpu_available = True  # In real Isaac ROS, this would check for GPU
-        self.get_logger().info('Isaac ROS Pipeline initialized with hardware acceleration')
-
-    def stereo_callback(self, left_msg, right_msg, left_info, right_info):
-        """Process synchronized stereo image pair"""
-        try:
-            # Convert ROS images to OpenCV
-            left_cv = self.bridge.imgmsg_to_cv2(left_msg, desired_encoding='bgr8')
-            right_cv = self.bridge.imgmsg_to_cv2(right_msg, desired_encoding='bgr8')
-
-            # Convert to grayscale for stereo processing
-            left_gray = cv2.cvtColor(left_cv, cv2.COLOR_BGR2GRAY)
-            right_gray = cv2.cvtColor(right_cv, cv2.COLOR_BGR2GRAY)
-
-            # In real Isaac ROS, this would use hardware-accelerated stereo matching
-            # For this example, we'll simulate the process
-            if self.gpu_available:
-                # Simulate GPU-accelerated stereo matching
-                disparity = self.gpu_stereo_matching(left_gray, right_gray)
-            else:
-                # Fallback to CPU-based stereo matching
-                disparity = self.cpu_stereo_matching(left_gray, right_gray)
-
-            # Convert disparity to depth
-            depth_image = self.disparity_to_depth(disparity)
-
-            # Publish disparity map
-            disparity_msg = DisparityImage()
-            disparity_msg.image = self.bridge.cv2_to_imgmsg(disparity.astype(np.float32), encoding='32FC1')
-            disparity_msg.header = left_msg.header
-            disparity_msg.f = self.focal_length
-            disparity_msg.T = self.baseline
-            self.disparity_pub.publish(disparity_msg)
-
-            # Publish depth image
-            depth_msg = self.bridge.cv2_to_imgmsg(depth_image, encoding='32FC1')
-            depth_msg.header = left_msg.header
-            self.depth_pub.publish(depth_msg)
-
-            # Detect obstacles in depth image
-            obstacles = self.detect_obstacles(depth_image, left_msg.header)
-            self.obstacles_pub.publish(obstacles)
-
-            self.get_logger().info(f'Stereo processing completed: {left_cv.shape}')
-
-        except Exception as e:
-            self.get_logger().error(f'Error in stereo callback: {e}')
-
-    def gpu_stereo_matching(self, left_gray, right_gray):
-        """Simulate GPU-accelerated stereo matching (in real Isaac ROS, this would use CUDA)"""
-        # In real Isaac ROS, this would use NVIDIA's hardware-accelerated stereo matching
-        # For simulation, we'll use OpenCV's GPU module if available, otherwise CPU
-        try:
-            # Try to use OpenCV's GPU stereo matcher
-            stereo = cv2.StereoBM_create(numDisparities=16, blockSize=15)
-            disparity = stereo.compute(left_gray, right_gray)
-            return disparity.astype(np.float32) / 16.0
-        except:
-            # Fallback to basic stereo matching
-            stereo = cv2.StereoSGBM_create(
-                minDisparity=0,
-                numDisparities=16,
-                blockSize=5,
-                P1=8 * 3 * 5**2,
-                P2=32 * 3 * 5**2
-            )
-            disparity = stereo.compute(left_gray, right_gray)
-            return disparity.astype(np.float32) / 16.0
-
-    def cpu_stereo_matching(self, left_gray, right_gray):
-        """CPU-based stereo matching (fallback)"""
-        stereo = cv2.StereoBM_create(numDisparities=16, blockSize=15)
-        disparity = stereo.compute(left_gray, right_gray)
-        return disparity.astype(np.float32) / 16.0
-
-    def disparity_to_depth(self, disparity):
-        """Convert disparity map to depth image"""
-        # Depth = (baseline * focal_length) / disparity
-        # Add small epsilon to avoid division by zero
-        depth = np.zeros_like(disparity)
-        valid = disparity > 0.1  # Only compute depth for valid disparities
-        depth[valid] = (self.baseline * self.focal_length) / (disparity[valid] + 1e-6)
-        return depth
-
-    def detect_obstacles(self, depth_image, header):
-        """Detect obstacles in depth image and return as markers"""
-        marker_array = MarkerArray()
-
-        # Simple obstacle detection: find regions with depth < threshold
-        obstacle_threshold = 1.0  # meters
-        obstacle_mask = (depth_image > 0.1) & (depth_image < obstacle_threshold)
-
-        # Find contours of obstacle regions
-        contours, _ = cv2.findContours(
-            (obstacle_mask * 255).astype(np.uint8),
-            cv2.RETR_EXTERNAL,
-            cv2.CHAIN_APPROX_SIMPLE
-        )
-
-        for i, contour in enumerate(contours):
-            if cv2.contourArea(contour) > 100:  # Filter small regions
-                # Calculate bounding box
-                x, y, w, h = cv2.boundingRect(contour)
-
-                # Convert pixel coordinates to 3D world coordinates (simplified)
-                center_x = x + w // 2
-                center_y = y + h // 2
-                avg_depth = np.mean(depth_image[y:y+h, x:x+w][depth_image[y:y+h, x:x+w] > 0])
-
-                if avg_depth > 0:
-                    # Create marker for obstacle
-                    marker = Marker()
-                    marker.header = header
-                    marker.ns = "obstacles"
-                    marker.id = i
-                    marker.type = Marker.CUBE
-                    marker.action = Marker.ADD
-
-                    # Position based on image coordinates and depth
-                    marker.pose.position.x = avg_depth  # Forward
-                    marker.pose.position.y = (center_x - 320) * avg_depth / self.focal_length  # Left/right
-                    marker.pose.position.z = (center_y - 240) * avg_depth / self.focal_length  # Up/down
-
-                    marker.pose.orientation.w = 1.0
-                    marker.scale.x = w / self.focal_length  # Width
-                    marker.scale.y = h / self.focal_length  # Height
-                    marker.scale.z = avg_depth * 0.5  # Height based on depth
-                    marker.color.r = 1.0
-                    marker.color.g = 0.0
-                    marker.color.b = 0.0
-                    marker.color.a = 0.5
-
-                    marker_array.markers.append(marker)
-
-        return marker_array
-
-class IsaacROSVisualSLAM(Node):
-    """Hardware-accelerated Visual SLAM using Isaac ROS concepts"""
-
-    def __init__(self):
-        super().__init__('isaac_ros_vslam')
-
-        # Subscribers
+        # Subscribers for sensor data
         self.image_sub = self.create_subscription(
-            Image,
-            '/camera/image_raw',
-            self.image_callback,
-            10
-        )
-
+            Image, '/camera/image_raw', self.image_callback, 10)
+        self.pointcloud_sub = self.create_subscription(
+            PointCloud2, '/velodyne_points', self.pointcloud_callback, 10)
         self.camera_info_sub = self.create_subscription(
-            CameraInfo,
-            '/camera/camera_info',
-            self.camera_info_callback,
-            10
-        )
+            CameraInfo, '/camera/camera_info', self.camera_info_callback, 10)
 
-        # Publishers
-        self.pose_pub = self.create_publisher(PointStamped, '/vslam/pose', 10)
-        self.map_pub = self.create_publisher(MarkerArray, '/vslam/map', 10)
-        self.feature_pub = self.create_publisher(MarkerArray, '/vslam/features', 10)
+        # Service servers for Isaac ROS control
+        self.enable_perception_srv = self.create_service(
+            SetBool, '/isaac_enable_perception', self.enable_perception_callback)
+        self.enable_mapping_srv = self.create_service(
+            SetBool, '/isaac_enable_mapping', self.enable_mapping_callback)
 
-        # CV Bridge
-        self.bridge = CvBridge()
+        # Isaac ROS specific parameters
+        self.isaac_ros_config = {
+            'gpu_id': 0,
+            'tensorrt_engine': '/opt/isaac_ros/models/yolov5m_plan.pt',
+            'cuda_stream_priority': 0,
+            'enable_tensorrt_fp16': True,
+            'max_batch_size': 1
+        }
 
-        # VSLAM state
-        self.camera_matrix = None
-        self.dist_coeffs = None
-        self.previous_features = None
-        self.current_pose = np.eye(4)  # 4x4 identity matrix
-        self.map_points = []  # 3D points in the map
-        self.feature_trackers = {}  # Track features across frames
-
-        # Hardware acceleration flag
+        # Internal state
+        self.current_image = None
+        self.current_pointcloud = None
+        self.camera_info = None
+        self.perception_enabled = True
+        self.mapping_enabled = False
         self.gpu_available = True
-        self.get_logger().info('Isaac ROS Visual SLAM initialized')
+
+        # Timer for Isaac ROS processing
+        self.processing_timer = self.create_timer(0.033, self.isaac_ros_processing_loop)  # ~30 Hz
+
+        # Initialize Isaac ROS components
+        self.initialize_isaac_ros_components()
+
+    def initialize_isaac_ros_components(self):
+        """Initialize Isaac ROS accelerated components"""
+        self.get_logger().info('Initializing Isaac ROS components...')
+
+        # Check GPU availability
+        try:
+            import pycuda.driver as cuda
+            cuda.init()
+            gpu_count = cuda.Device.count()
+            self.get_logger().info(f'GPU devices available: {gpu_count}')
+
+            if gpu_count == 0:
+                self.gpu_available = False
+                self.get_logger().warn('No GPU devices found - falling back to CPU processing')
+        except ImportError:
+            self.gpu_available = False
+            self.get_logger().warn('PyCUDA not available - falling back to CPU processing')
+
+        # Initialize TensorRT engine if available
+        if self.gpu_available:
+            try:
+                # This would typically load a TensorRT engine for inference
+                # For example: YOLOv5 for object detection
+                self.initialize_tensorrt_engine()
+            except Exception as e:
+                self.get_logger().warn(f'Could not initialize TensorRT: {e}')
+
+        self.get_logger().info('Isaac ROS components initialized')
+
+    def initialize_tensorrt_engine(self):
+        """Initialize TensorRT engine for accelerated inference"""
+        self.get_logger().info(f'Loading TensorRT engine from: {self.isaac_ros_config["tensorrt_engine"]}')
+
+        # In a real implementation, this would load a TensorRT engine
+        # For example, for object detection:
+        # self.trt_engine = tensorrt.load_engine(self.isaac_ros_config['tensorrt_engine'])
+        # self.context = self.trt_engine.create_execution_context()
+
+        self.get_logger().info('TensorRT engine loaded successfully')
+
+    def image_callback(self, msg):
+        """Process image data from camera for Isaac ROS accelerated processing"""
+        try:
+            # Convert ROS Image to OpenCV format
+            cv_image = self.cv_bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+            self.current_image = cv_image
+
+            self.get_logger().debug(f'Received image: {cv_image.shape[1]}x{cv_image.shape[0]}')
+        except Exception as e:
+            self.get_logger().error(f'Error converting image: {e}')
+
+    def pointcloud_callback(self, msg):
+        """Process point cloud data from LiDAR for Isaac ROS accelerated processing"""
+        self.current_pointcloud = msg
+        self.get_logger().debug(f'Received point cloud with {msg.height * msg.width} points')
 
     def camera_info_callback(self, msg):
         """Process camera calibration information"""
-        self.camera_matrix = np.array(msg.k).reshape(3, 3)
-        self.dist_coeffs = np.array(msg.d)
+        self.camera_info = msg
+        self.get_logger().debug(f'Received camera info: {msg.width}x{msg.height}')
 
-    def image_callback(self, msg):
-        """Process incoming camera image for VSLAM"""
+    def enable_perception_callback(self, request, response):
+        """Enable/disable Isaac ROS perception processing"""
+        self.perception_enabled = request.data
+        response.success = True
+        response.message = f'Perception processing {"enabled" if self.perception_enabled else "disabled"}'
+
+        self.get_logger().info(response.message)
+        return response
+
+    def enable_mapping_callback(self, request, response):
+        """Enable/disable Isaac ROS mapping processing"""
+        self.mapping_enabled = request.data
+        response.success = True
+        response.message = f'Mapping processing {"enabled" if self.mapping_enabled else "disabled"}'
+
+        self.get_logger().info(response.message)
+        return response
+
+    def isaac_ros_processing_loop(self):
+        """Main processing loop for Isaac ROS accelerated tasks"""
+        if not self.perception_enabled:
+            return
+
+        if self.current_image is not None:
+            # Process image with Isaac ROS accelerated perception
+            self.process_image_perception()
+
+        if self.current_pointcloud is not None and self.mapping_enabled:
+            # Process point cloud for mapping with Isaac ROS
+            self.process_pointcloud_mapping()
+
+    def process_image_perception(self):
+        """Process image with Isaac ROS accelerated perception"""
+        if self.current_image is None:
+            return
+
         try:
-            # Convert to OpenCV
-            cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
+            # Example: Accelerated semantic segmentation using Isaac ROS
+            segmented_image = self.accelerated_segmentation(self.current_image)
+            if segmented_image is not None:
+                seg_msg = self.cv_bridge.cv2_to_imgmsg(segmented_image, encoding='mono8')
+                seg_msg.header.stamp = self.get_clock().now().to_msg()
+                seg_msg.header.frame_id = 'camera_optical'
+                self.segmentation_pub.publish(seg_msg)
 
-            # Detect and track features
-            current_features = self.detect_features(cv_image)
+            # Example: Accelerated object detection using Isaac ROS
+            detections = self.accelerated_object_detection(self.current_image)
+            if detections:
+                detection_msg = String()
+                detection_msg.data = str(detections)
+                self.detection_pub.publish(detection_msg)
 
-            # In real Isaac ROS, feature detection would be GPU-accelerated
-            if self.previous_features is not None and len(current_features) > 0:
-                # Track features between frames
-                tracked_features, current_pose_delta = self.track_features(
-                    self.previous_features, current_features
-                )
-
-                # Update global pose
-                if current_pose_delta is not None:
-                    self.current_pose = self.current_pose @ current_pose_delta
-
-                    # Publish current pose
-                    pose_msg = PointStamped()
-                    pose_msg.header = msg.header
-                    pose_msg.point.x = self.current_pose[0, 3]
-                    pose_msg.point.y = self.current_pose[1, 3]
-                    pose_msg.point.z = self.current_pose[2, 3]
-                    self.pose_pub.publish(pose_msg)
-
-                # Triangulate new map points
-                self.triangulate_new_points(tracked_features, msg.header)
-
-            # Publish map and features
-            self.publish_map(msg.header)
-            self.publish_features(current_features, msg.header)
-
-            # Update for next frame
-            self.previous_features = current_features
+            # Example: Accelerated depth estimation (if stereo camera available)
+            depth_image = self.accelerated_depth_estimation(self.current_image)
+            if depth_image is not None:
+                depth_msg = self.cv_bridge.cv2_to_imgmsg(depth_image, encoding='passthrough')
+                depth_msg.header.stamp = self.get_clock().now().to_msg()
+                depth_msg.header.frame_id = 'camera_optical'
+                self.depth_pub.publish(depth_msg)
 
         except Exception as e:
-            self.get_logger().error(f'Error in VSLAM callback: {e}')
+            self.get_logger().error(f'Error in Isaac ROS perception processing: {e}')
 
-    def detect_features(self, image):
-        """Detect features in image (GPU-accelerated in Isaac ROS)"""
-        # Convert to grayscale
-        gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    def accelerated_segmentation(self, image):
+        """Accelerated semantic segmentation using Isaac ROS (simulated)"""
+        # In a real implementation, this would use Isaac ROS segmentation packages
+        # which leverage TensorRT and CUDA for acceleration
 
-        # In real Isaac ROS, this would use hardware-accelerated feature detection
         if self.gpu_available:
-            # Use GPU-accelerated feature detector (simulated)
-            # In real implementation: cv2.cuda.GFTTDetector or similar
-            detector = cv2.FastFeatureDetector_create()
-            keypoints = detector.detect(gray)
+            # Simulate accelerated segmentation
+            # This would typically use a TensorRT-optimized segmentation model
+            height, width = image.shape[:2]
+            segmented = np.zeros((height, width), dtype=np.uint8)
+
+            # Simulate segmentation results (in reality, this would run on GPU)
+            # For example, segment different regions based on color
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            _, binary = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
+
+            return binary
         else:
-            # Fallback to CPU-based detection
-            detector = cv2.FastFeatureDetector_create()
-            keypoints = detector.detect(gray)
+            # Fallback to CPU processing
+            self.get_logger().warn('Using CPU fallback for segmentation')
+            height, width = image.shape[:2]
+            return np.zeros((height, width), dtype=np.uint8)
 
-        # Extract keypoint coordinates
-        features = []
-        for kp in keypoints:
-            features.append((int(kp.pt[0]), int(kp.pt[1])))
+    def accelerated_object_detection(self, image):
+        """Accelerated object detection using Isaac ROS (simulated)"""
+        # In a real implementation, this would use Isaac ROS detection packages
+        # leveraging TensorRT-optimized models like YOLO
 
-        return features
+        if self.gpu_available:
+            # Simulate accelerated object detection
+            # This would typically run a TensorRT-optimized model on GPU
+            detections = []
 
-    def track_features(self, prev_features, curr_features):
-        """Track features between frames"""
-        if len(prev_features) < 10 or len(curr_features) < 10:
-            return [], None
+            # Example: Detect large bright regions as potential objects
+            hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+            # Detect bright regions (could indicate objects of interest)
+            bright_mask = cv2.inRange(hsv, (0, 0, 200), (180, 50, 255))
 
-        # Convert to numpy arrays for OpenCV
-        prev_pts = np.array(prev_features, dtype=np.float32).reshape(-1, 1, 2)
-        curr_pts = np.array(curr_features, dtype=np.float32).reshape(-1, 1, 2)
+            contours, _ = cv2.findContours(bright_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-        # Optical flow tracking
-        if len(prev_pts) > 0 and len(curr_pts) > 0:
-            # Calculate optical flow
-            status, err = cv2.calcOpticalFlowPyrLK(
-                np.zeros_like(prev_pts.reshape(-1, 2)[:, 0]),  # Placeholder for previous image
-                curr_pts.reshape(-1, 2)[:, 0],  # Placeholder for current image
-                prev_pts, curr_pts,
-                winSize=(21, 21),
-                maxLevel=3,
-                criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 30, 0.01)
-            )
+            for contour in contours:
+                area = cv2.contourArea(contour)
+                if area > 500:  # Only consider large enough regions
+                    x, y, w, h = cv2.boundingRect(contour)
+                    detections.append({
+                        'class': 'bright_region',
+                        'confidence': 0.8,
+                        'bbox': [x, y, x+w, y+h],
+                        'area': area
+                    })
 
-            # Filter good matches
-            good_matches = []
-            for i, stat in enumerate(status):
-                if stat[0] == 1:  # Feature was tracked successfully
-                    good_matches.append((prev_features[i], (int(curr_pts[i][0][0]), int(curr_pts[i][0][1]))))
+            return detections
+        else:
+            # Fallback to CPU processing
+            self.get_logger().warn('Using CPU fallback for object detection')
+            return []
 
-            # Estimate pose change from tracked features
-            if len(good_matches) >= 10:
-                prev_matched = np.array([m[0] for m in good_matches], dtype=np.float32)
-                curr_matched = np.array([m[1] for m in good_matches], dtype=np.float32)
+    def accelerated_depth_estimation(self, image):
+        """Accelerated depth estimation using Isaac ROS (simulated)"""
+        # In a real implementation, this would use Isaac ROS stereo vision packages
+        # for depth estimation from stereo cameras
 
-                # Estimate essential matrix and decompose to get rotation/translation
-                if self.camera_matrix is not None:
-                    E, mask = cv2.findEssentialMat(
-                        curr_matched, prev_matched,
-                        self.camera_matrix,
-                        method=cv2.RANSAC,
-                        threshold=1.0
-                    )
+        if self.gpu_available:
+            # Simulate depth estimation (typically requires stereo pair)
+            height, width = image.shape[:2]
+            depth = np.ones((height, width), dtype=np.float32) * 10.0  # Default depth of 10m
 
-                    if E is not None:
-                        # Decompose essential matrix
-                        _, R, t, _ = cv2.recoverPose(E, curr_matched, prev_matched, self.camera_matrix)
+            # Simulate some depth variation
+            for i in range(height):
+                for j in range(width):
+                    # Create a gradient effect
+                    depth[i, j] = 1.0 + (i / height) * 9.0
 
-                        # Create transformation matrix
-                        pose_delta = np.eye(4)
-                        pose_delta[:3, :3] = R
-                        pose_delta[:3, 3] = t.flatten() * 0.1  # Scale factor for simulation
+            return depth
+        else:
+            # Fallback to CPU processing
+            self.get_logger().warn('Using CPU fallback for depth estimation')
+            height, width = image.shape[:2]
+            return np.ones((height, width), dtype=np.float32) * 10.0
 
-                        return good_matches, pose_delta
+    def process_pointcloud_mapping(self):
+        """Process point cloud data for mapping using Isaac ROS"""
+        if self.current_pointcloud is None:
+            return
 
-        return [], None
+        # In a real implementation, this would use Isaac ROS mapping packages
+        # such as accelerated SLAM algorithms
+        self.get_logger().debug('Processing point cloud for mapping')
 
-    def triangulate_new_points(self, tracked_features, header):
-        """Triangulate 3D points from tracked features"""
-        # In a real implementation, this would use previous poses and current pose
-        # to triangulate 3D points from 2D feature correspondences
-        pass
+        # Example: Simulate point cloud processing for mapping
+        # This would typically involve GPU-accelerated operations like:
+        # - Point cloud registration
+        # - Feature extraction
+        # - Map building
+        # - Loop closure detection
 
-    def publish_map(self, header):
-        """Publish the current map as markers"""
-        marker_array = MarkerArray()
+        # For simulation, we'll just log the processing
+        self.get_logger().debug(f'Processed point cloud with {self.current_pointcloud.height * self.current_pointcloud.width} points for mapping')
 
-        # Create markers for map points
-        for i, point in enumerate(self.map_points):
-            marker = Marker()
-            marker.header = header
-            marker.ns = "vslam_map"
-            marker.id = i
-            marker.type = Marker.SPHERE
-            marker.action = Marker.ADD
-            marker.pose.position.x = point[0]
-            marker.pose.position.y = point[1]
-            marker.pose.position.z = point[2]
-            marker.pose.orientation.w = 1.0
-            marker.scale.x = 0.05
-            marker.scale.y = 0.05
-            marker.scale.z = 0.05
-            marker.color.r = 0.0
-            marker.color.g = 1.0
-            marker.color.b = 0.0
-            marker.color.a = 1.0
+class IsaacROSNavigateNode(Node):
+    def __init__(self):
+        super().__init__('isaac_ros_navigate')
 
-            marker_array.markers.append(marker)
+        # Publishers for navigation commands
+        self.nav_cmd_pub = self.create_publisher(Twist, '/isaac_nav_cmd', 10)
 
-        self.map_pub.publish(marker_array)
+        # Subscribers for navigation data
+        self.map_sub = self.create_subscription(
+            String, '/isaac_map', self.map_callback, 10)
+        self.path_sub = self.create_subscription(
+            String, '/isaac_path', self.path_callback, 10)
 
-    def publish_features(self, features, header):
-        """Publish current features as markers"""
-        marker_array = MarkerArray()
+        # Timer for navigation loop
+        self.nav_timer = self.create_timer(0.1, self.navigation_loop)
 
-        for i, (x, y) in enumerate(features[:50]):  # Limit to first 50 features
-            marker = Marker()
-            marker.header = header
-            marker.ns = "vslam_features"
-            marker.id = i
-            marker.type = Marker.CUBE
-            marker.action = Marker.ADD
-            marker.pose.position.x = float(x) / 100.0  # Scale for visualization
-            marker.pose.position.y = float(y) / 100.0
-            marker.pose.position.z = 0.0
-            marker.pose.orientation.w = 1.0
-            marker.scale.x = 0.02
-            marker.scale.y = 0.02
-            marker.scale.z = 0.02
-            marker.color.r = 1.0
-            marker.color.g = 0.0
-            marker.color.b = 1.0
-            marker.color.a = 1.0
+        # Navigation state
+        self.current_map = None
+        self.current_path = None
+        self.robot_pose = Pose()
 
-            marker_array.markers.append(marker)
+    def map_callback(self, msg):
+        """Process map data from Isaac ROS mapping"""
+        try:
+            # In a real implementation, this would parse map data
+            # such as occupancy grids or 3D maps
+            self.current_map = eval(msg.data)  # For example only - use proper parsing in real code
+            self.get_logger().debug(f'Received Isaac ROS map data: {len(self.current_map) if self.current_map else 0} elements')
+        except Exception as e:
+            self.get_logger().error(f'Error parsing map data: {e}')
 
-        self.feature_pub.publish(marker_array)
+    def path_callback(self, msg):
+        """Process path data from Isaac ROS path planner"""
+        try:
+            # In a real implementation, this would parse path data
+            # such as waypoints or trajectory points
+            self.current_path = eval(msg.data)  # For example only - use proper parsing in real code
+            self.get_logger().debug(f'Received Isaac ROS path data: {len(self.current_path) if self.current_path else 0} waypoints')
+        except Exception as e:
+            self.get_logger().error(f'Error parsing path data: {e}')
+
+    def navigation_loop(self):
+        """Main navigation loop using Isaac ROS"""
+        if self.current_path and len(self.current_path) > 0:
+            # Example: Navigate towards the next waypoint
+            next_waypoint = self.current_path[0] if isinstance(self.current_path, list) else None
+
+            if next_waypoint:
+                # Calculate direction to next waypoint
+                target_x = next_waypoint.get('x', 0.0) if isinstance(next_waypoint, dict) else 0.0
+                target_y = next_waypoint.get('y', 0.0) if isinstance(next_waypoint, dict) else 0.0
+
+                # Simple proportional controller
+                dx = target_x - self.robot_pose.position.x
+                dy = target_y - self.robot_pose.position.y
+
+                cmd_vel = Twist()
+                cmd_vel.linear.x = min(0.5, max(-0.5, dx * 0.5))  # Max 0.5 m/s
+                cmd_vel.angular.z = min(0.5, max(-0.5, dy * 0.5))  # Max 0.5 rad/s
+
+                self.nav_cmd_pub.publish(cmd_vel)
 
 def main(args=None):
     rclpy.init(args=args)
 
-    # Create Isaac ROS nodes
-    pipeline_node = IsaacROSPipeline()
-    vslam_node = IsaacROSVisualSLAM()
+    # Create Isaac ROS integration node
+    isaac_node = IsaacROSIntegrationNode()
 
-    # Create executor and add nodes
-    executor = rclpy.executors.MultiThreadedExecutor()
-    executor.add_node(pipeline_node)
-    executor.add_node(vslam_node)
+    # Create navigation node if needed
+    nav_node = IsaacROSNavigateNode()
 
     try:
+        # Create executor and add nodes
+        executor = rclpy.executors.MultiThreadedExecutor()
+        executor.add_node(isaac_node)
+        executor.add_node(nav_node)
+
         executor.spin()
     except KeyboardInterrupt:
-        pass
+        isaac_node.get_logger().info('Shutting down Isaac ROS integration nodes')
     finally:
-        pipeline_node.destroy_node()
-        vslam_node.destroy_node()
-        rclpy.shutdown()
-
-if __name__ == '__main__':
-    main()
-```
-
-```python
-# Isaac ROS hardware-accelerated perception example with TensorRT
-import rclpy
-from rclpy.node import Node
-from sensor_msgs.msg import Image
-from cv_bridge import CvBridge
-import numpy as np
-import cv2
-import tensorrt as trt
-import pycuda.driver as cuda
-import pycuda.autoinit
-from typing import List, Tuple
-import time
-
-class IsaacROSPerceptionNode(Node):
-    """Hardware-accelerated perception using TensorRT for deep learning inference"""
-
-    def __init__(self):
-        super().__init__('isaac_ros_perception')
-
-        # Create subscriber for camera input
-        self.image_sub = self.create_subscription(
-            Image,
-            '/camera/image_raw',
-            self.image_callback,
-            10
-        )
-
-        # Publisher for perception results
-        self.detection_pub = self.create_publisher(Image, '/perception/detections', 10)
-
-        # CV Bridge for image conversion
-        self.bridge = CvBridge()
-
-        # Initialize TensorRT engine
-        self.trt_engine = None
-        self.cuda_context = cuda.Device(0).make_context()
-        self.stream = cuda.Stream()
-
-        # Initialize TensorRT engine for object detection
-        self.initialize_tensorrt_engine()
-
-        # Class names for visualization (COCO dataset)
-        self.class_names = [
-            'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train',
-            'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign',
-            'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep',
-            'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella',
-            'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard',
-            'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard',
-            'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup', 'fork',
-            'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange',
-            'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair',
-            'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv',
-            'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave',
-            'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase',
-            'scissors', 'teddy bear', 'hair drier', 'toothbrush'
-        ]
-
-        self.get_logger().info('Isaac ROS Perception Node initialized with TensorRT')
-
-    def initialize_tensorrt_engine(self):
-        """Initialize TensorRT engine for hardware-accelerated inference"""
-        try:
-            # In a real implementation, this would load a pre-built TensorRT engine
-            # For this example, we'll simulate the engine initialization
-            self.get_logger().info('Loading TensorRT engine for object detection...')
-
-            # Simulate loading an engine file
-            # self.trt_engine = self.load_engine('path/to/tensorrt/engine.plan')
-
-            # For simulation, we'll just set a flag indicating TensorRT is available
-            self.trt_engine = "dummy_engine"
-            self.get_logger().info('TensorRT engine loaded successfully')
-
-        except Exception as e:
-            self.get_logger().error(f'Failed to initialize TensorRT engine: {e}')
-            self.trt_engine = None
-
-    def image_callback(self, msg):
-        """Process incoming camera image with hardware-accelerated perception"""
-        try:
-            # Convert ROS image to OpenCV
-            cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
-
-            # Perform object detection using TensorRT
-            if self.trt_engine is not None:
-                detections = self.tensorrt_object_detection(cv_image)
-            else:
-                # Fallback to CPU-based detection
-                detections = self.cpu_object_detection(cv_image)
-
-            # Draw detections on image
-            annotated_image = self.draw_detections(cv_image, detections)
-
-            # Publish annotated image
-            annotated_msg = self.bridge.cv2_to_imgmsg(annotated_image, encoding='bgr8')
-            annotated_msg.header = msg.header
-            self.detection_pub.publish(annotated_msg)
-
-            self.get_logger().info(f'Processed image with {len(detections)} detections')
-
-        except Exception as e:
-            self.get_logger().error(f'Error in image callback: {e}')
-
-    def tensorrt_object_detection(self, image):
-        """Perform object detection using TensorRT (simulated)"""
-        # In a real Isaac ROS implementation, this would use the TensorRT engine
-        # to perform hardware-accelerated object detection
-        start_time = time.time()
-
-        # Preprocess image for TensorRT
-        input_tensor = self.preprocess_image(image)
-
-        # In real implementation:
-        # 1. Copy input to GPU memory
-        # 2. Execute TensorRT inference
-        # 3. Copy output from GPU memory
-        # 4. Post-process results
-
-        # For simulation, we'll use OpenCV's DNN module as a placeholder
-        # that represents the accelerated processing
-        net = cv2.dnn.readNetFromONNX('dummy_model.onnx')  # This would be a TensorRT engine in reality
-
-        # Simulate accelerated processing time
-        time.sleep(0.01)  # Simulate fast inference (10ms)
-
-        # For this example, return simulated detections
-        height, width = image.shape[:2]
-        detections = []
-
-        # Simulate some detections
-        for i in range(3):
-            x = np.random.randint(0, width - 100)
-            y = np.random.randint(0, height - 100)
-            w = np.random.randint(50, 100)
-            h = np.random.randint(50, 100)
-
-            class_id = np.random.randint(0, len(self.class_names))
-            confidence = np.random.uniform(0.6, 0.95)
-
-            detections.append({
-                'bbox': [x, y, x + w, y + h],
-                'class_id': class_id,
-                'confidence': confidence,
-                'class_name': self.class_names[class_id]
-            })
-
-        end_time = time.time()
-        self.get_logger().info(f'TensorRT detection took {(end_time - start_time)*1000:.2f}ms')
-
-        return detections
-
-    def cpu_object_detection(self, image):
-        """CPU-based object detection (fallback)"""
-        start_time = time.time()
-
-        # Fallback to CPU-based detection
-        # This would be much slower than TensorRT
-        height, width = image.shape[:2]
-        detections = []
-
-        # Simulate some detections with slower processing
-        time.sleep(0.1)  # Simulate slower CPU processing (100ms)
-
-        for i in range(2):
-            x = np.random.randint(0, width - 100)
-            y = np.random.randint(0, height - 100)
-            w = np.random.randint(50, 100)
-            h = np.random.randint(50, 100)
-
-            class_id = np.random.randint(0, len(self.class_names))
-            confidence = np.random.uniform(0.5, 0.8)
-
-            detections.append({
-                'bbox': [x, y, x + w, y + h],
-                'class_id': class_id,
-                'confidence': confidence,
-                'class_name': self.class_names[class_id]
-            })
-
-        end_time = time.time()
-        self.get_logger().info(f'CPU detection took {(end_time - start_time)*1000:.2f}ms')
-
-        return detections
-
-    def preprocess_image(self, image):
-        """Preprocess image for TensorRT inference"""
-        # Resize image to model input size (e.g., 640x640 for YOLO)
-        input_height, input_width = 640, 640
-        image_resized = cv2.resize(image, (input_width, input_height))
-
-        # Normalize pixel values
-        image_normalized = image_resized.astype(np.float32) / 255.0
-
-        # Convert to NCHW format (batch, channels, height, width)
-        image_transposed = np.transpose(image_normalized, (2, 0, 1))
-
-        # Add batch dimension
-        image_batched = np.expand_dims(image_transposed, axis=0)
-
-        return image_batched
-
-    def draw_detections(self, image, detections):
-        """Draw detection results on image"""
-        output_image = image.copy()
-
-        for detection in detections:
-            bbox = detection['bbox']
-            class_name = detection['class_name']
-            confidence = detection['confidence']
-
-            # Draw bounding box
-            cv2.rectangle(output_image, (bbox[0], bbox[1]), (bbox[2], bbox[3]), (0, 255, 0), 2)
-
-            # Draw label
-            label = f"{class_name}: {confidence:.2f}"
-            cv2.putText(output_image, label, (bbox[0], bbox[1] - 10),
-                       cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-
-        return output_image
-
-class IsaacROSVSLAMNode(Node):
-    """Hardware-accelerated Visual SLAM using Isaac ROS concepts"""
-
-    def __init__(self):
-        super().__init__('isaac_ros_vslam_node')
-
-        # Subscribers
-        self.image_sub = self.create_subscription(
-            Image,
-            '/camera/image_raw',
-            self.image_callback,
-            10
-        )
-
-        # Publishers
-        self.pose_pub = self.create_publisher(Image, '/vslam/pose_visualization', 10)
-
-        # Initialize state
-        self.previous_image = None
-        self.current_pose = np.eye(4)
-        self.feature_detector = cv2.cuda.SURF_create() if hasattr(cv2.cuda, 'SURF_create') else cv2.SURF_create()
-
-        # Use GPU if available, otherwise CPU
-        self.use_gpu = hasattr(cv2, 'cuda') and cv2.cuda.getCudaEnabledDeviceCount() > 0
-
-        self.get_logger().info(f'Isaac ROS VSLAM initialized with GPU: {self.use_gpu}')
-
-    def image_callback(self, msg):
-        """Process image for Visual SLAM"""
-        try:
-            # Convert ROS image to OpenCV
-            current_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='mono8')
-
-            if self.previous_image is not None:
-                # Compute visual odometry
-                pose_change = self.compute_visual_odometry(self.previous_image, current_image)
-
-                if pose_change is not None:
-                    # Update current pose
-                    self.current_pose = self.current_pose @ pose_change
-
-            # Store current image for next iteration
-            self.previous_image = current_image
-
-        except Exception as e:
-            self.get_logger().error(f'Error in VSLAM callback: {e}')
-
-    def compute_visual_odometry(self, prev_img, curr_img):
-        """Compute visual odometry between two images"""
-        try:
-            if self.use_gpu:
-                # Upload images to GPU
-                prev_gpu = cv2.cuda_GpuMat()
-                curr_gpu = cv2.cuda_GpuMat()
-                prev_gpu.upload(prev_img)
-                curr_gpu.upload(curr_img)
-
-                # Detect and compute descriptors on GPU
-                keypoints_prev, descriptors_prev = self.feature_detector.detectAndCompute(prev_gpu, None)
-                keypoints_curr, descriptors_curr = self.feature_detector.detectAndCompute(curr_gpu, None)
-
-                # Download from GPU
-                keypoints_prev = [cv2.KeyPoint(x=k.pt[0], y=k.pt[1], _size=k.size, _angle=k.angle)
-                                 for k in keypoints_prev]
-                keypoints_curr = [cv2.KeyPoint(x=k.pt[0], y=k.pt[1], _size=k.size, _angle=k.angle)
-                                 for k in keypoints_curr]
-                descriptors_prev = descriptors_prev.download() if descriptors_prev is not None else None
-                descriptors_curr = descriptors_curr.download() if descriptors_curr is not None else None
-            else:
-                # CPU-based feature detection
-                keypoints_prev, descriptors_prev = self.feature_detector.detectAndCompute(prev_img, None)
-                keypoints_curr, descriptors_curr = self.feature_detector.detectAndCompute(curr_img, None)
-
-            if descriptors_prev is None or descriptors_curr is None:
-                return None
-
-            # Match features
-            bf = cv2.BFMatcher()
-            matches = bf.knnMatch(descriptors_prev, descriptors_curr, k=2)
-
-            # Apply ratio test
-            good_matches = []
-            for match_pair in matches:
-                if len(match_pair) == 2:
-                    m, n = match_pair
-                    if m.distance < 0.75 * n.distance:
-                        good_matches.append(m)
-
-            if len(good_matches) >= 10:
-                # Extract corresponding points
-                src_points = np.float32([keypoints_prev[m.queryIdx].pt for m in good_matches]).reshape(-1, 1, 2)
-                dst_points = np.float32([keypoints_curr[m.trainIdx].pt for m in good_matches]).reshape(-1, 1, 2)
-
-                # Compute fundamental matrix
-                F, mask = cv2.findFundamentalMat(src_points, dst_points, cv2.RANSAC, 4, 0.999)
-
-                if F is not None:
-                    # Estimate essential matrix (assuming known camera intrinsics)
-                    # For simplicity, we'll just return a translation based on optical flow
-                    avg_flow_x = np.mean([dst_points[i][0][0] - src_points[i][0][0] for i in range(len(good_matches))])
-                    avg_flow_y = np.mean([dst_points[i][0][1] - src_points[i][0][1] for i in range(len(good_matches))])
-
-                    # Create pose change matrix (simplified)
-                    pose_change = np.eye(4)
-                    pose_change[0, 3] = avg_flow_x * 0.01  # Scale to reasonable units
-                    pose_change[1, 3] = avg_flow_y * 0.01
-
-                    return pose_change
-
-            return None
-
-        except Exception as e:
-            self.get_logger().error(f'Error in visual odometry: {e}')
-            return None
-
-def main(args=None):
-    rclpy.init(args=args)
-
-    # Create Isaac ROS perception nodes
-    perception_node = IsaacROSPerceptionNode()
-    vslam_node = IsaacROSVSLAMNode()
-
-    # Create executor and add nodes
-    executor = rclpy.executors.MultiThreadedExecutor()
-    executor.add_node(perception_node)
-    executor.add_node(vslam_node)
-
-    try:
-        executor.spin()
-    except KeyboardInterrupt:
-        pass
-    finally:
-        perception_node.destroy_node()
-        vslam_node.destroy_node()
+        isaac_node.destroy_node()
+        nav_node.destroy_node()
         rclpy.shutdown()
 
 if __name__ == '__main__':
@@ -919,25 +452,27 @@ if __name__ == '__main__':
 
 ## Summary
 
-Isaac ROS represents a significant advancement in robotic perception by leveraging NVIDIA's GPU computing capabilities to accelerate critical perception tasks. It provides hardware-accelerated packages for stereo vision, visual SLAM, object detection, and other perception algorithms that would be computationally prohibitive on CPU-only systems.
+NVIDIA Isaac ROS provides GPU-accelerated capabilities that significantly enhance traditional ROS 2 robotics applications. By leveraging NVIDIA's CUDA, TensorRT, and specialized hardware, Isaac ROS enables robots to perform computationally intensive tasks that would be impossible with CPU-only systems.
 
-The key benefits of Isaac ROS include:
-- **Hardware Acceleration**: GPU-accelerated processing of sensor data for real-time performance
-- **Deep Learning Integration**: TensorRT-optimized neural networks for perception tasks
-- **Visual SLAM**: Accelerated visual odometry and mapping algorithms
-- **Stereo Vision**: Real-time depth estimation from stereo cameras
-- **Computer Vision**: Optimized algorithms for feature detection, tracking, and recognition
+Key features of Isaac ROS include:
+- Hardware-accelerated perception algorithms for real-time sensor processing
+- GPU-optimized computer vision and deep learning inference
+- Integration with NVIDIA's Jetson and EGX platforms for edge computing
+- ROS 2 native packages that leverage CUDA, TensorRT, and cuDNN
+- Accelerated SLAM, object detection, and manipulation algorithms
 
-Isaac ROS is particularly valuable for Physical AI and humanoid robotics because it enables robots to process complex sensor data streams in real-time, making them capable of operating safely and effectively in dynamic environments. The hardware acceleration allows for sophisticated perception capabilities that were previously impossible on robotic platforms.
+For Physical AI and humanoid robotics, Isaac ROS is particularly valuable because it enables real-time processing of complex sensor data streams, such as high-resolution cameras, LiDAR, and other sensors that generate large amounts of data. This allows robots to make intelligent decisions about their environment and actions in real-time, which is essential for safe and effective operation in dynamic environments.
 
-The platform's integration with NVIDIA's GPU ecosystem, including CUDA, TensorRT, and specialized accelerators, makes it a powerful tool for developing perception systems that can match the processing requirements of real-world robotics applications.
+The platform seamlessly integrates with existing ROS 2 workflows while providing the computational power needed for advanced AI applications. This enables developers to maintain their existing tools and processes while benefiting from GPU acceleration for compute-intensive tasks.
 
 ## Exercises
 
-1. **Basic Understanding**: Explain the difference between CPU-based and GPU-accelerated perception processing. What types of robotic perception tasks benefit most from hardware acceleration?
+1. **Setup Exercise**: Install NVIDIA Isaac ROS packages and verify that you can run accelerated perception nodes. Test with sample images to confirm GPU acceleration is working.
 
-2. **Application Exercise**: Design an Isaac ROS pipeline for a humanoid robot that needs to navigate indoors. Include stereo vision for obstacle detection, visual SLAM for localization, and object detection for scene understanding. Describe the computational requirements and expected performance improvements.
+2. **Conceptual Exercise**: Design an Isaac ROS pipeline for a humanoid robot that needs to recognize and manipulate objects in real-time. What accelerated perception packages would you use and how would they integrate?
 
-3. **Implementation Exercise**: Create a ROS 2 node that simulates the integration between Isaac ROS perception nodes and a robot's navigation system. Show how perception data flows to the path planning and control systems.
+3. **Programming Exercise**: Create a ROS 2 node that uses Isaac ROS to perform real-time object detection and tracking. Integrate the detection results with a robot navigation system.
 
-4. **Challenge Exercise**: Implement a complete perception pipeline that uses Isaac ROS for visual SLAM and object detection, then uses the results for navigation planning. Include fallback mechanisms for when GPU acceleration is not available.
+4. **Integration Exercise**: Extend the provided Isaac ROS integration code to include accelerated SLAM capabilities for environment mapping and localization.
+
+5. **Advanced Exercise**: Implement a complete perception pipeline using Isaac ROS that processes stereo camera data for depth estimation and object detection, then uses this information for robot navigation.

@@ -1,676 +1,302 @@
-# Robot Simulation with Gazebo: Physics, Sensors, and Environments
+# Gazebo Simulation for Physical AI
 
 ## Concept
 
-Gazebo is a powerful 3D simulation environment that provides realistic physics simulation, high-fidelity graphics, and support for various robot sensors. Think of it as a virtual laboratory where you can test and develop robot behaviors without the risks and costs associated with real-world experimentation.
+Gazebo is a powerful 3D simulation environment that enables the development, testing, and validation of robotics applications in a realistic virtual environment. It provides high-fidelity physics simulation, realistic sensor models, and detailed 3D visualization capabilities that make it an essential tool for Physical AI and humanoid robotics development.
 
-In robotics, simulation is crucial because it allows developers to:
-- Test algorithms in a safe, repeatable environment
-- Debug complex behaviors without physical robot damage
-- Evaluate robot performance across various scenarios
-- Train machine learning models before real-world deployment
-- Prototype new robot designs and configurations
+Gazebo simulates real-world physics including gravity, friction, collisions, and dynamics, allowing robots to be tested in environments that closely mimic real-world conditions. For humanoid robotics, this is particularly important because these robots have complex kinematic structures and need to interact with diverse environments and objects.
 
-Gazebo matters in Physical AI because it bridges the gap between pure simulation and reality. Unlike simple 2D simulators, Gazebo provides realistic physics simulation with properties like friction, gravity, and collision detection that closely match real-world behavior. This is especially important for humanoid robots that need to maintain balance, manipulate objects, and navigate complex environments.
+The simulation environment includes:
+- Physics engine with accurate collision detection and response
+- Realistic sensor models (cameras, LiDAR, IMU, force/torque sensors)
+- 3D visualization with realistic lighting and materials
+- Support for complex environments and objects
+- Integration with ROS/ROS 2 for seamless robot development
 
-If you're familiar with game engines like Unity or Unreal Engine, Gazebo provides similar capabilities but specifically designed for robotics applications. It includes realistic physics simulation, sensor models, and tools specifically designed for robot development and testing.
+Gazebo is essential for Physical AI because it allows developers to test robot behaviors in a safe, controlled environment before deploying to real hardware. This is especially important for humanoid robots, which are expensive and potentially dangerous if not properly tested.
 
-## ASCII Diagram
+## Diagram
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                    GAZEBO SIMULATION ENVIRONMENT                │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌─────────────┐      PHYSICS ENGINE      ┌─────────────────┐   │
-│  │   ROBOT     │ ────────────────────────▶│   ODE/BULLET    │   │
-│  │  MODEL      │                          │   SIMULATION    │   │
-│  │  (URDF)     │ ◀─────────────────────── │   CORE          │   │
-│  └─────────────┘      JOINT FORCES       └─────────────────┘   │
-│         │                                           │           │
-│         ▼                                           ▼           │
-│  ┌─────────────┐                              ┌─────────────┐   │
-│  │  SENSORS    │                              │  COLLISION  │   │
-│  │  (Cameras,  │                              │  DETECTION  │   │
-│  │  LiDAR,     │                              │             │   │
-│  │  IMU, etc.) │                              └─────────────┘   │
-│  └─────────────┘                                    │             │
-│         │                                           │             │
-│         ▼                                           ▼             │
-│  ┌─────────────┐    DATA FLOW        ┌─────────────────────────┐ │
-│  │  ROS 2      │ ───────────────────▶│    SIMULATION         │ │
-│  │  INTERFACE  │                     │    WORLD              │ │
-│  │             │ ◀────────────────── │    (Environment,      │ │
-│  └─────────────┘   CONTROL COMMANDS  │     Objects, etc.)    │ │
-│                                      └─────────────────────────┘ │
-│                                                                 │
-├─────────────────────────────────────────────────────────────────┤
-│                GAZEBO PLUGIN ARCHITECTURE                       │
-│                                                                 │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────┐ │
-│  │  SENSOR         │    │  PHYSICS        │    │  RENDERING  │ │
-│  │  PLUGINS        │    │  PLUGINS        │    │  PLUGINS    │ │
-│  │                 │    │                 │    │             │ │
-│  │ • Camera        │    │ • Joint Control │    │ • OpenGL    │ │
-│  │ • LiDAR         │    │ • Collision     │    │ • Lighting  │ │
-│  │ • IMU           │    │ • Dynamics      │    │ • Shadows   │ │
-│  │ • Force/Torque  │    │ • Contacts      │    │ • Textures  │ │
-│  └─────────────────┘    └─────────────────┘    └─────────────┘ │
-│         │                       │                       │       │
-│         └───────────────────────┼───────────────────────┘       │
-│                                 │                               │
-│                    ┌─────────────────────────────────────────┐  │
-│                    │        GAZEBO SERVER                  │  │
-│                    │                                       │  │
-│                    │  ┌──────────────────────────────────┐ │  │
-│                    │  │        SIMULATION LOOP           │ │  │
-│                    │  │                                  │ │  │
-│                    │  │  1. Update Physics               │ │  │
-│                    │  │  2. Process Sensor Data          │ │  │
-│                    │  │  3. Handle ROS 2 Communication   │ │  │
-│                    │  │  4. Update Graphics              │ │  │
-│                    │  └──────────────────────────────────┘ │  │
-│                    └─────────────────────────────────────────┘  │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+                    GAZEBO SIMULATION ARCHITECTURE
+                              │
+        ┌─────────────────────┼─────────────────────┐
+        │                     │                     │
+    PHYSICS ENGINE      SENSOR MODELS       VISUALIZATION
+        │                     │                     │
+    ┌───▼───┐            ┌─────▼─────┐         ┌───▼───┐
+    │ODE/    │            │Camera     │         │3D     │
+    │Bullet  │            │LiDAR      │         │Scene  │
+    │Engine  │            │IMU        │         │Viewer │
+    │Gravity │            │Force/Torque│         │OpenGL │
+    │Collisions│          │GPS        │         │       │
+    └───────┬─┘            └─────────┬─┘         └─────┬─┘
+            │                        │                   │
+            ▼                        ▼                   ▼
+    ┌─────────────────────────────────────────────────────────┐
+    │                 GAZEBO CORE                           │
+    │  ┌─────────────┐   ┌─────────────┐   ┌─────────────┐  │
+    │  │  World      │   │  Model      │   │  Plugin     │  │
+    │  │  Description│   │  Database   │   │  Interface  │  │
+    │  │  (SDF)      │   │             │   │             │  │
+    │  └─────────────┘   └─────────────┘   └─────────────┘  │
+    └─────────────────────────────────────────────────────────┘
+                              │
+                    ┌─────────▼─────────┐
+                    │   ROS/ROS2        │
+                    │   Integration     │
+                    └───────────────────┘
 ```
-
-This diagram illustrates the Gazebo simulation environment with its core components: the physics engine, sensor simulation, collision detection, and ROS 2 interface, all working together through the simulation loop.
 
 ## Real-world Analogy
 
-Think of Gazebo like a flight simulator for pilots, but designed specifically for robots. Just as pilots use flight simulators to practice flying in various conditions (storms, equipment failures, different airports) without the risks of real flight, roboticists use Gazebo to test robot behaviors in various environments and conditions without risking physical robots.
+Think of Gazebo like a flight simulator for pilots, but for robots. Just as pilots use flight simulators to practice flying in various conditions (different weather, airports, emergencies) without the risk of crashing a real aircraft, roboticists use Gazebo to practice robot behaviors in various conditions without risking damage to expensive hardware.
 
-A flight simulator needs to accurately model:
-- Aerodynamics and physics of flight
-- Weather conditions and environmental factors
-- Aircraft controls and responses
-- Visual representation of the world
+A flight simulator allows pilots to learn how to handle complex situations like bad weather, equipment failures, or emergency landings in a safe environment. Similarly, Gazebo allows roboticists to test how their robots handle complex physical interactions, unexpected obstacles, or challenging terrain without the risk of damaging the actual robot. This is especially important for humanoid robots, which have many degrees of freedom and complex control systems that need extensive testing.
 
-Similarly, Gazebo models:
-- Physics of robot movement and interaction
-- Environmental factors like friction and gravity
-- Sensor responses and limitations
-- Visual and geometric representation of the world
+Just as flight simulators have become essential for pilot training because they provide safe, repeatable, and cost-effective training, Gazebo has become essential for robot development because it provides safe, repeatable, and cost-effective testing of robot behaviors.
 
-Just as flight simulators allow pilots to practice thousands of scenarios safely, Gazebo allows roboticists to test robot behaviors across countless scenarios, from normal operation to edge cases, all in a safe virtual environment.
-
-## Pseudo-code (ROS 2 / Python style)
-
-```xml
-<!-- Example Gazebo world file with physics properties and models -->
-<?xml version="1.0"?>
-<sdf version="1.7">
-  <world name="robotics_lab">
-    <!-- Physics engine configuration -->
-    <physics type="ode">
-      <max_step_size>0.001</max_step_size>
-      <real_time_factor>1.0</real_time_factor>
-      <real_time_update_rate>1000.0</real_time_update_rate>
-      <gravity>0 0 -9.8</gravity>
-      <ode>
-        <solver>
-          <type>quick</type>
-          <iters>10</iters>
-          <sor>1.0</sor>
-        </solver>
-        <constraints>
-          <cfm>0.0</cfm>
-          <erp>0.2</erp>
-          <contact_max_correcting_vel>100.0</contact_max_correcting_vel>
-          <contact_surface_layer>0.001</contact_surface_layer>
-        </constraints>
-      </ode>
-    </physics>
-
-    <!-- Lighting -->
-    <light name="sun" type="directional">
-      <cast_shadows>true</cast_shadows>
-      <pose>0 0 10 0 0 0</pose>
-      <diffuse>0.8 0.8 0.8 1</diffuse>
-      <specular>0.2 0.2 0.2 1</specular>
-      <attenuation>
-        <range>1000</range>
-        <constant>0.9</constant>
-        <linear>0.01</linear>
-        <quadratic>0.001</quadratic>
-      </attenuation>
-      <direction>-0.4 0.2 -1.0</direction>
-    </light>
-
-    <!-- Ground plane -->
-    <model name="ground_plane">
-      <static>true</static>
-      <link name="link">
-        <collision name="collision">
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>1.0</mu>
-                <mu2>1.0</mu2>
-              </ode>
-            </friction>
-          </surface>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
-          </geometry>
-          <material>
-            <ambient>0.7 0.7 0.7 1</ambient>
-            <diffuse>0.7 0.7 0.7 1</diffuse>
-            <specular>0.0 0.0 0.0 1</specular>
-          </material>
-        </visual>
-      </link>
-    </model>
-
-    <!-- Example robot model with Gazebo plugins -->
-    <include>
-      <uri>model://simple_humanoid</uri>
-      <pose>0 0 1 0 0 0</pose>
-    </include>
-
-    <!-- Example objects in the environment -->
-    <model name="table">
-      <pose>2 0 0 0 0 0</pose>
-      <link name="table_link">
-        <collision name="collision">
-          <geometry>
-            <box>
-              <size>1.0 0.8 0.8</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>0.5</mu>
-                <mu2>0.5</mu2>
-              </ode>
-            </friction>
-          </surface>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <box>
-              <size>1.0 0.8 0.8</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.8 0.6 0.2 1</ambient>
-            <diffuse>0.8 0.6 0.2 1</diffuse>
-            <specular>0.1 0.1 0.1 1</specular>
-          </material>
-        </visual>
-        <inertial>
-          <mass>20.0</mass>
-          <inertia>
-            <ixx>1.0</ixx>
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>1.0</iyy>
-            <iyz>0.0</iyz>
-            <izz>1.0</izz>
-          </inertia>
-        </inertial>
-      </link>
-    </model>
-
-    <!-- Example obstacle -->
-    <model name="obstacle">
-      <pose>-1 1 0.2 0 0 0</pose>
-      <link name="link">
-        <collision name="collision">
-          <geometry>
-            <cylinder>
-              <radius>0.2</radius>
-              <length>0.4</length>
-            </cylinder>
-          </geometry>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <cylinder>
-              <radius>0.2</radius>
-              <length>0.4</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <ambient>1.0 0.0 0.0 1</ambient>
-            <diffuse>1.0 0.0 0.0 1</diffuse>
-          </material>
-        </visual>
-        <inertial>
-          <mass>2.0</mass>
-          <inertia>
-            <ixx>0.1</ixx>
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyy>0.1</iyy>
-            <iyz>0.0</iyz>
-            <izz>0.08</izz>
-          </inertia>
-        </inertial>
-      </link>
-    </model>
-  </world>
-</sdf>
-```
+## Pseudo-code (ROS 2 / Python)
 
 ```python
-# Gazebo plugin example - Camera sensor plugin
+# ROS 2 Node for Gazebo Simulation Control
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Image, CameraInfo
-from cv_bridge import CvBridge
-import numpy as np
-import cv2
+from std_msgs.msg import String
+from geometry_msgs.msg import Twist, Pose
+from sensor_msgs.msg import JointState, Imu, Image
+from gazebo_msgs.srv import SpawnEntity, DeleteEntity, SetEntityState
+from gazebo_msgs.msg import ModelState
+from builtin_interfaces.msg import Time
+import math
+import time
 
-class GazeboCameraPlugin(Node):
-    """Simulated camera plugin for Gazebo"""
+class GazeboSimulationNode(Node):
     def __init__(self):
-        super().__init__('gazebo_camera_plugin')
+        super().__init__('gazebo_simulation')
 
-        # Create publisher for camera images
-        self.image_pub = self.create_publisher(Image, '/camera/image_raw', 10)
-        self.info_pub = self.create_publisher(CameraInfo, '/camera/camera_info', 10)
+        # Publishers for commanding the simulated robot
+        self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.joint_cmd_pub = self.create_publisher(JointState, '/joint_commands', 10)
 
-        # CV Bridge for image conversion
-        self.bridge = CvBridge()
+        # Subscribers for sensor data from simulation
+        self.joint_state_sub = self.create_subscription(
+            JointState, '/joint_states', self.joint_state_callback, 10)
+        self.imu_sub = self.create_subscription(
+            Imu, '/imu/data', self.imu_callback, 10)
+        self.camera_sub = self.create_subscription(
+            Image, '/camera/image_raw', self.camera_callback, 10)
 
-        # Camera parameters (simulated)
-        self.camera_info = CameraInfo()
-        self.camera_info.width = 640
-        self.camera_info.height = 480
-        self.camera_info.k = [640.0, 0.0, 320.0, 0.0, 640.0, 240.0, 0.0, 0.0, 1.0]  # Camera matrix
-        self.camera_info.distortion_model = 'plumb_bob'
-        self.camera_info.d = [0.0, 0.0, 0.0, 0.0, 0.0]  # Distortion coefficients
+        # Service clients for Gazebo control
+        self.spawn_client = self.create_client(SpawnEntity, '/spawn_entity')
+        self.delete_client = self.create_client(DeleteEntity, '/delete_entity')
+        self.set_state_client = self.create_client(SetEntityState, '/set_entity_state')
 
-        # Timer to simulate camera capture rate
-        self.timer = self.create_timer(0.1, self.capture_image)
-
-        # Simulated environment state
+        # Internal state
+        self.current_joint_positions = {}
         self.simulation_time = 0.0
+        self.robot_pose = Pose()
 
-    def capture_image(self):
-        """Simulate capturing an image from the virtual camera"""
-        # In a real Gazebo plugin, this would receive image data from Gazebo
-        # For simulation, we'll create a synthetic image
+        # Wait for Gazebo services to be available
+        while not self.spawn_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Spawn service not available, waiting...')
 
-        # Create a synthetic image with some geometric shapes
-        image = np.zeros((480, 640, 3), dtype=np.uint8)
+        while not self.delete_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Delete service not available, waiting...')
 
-        # Add some colored shapes to simulate environment
-        cv2.rectangle(image, (100, 100), (200, 200), (255, 0, 0), -1)  # Blue rectangle
-        cv2.circle(image, (400, 300), 50, (0, 255, 0), -1)  # Green circle
-        cv2.line(image, (0, 400), (640, 400), (255, 255, 255), 2)  # White line (floor)
+        while not self.set_state_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Set state service not available, waiting...')
 
-        # Add some noise to make it more realistic
-        noise = np.random.normal(0, 10, image.shape).astype(np.int16)
-        image = np.clip(image.astype(np.int16) + noise, 0, 255).astype(np.uint8)
+        # Timer for simulation control
+        self.sim_control_timer = self.create_timer(0.1, self.simulation_control_loop)
 
-        # Convert to ROS Image message
-        ros_image = self.bridge.cv2_to_imgmsg(image, encoding='bgr8')
-        ros_image.header.stamp = self.get_clock().now().to_msg()
-        ros_image.header.frame_id = 'camera_link'
+    def joint_state_callback(self, msg):
+        """Process joint state data from simulation"""
+        for i, name in enumerate(msg.name):
+            if i < len(msg.position):
+                self.current_joint_positions[name] = msg.position[i]
 
-        # Publish image and camera info
-        self.image_pub.publish(ros_image)
-        self.camera_info.header.stamp = ros_image.header.stamp
-        self.info_pub.publish(self.camera_info)
+        self.get_logger().debug(f'Received joint states for {len(msg.name)} joints')
 
-        self.simulation_time += 0.1
+    def imu_callback(self, msg):
+        """Process IMU data from simulation"""
+        # Process IMU data for balance and orientation
+        self.get_logger().debug('Received IMU data from simulation')
 
-class GazeboLidarPlugin(Node):
-    """Simulated LiDAR plugin for Gazebo"""
+    def camera_callback(self, msg):
+        """Process camera data from simulation"""
+        # Process camera data for vision-based tasks
+        self.get_logger().debug(f'Received camera image: {msg.height}x{msg.width}')
+
+    def spawn_robot(self, model_name, model_xml, initial_pose):
+        """Spawn a robot model in the simulation"""
+        request = SpawnEntity.Request()
+        request.name = model_name
+        request.xml = model_xml
+        request.initial_pose = initial_pose
+
+        future = self.spawn_client.call_async(request)
+        return future
+
+    def delete_entity(self, entity_name):
+        """Delete an entity from the simulation"""
+        request = DeleteEntity.Request()
+        request.name = entity_name
+
+        future = self.delete_client.call_async(request)
+        return future
+
+    def set_entity_state(self, entity_name, pose, twist):
+        """Set the state of an entity in the simulation"""
+        request = SetEntityState.Request()
+        request.state = ModelState()
+        request.state.model_name = entity_name
+        request.state.pose = pose
+        request.state.twist = twist
+
+        future = self.set_state_client.call_async(request)
+        return future
+
+    def simulation_control_loop(self):
+        """Main simulation control loop"""
+        # Example: Send velocity commands to the simulated robot
+        cmd = Twist()
+
+        # Simple oscillating motion for demonstration
+        time_val = self.get_clock().now().nanoseconds / 1e9
+        cmd.linear.x = 0.5 * math.sin(time_val * 0.5)  # Forward/back motion
+        cmd.angular.z = 0.3 * math.cos(time_val * 0.3)  # Turning motion
+
+        self.cmd_vel_pub.publish(cmd)
+
+        # Example: Publish joint commands if needed
+        joint_cmd = JointState()
+        joint_cmd.name = list(self.current_joint_positions.keys())
+        joint_cmd.position = [pos + 0.01 * math.sin(time_val) for pos in self.current_joint_positions.values()]
+        joint_cmd.header.stamp = self.get_clock().now().to_msg()
+
+        self.joint_cmd_pub.publish(joint_cmd)
+
+        # Update simulation time
+        self.simulation_time = time_val
+
+    def setup_simulation_environment(self):
+        """Setup the simulation environment with models and objects"""
+        # Example: Spawn a simple box obstacle
+        box_model = """
+        <sdf version="1.6">
+            <model name="obstacle_box">
+                <pose>2 0 0.5 0 0 0</pose>
+                <link name="box_link">
+                    <pose>0 0 0.5 0 0 0</pose>
+                    <collision name="box_collision">
+                        <geometry>
+                            <box>
+                                <size>1 1 1</size>
+                            </box>
+                        </geometry>
+                    </collision>
+                    <visual name="box_visual">
+                        <geometry>
+                            <box>
+                                <size>1 1 1</size>
+                            </box>
+                        </geometry>
+                        <material>
+                            <ambient>0.8 0.2 0.2 1</ambient>
+                            <diffuse>0.8 0.2 0.2 1</diffuse>
+                        </material>
+                    </visual>
+                    <inertial>
+                        <mass>1.0</mass>
+                        <inertia>
+                            <ixx>0.166667</ixx>
+                            <iyy>0.166667</iyy>
+                            <izz>0.166667</izz>
+                        </inertia>
+                    </inertial>
+                </link>
+            </model>
+        </sdf>
+        """
+
+        initial_pose = Pose()
+        initial_pose.position.x = 2.0
+        initial_pose.position.y = 0.0
+        initial_pose.position.z = 0.5
+
+        future = self.spawn_robot("obstacle_box", box_model, initial_pose)
+        return future
+
+class SimulationTestNode(Node):
     def __init__(self):
-        super().__init__('gazebo_lidar_plugin')
+        super().__init__('simulation_test')
 
-        # Create publisher for LiDAR data
-        from sensor_msgs.msg import LaserScan
-        self.scan_pub = self.create_publisher(LaserScan, '/scan', 10)
+        # Publisher for robot commands
+        self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
 
-        # LiDAR parameters
-        self.angle_min = -np.pi / 2
-        self.angle_max = np.pi / 2
-        self.angle_increment = np.pi / 180  # 1 degree
-        self.scan_time = 0.1
-        self.range_min = 0.1
-        self.range_max = 10.0
+        # Subscriber for robot pose feedback
+        self.pose_sub = self.create_subscription(
+            Pose, '/robot_pose', self.pose_callback, 10)
 
-        # Timer for LiDAR updates
-        self.timer = self.create_timer(0.05, self.publish_scan)
+        # Timer for testing
+        self.test_timer = self.create_timer(0.1, self.test_behavior)
 
-    def publish_scan(self):
-        """Simulate LiDAR scan data"""
-        scan = LaserScan()
-        scan.header.stamp = self.get_clock().now().to_msg()
-        scan.header.frame_id = 'laser_link'
+        self.test_start_time = self.get_clock().now().nanoseconds / 1e9
+        self.test_phase = 0
 
-        # Set scan parameters
-        scan.angle_min = self.angle_min
-        scan.angle_max = self.angle_max
-        scan.angle_increment = self.angle_increment
-        scan.time_increment = 0.0
-        scan.scan_time = self.scan_time
-        scan.range_min = self.range_min
-        scan.range_max = self.range_max
+    def pose_callback(self, msg):
+        """Handle robot pose feedback"""
+        self.current_pose = msg
 
-        # Calculate number of ranges
-        num_ranges = int((self.angle_max - self.angle_min) / self.angle_increment) + 1
-        scan.ranges = [float('inf')] * num_ranges
+    def test_behavior(self):
+        """Execute simulation test behavior"""
+        current_time = self.get_clock().now().nanoseconds / 1e9
+        elapsed_time = current_time - self.test_start_time
 
-        # Simulate some obstacles in the environment
-        for i in range(num_ranges):
-            angle = self.angle_min + i * self.angle_increment
+        cmd = Twist()
 
-            # Simulate a wall at 3 meters in front
-            if -0.2 < angle < 0.2:
-                scan.ranges[i] = 3.0 + np.random.normal(0, 0.05)  # Add some noise
+        # Test sequence: move forward, turn, move forward again
+        if elapsed_time < 5.0:  # Move forward for 5 seconds
+            cmd.linear.x = 0.5
+            cmd.angular.z = 0.0
+        elif elapsed_time < 7.0:  # Turn for 2 seconds
+            cmd.linear.x = 0.0
+            cmd.angular.z = 0.5
+        elif elapsed_time < 12.0:  # Move forward again
+            cmd.linear.x = 0.5
+            cmd.angular.z = 0.0
+        else:  # Stop and reset
+            cmd.linear.x = 0.0
+            cmd.angular.z = 0.0
+            self.test_start_time = current_time
 
-            # Simulate an obstacle to the right
-            elif 0.3 < angle < 0.5:
-                scan.ranges[i] = 2.0 + np.random.normal(0, 0.03)
-
-            # Simulate an obstacle to the left
-            elif -0.5 < angle < -0.3:
-                scan.ranges[i] = 2.5 + np.random.normal(0, 0.04)
-
-        # Publish the scan
-        self.scan_pub.publish(scan)
-
-class GazeboIMUPlugin(Node):
-    """Simulated IMU plugin for Gazebo"""
-    def __init__(self):
-        super().__init__('gazebo_imu_plugin')
-
-        # Create publisher for IMU data
-        from sensor_msgs.msg import Imu
-        self.imu_pub = self.create_publisher(Imu, '/imu/data', 10)
-
-        # Timer for IMU updates
-        self.timer = self.create_timer(0.01, self.publish_imu)
-
-        # Simulated robot state
-        self.roll = 0.0
-        self.pitch = 0.0
-        self.yaw = 0.0
-        self.angular_velocity = [0.0, 0.0, 0.0]
-        self.linear_acceleration = [0.0, 0.0, 9.81]  # Gravity
-
-    def publish_imu(self):
-        """Simulate IMU data"""
-        from geometry_msgs.msg import Vector3, Quaternion
-        import math
-
-        imu_msg = Imu()
-        imu_msg.header.stamp = self.get_clock().now().to_msg()
-        imu_msg.header.frame_id = 'imu_link'
-
-        # Simulate small oscillations (e.g., from walking)
-        self.roll = 0.01 * math.sin(self.get_clock().now().nanoseconds * 1e-9 * 2)
-        self.pitch = 0.015 * math.cos(self.get_clock().now().nanoseconds * 1e-9 * 1.5)
-
-        # Convert Euler angles to quaternion
-        cy = math.cos(self.yaw * 0.5)
-        sy = math.sin(self.yaw * 0.5)
-        cp = math.cos(self.pitch * 0.5)
-        sp = math.sin(self.pitch * 0.5)
-        cr = math.cos(self.roll * 0.5)
-        sr = math.sin(self.roll * 0.5)
-
-        imu_msg.orientation.w = cr * cp * cy + sr * sp * sy
-        imu_msg.orientation.x = sr * cp * cy - cr * sp * sy
-        imu_msg.orientation.y = cr * sp * cy + sr * cp * sy
-        imu_msg.orientation.z = cr * cp * sy - sr * sp * cy
-
-        # Simulate angular velocity (small random movements)
-        self.angular_velocity[0] = 0.1 * math.cos(self.get_clock().now().nanoseconds * 1e-9 * 3)
-        self.angular_velocity[1] = 0.08 * math.sin(self.get_clock().now().nanoseconds * 1e-9 * 2.5)
-        self.angular_velocity[2] = 0.05 * math.sin(self.get_clock().now().nanoseconds * 1e-9 * 4)
-
-        imu_msg.angular_velocity.x = self.angular_velocity[0] + np.random.normal(0, 0.001)
-        imu_msg.angular_velocity.y = self.angular_velocity[1] + np.random.normal(0, 0.001)
-        imu_msg.angular_velocity.z = self.angular_velocity[2] + np.random.normal(0, 0.001)
-
-        # Simulate linear acceleration (with gravity and small movements)
-        self.linear_acceleration[0] = 0.2 * math.sin(self.get_clock().now().nanoseconds * 1e-9 * 5)
-        self.linear_acceleration[1] = 0.15 * math.cos(self.get_clock().now().nanoseconds * 1e-9 * 4)
-
-        imu_msg.linear_acceleration.x = self.linear_acceleration[0] + np.random.normal(0, 0.01)
-        imu_msg.linear_acceleration.y = self.linear_acceleration[1] + np.random.normal(0, 0.01)
-        imu_msg.linear_acceleration.z = self.linear_acceleration[2] + np.random.normal(0, 0.01)
-
-        # Covariance matrices (set to realistic values)
-        imu_msg.orientation_covariance = [0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01]
-        imu_msg.angular_velocity_covariance = [0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01]
-        imu_msg.linear_acceleration_covariance = [0.01, 0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.01]
-
-        self.imu_pub.publish(imu_msg)
+        self.cmd_vel_pub.publish(cmd)
 
 def main(args=None):
     rclpy.init(args=args)
 
-    # Create simulation nodes
-    camera_plugin = GazeboCameraPlugin()
-    lidar_plugin = GazeboLidarPlugin()
-    imu_plugin = GazeboIMUPlugin()
+    # Create simulation control node
+    sim_node = GazeboSimulationNode()
 
-    # Create executor and add nodes
-    executor = rclpy.executors.MultiThreadedExecutor()
-    executor.add_node(camera_plugin)
-    executor.add_node(lidar_plugin)
-    executor.add_node(imu_plugin)
+    # Setup the simulation environment
+    sim_node.setup_simulation_environment()
+
+    # Create test node
+    test_node = SimulationTestNode()
 
     try:
+        # Create executor and add nodes
+        executor = rclpy.executors.MultiThreadedExecutor()
+        executor.add_node(sim_node)
+        executor.add_node(test_node)
+
         executor.spin()
     except KeyboardInterrupt:
-        pass
+        sim_node.get_logger().info('Shutting down simulation nodes')
     finally:
-        camera_plugin.destroy_node()
-        lidar_plugin.destroy_node()
-        imu_plugin.destroy_node()
-        rclpy.shutdown()
-
-if __name__ == '__main__':
-    main()
-```
-
-```python
-# Gazebo simulation control and interaction example
-import rclpy
-from rclpy.node import Node
-from std_srvs.srv import Empty
-from gazebo_msgs.srv import SetEntityState, GetEntityState, SpawnEntity
-from geometry_msgs.msg import Pose, Point, Quaternion
-from std_msgs.msg import String
-import math
-
-class GazeboSimulationController(Node):
-    """Controller for Gazebo simulation environment"""
-    def __init__(self):
-        super().__init__('gazebo_simulation_controller')
-
-        # Create clients for Gazebo services
-        self.reset_simulation_client = self.create_client(Empty, '/reset_simulation')
-        self.pause_simulation_client = self.create_client(Empty, '/pause_physics')
-        self.unpause_simulation_client = self.create_client(Empty, '/unpause_physics')
-        self.set_entity_state_client = self.create_client(SetEntityState, '/set_entity_state')
-        self.get_entity_state_client = self.create_client(GetEntityState, '/get_entity_state')
-        self.spawn_entity_client = self.create_client(SpawnEntity, '/spawn_entity')
-
-        # Wait for services to be available
-        self.get_logger().info('Waiting for Gazebo services...')
-        self.reset_simulation_client.wait_for_service()
-        self.pause_simulation_client.wait_for_service()
-        self.unpause_simulation_client.wait_for_service()
-        self.set_entity_state_client.wait_for_service()
-        self.get_entity_state_client.wait_for_service()
-        self.spawn_entity_client.wait_for_service()
-        self.get_logger().info('Gazebo services ready!')
-
-        # Timer to periodically check robot state
-        self.timer = self.create_timer(1.0, self.check_robot_state)
-
-    def reset_simulation(self):
-        """Reset the entire simulation"""
-        request = Empty.Request()
-        future = self.reset_simulation_client.call_async(request)
-        return future
-
-    def pause_simulation(self):
-        """Pause physics simulation"""
-        request = Empty.Request()
-        future = self.pause_simulation_client.call_async(request)
-        return future
-
-    def unpause_simulation(self):
-        """Resume physics simulation"""
-        request = Empty.Request()
-        future = self.unpause_simulation_client.call_async(request)
-        return future
-
-    def move_robot_to_pose(self, entity_name, x, y, z, roll=0, pitch=0, yaw=0):
-        """Move a robot/entity to a specific pose"""
-        request = SetEntityState.Request()
-
-        # Set entity name
-        request.state.name = entity_name
-
-        # Set position
-        request.state.pose.position.x = x
-        request.state.pose.position.y = y
-        request.state.pose.position.z = z
-
-        # Convert Euler to quaternion
-        cy = math.cos(yaw * 0.5)
-        sy = math.sin(yaw * 0.5)
-        cp = math.cos(pitch * 0.5)
-        sp = math.sin(pitch * 0.5)
-        cr = math.cos(roll * 0.5)
-        sr = math.sin(roll * 0.5)
-
-        w = cr * cp * cy + sr * sp * sy
-        x_q = sr * cp * cy - cr * sp * sy
-        y_q = cr * sp * cy + sr * cp * sy
-        z_q = cr * cp * sy - sr * sp * cy
-
-        request.state.pose.orientation.w = w
-        request.state.pose.orientation.x = x_q
-        request.state.pose.orientation.y = y_q
-        request.state.pose.orientation.z = z_q
-
-        # Set zero velocities
-        request.state.twist.linear.x = 0.0
-        request.state.twist.linear.y = 0.0
-        request.state.twist.linear.z = 0.0
-        request.state.twist.angular.x = 0.0
-        request.state.twist.angular.y = 0.0
-        request.state.twist.angular.z = 0.0
-
-        future = self.set_entity_state_client.call_async(request)
-        return future
-
-    def get_robot_state(self, entity_name, reference_frame=''):
-        """Get the current state of a robot/entity"""
-        request = GetEntityState.Request()
-        request.name = entity_name
-        request.reference_frame = reference_frame
-
-        future = self.get_entity_state_client.call_async(request)
-        return future
-
-    def spawn_object(self, name, xml, initial_pose, reference_frame=''):
-        """Spawn a new object in the simulation"""
-        request = SpawnEntity.Request()
-        request.name = name
-        request.xml = xml
-        request.initial_pose = initial_pose
-        request.reference_frame = reference_frame
-
-        future = self.spawn_entity_client.call_async(request)
-        return future
-
-    def check_robot_state(self):
-        """Periodically check robot state"""
-        future = self.get_robot_state('simple_humanoid')
-        # Note: In a real implementation, you would handle the future response
-        # For this example, we'll just log that we're checking
-        self.get_logger().info('Checking robot state...')
-
-class SimulationScenarioManager(Node):
-    """Manager for running different simulation scenarios"""
-    def __init__(self):
-        super().__init__('simulation_scenario_manager')
-
-        # Create controller
-        self.controller = GazeboSimulationController()
-
-        # Timer to run scenarios
-        self.scenario_timer = self.create_timer(5.0, self.run_next_scenario)
-        self.scenario_count = 0
-
-    def run_next_scenario(self):
-        """Run the next simulation scenario"""
-        scenarios = [
-            self.run_balancing_scenario,
-            self.run_navigation_scenario,
-            self.run_manipulation_scenario,
-            self.run_obstacle_avoidance_scenario
-        ]
-
-        if self.scenario_count < len(scenarios):
-            scenario_func = scenarios[self.scenario_count]
-            self.get_logger().info(f'Running scenario {self.scenario_count + 1}: {scenario_func.__name__}')
-            scenario_func()
-            self.scenario_count += 1
-        else:
-            self.scenario_count = 0  # Reset to first scenario
-
-    def run_balancing_scenario(self):
-        """Scenario: Test robot balancing"""
-        self.get_logger().info('Running balancing scenario...')
-        # Move robot to position where balancing is challenged
-        self.controller.move_robot_to_pose('simple_humanoid', 0.0, 0.0, 1.0, 0.0, 0.0, 0.0)
-
-    def run_navigation_scenario(self):
-        """Scenario: Test robot navigation"""
-        self.get_logger().info('Running navigation scenario...')
-        # Move robot to starting position for navigation
-        self.controller.move_robot_to_pose('simple_humanoid', -2.0, 0.0, 1.0, 0.0, 0.0, 0.0)
-
-    def run_manipulation_scenario(self):
-        """Scenario: Test robot manipulation"""
-        self.get_logger().info('Running manipulation scenario...')
-        # Move robot near an object for manipulation
-        self.controller.move_robot_to_pose('simple_humanoid', 1.5, 0.0, 1.0, 0.0, 0.0, 1.57)
-
-    def run_obstacle_avoidance_scenario(self):
-        """Scenario: Test obstacle avoidance"""
-        self.get_logger().info('Running obstacle avoidance scenario...')
-        # Move robot to position with obstacles
-        self.controller.move_robot_to_pose('simple_humanoid', 0.0, -2.0, 1.0, 0.0, 0.0, 0.0)
-
-def main(args=None):
-    rclpy.init(args=args)
-
-    scenario_manager = SimulationScenarioManager()
-
-    try:
-        rclpy.spin(scenario_manager)
-    except KeyboardInterrupt:
-        pass
-    finally:
-        scenario_manager.destroy_node()
+        sim_node.destroy_node()
+        test_node.destroy_node()
         rclpy.shutdown()
 
 if __name__ == '__main__':
@@ -679,24 +305,25 @@ if __name__ == '__main__':
 
 ## Summary
 
-Gazebo is a comprehensive 3D simulation environment that provides realistic physics simulation, sensor modeling, and environment creation capabilities essential for robotics development. It enables safe, repeatable testing of robot behaviors before deployment to real hardware.
+Gazebo is a critical simulation environment for Physical AI and humanoid robotics development. It provides high-fidelity physics simulation, realistic sensor models, and detailed 3D visualization that enable safe and cost-effective robot development and testing.
 
-The key components of Gazebo simulation include:
-- **Physics Engine**: Provides realistic simulation of forces, collisions, and dynamics
-- **Sensor Simulation**: Models cameras, LiDAR, IMU, and other sensors with realistic noise and limitations
-- **Environment Modeling**: Creates complex 3D worlds with objects, lighting, and physics properties
-- **ROS 2 Integration**: Seamless communication between simulated robots and ROS 2 nodes
+Key features of Gazebo include:
+- Accurate physics simulation with collision detection and response
+- Realistic sensor models that closely match real hardware
+- 3D visualization for monitoring robot behavior
+- Integration with ROS/ROS 2 for seamless development workflows
+- Support for complex environments and objects
 
-Gazebo is particularly valuable for Physical AI and humanoid robotics because it allows for testing complex behaviors like walking, manipulation, and navigation in a safe virtual environment. The realistic physics simulation ensures that behaviors developed in Gazebo have a high likelihood of working on real robots.
-
-Understanding Gazebo simulation is crucial for developing robust robot behaviors, as it provides the bridge between algorithm development and real-world deployment.
+For humanoid robotics, Gazebo is especially valuable because it allows for extensive testing of complex multi-joint robots in safe virtual environments before deployment on expensive hardware. The simulation capabilities enable developers to test robot behaviors under various conditions and validate control algorithms before physical implementation.
 
 ## Exercises
 
-1. **Basic Understanding**: Explain the difference between a Gazebo world file and a URDF robot model. How do they work together in a simulation?
+1. **Setup Exercise**: Install Gazebo and verify that you can launch the simulation environment. Spawn a simple robot model and verify that it responds to basic commands.
 
-2. **Application Exercise**: Design a Gazebo world file for a humanoid robot to practice walking. Include a flat ground plane, some obstacles to navigate around, and a target location. Describe the physics properties you would set for realistic walking simulation.
+2. **Conceptual Exercise**: Design a simulation environment for testing a humanoid robot's walking capabilities. What elements would you include in the environment to properly test the robot's locomotion?
 
-3. **Implementation Exercise**: Create a Python node that interfaces with Gazebo to spawn a new object in the simulation at a random location when a service is called. The object should be a simple geometric shape (cube, sphere, or cylinder).
+3. **Programming Exercise**: Create a ROS 2 node that controls a simulated robot to navigate around obstacles in Gazebo. Include sensor feedback to detect and avoid obstacles.
 
-4. **Challenge Exercise**: Implement a simulation scenario where a humanoid robot must navigate through a changing environment (moving obstacles). Create a controller that adjusts the robot's behavior based on sensor feedback from the simulated environment.
+4. **Integration Exercise**: Modify the provided simulation code to include a plugin that adds realistic sensor noise to the simulated sensors.
+
+5. **Advanced Exercise**: Create a complete simulation scenario that tests a humanoid robot's ability to pick up and manipulate objects in Gazebo, including realistic physics interactions.

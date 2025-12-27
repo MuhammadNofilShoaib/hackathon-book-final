@@ -2,651 +2,295 @@
 
 ## Concept
 
-Embodied Intelligence represents a paradigm shift from traditional AI systems that process information in isolation to AI systems that are intrinsically linked to physical bodies and environments. Think of it as the difference between reading about swimming from a book versus actually learning to swim in water - the embodied system learns and operates through direct physical interaction with its environment.
+Embodied intelligence is a fundamental principle in Physical AI that emphasizes the importance of physical form and sensorimotor interactions in the development of intelligent behavior. Unlike traditional AI approaches that treat intelligence as abstract computation, embodied intelligence posits that true intelligence emerges from the tight coupling between an agent's body, its sensors, its actuators, and the environment in which it operates.
 
-In Physical AI, embodied intelligence is the principle that intelligence emerges from the tight coupling between an agent's physical form, its sensors and actuators, and the environment it operates in. This challenges the classical view of intelligence as purely computational, suggesting instead that the body itself plays an active role in cognitive processes. For robots, this means that their physical form, sensor placement, and interaction capabilities are not just mechanical constraints but integral components of their intelligence.
+In the context of humanoid robotics, embodied intelligence means that the robot's intelligence is deeply connected to its physical form. The robot's human-like body structure shapes how it perceives and interacts with the world, just as our human bodies influence our cognition. This approach recognizes that intelligence is not just about processing information in isolation, but about understanding and navigating the physical world through embodied experience.
 
-Embodied intelligence matters because it provides a more natural and efficient approach to creating intelligent systems. Traditional AI often struggles with the complexity of real-world environments because it treats perception and action as separate modules. Embodied intelligence, by contrast, recognizes that perception, action, and cognition are deeply intertwined - just as human intelligence is shaped by our physical bodies and sensory experiences.
+The concept encompasses several key principles:
+- **Morphological computation**: The body's physical properties contribute to intelligent behavior, reducing the computational burden on the brain/controller
+- **Sensorimotor contingency**: Intelligent behavior emerges from the relationship between sensory input and motor output
+- **Environmental interaction**: The environment is used as a resource for computation rather than just an obstacle to navigate
 
-If you're familiar with the concept of "muscle memory" in humans, embodied intelligence in robots works similarly. Just as humans learn to ride a bicycle not just through cognitive understanding but through the physical experience of balancing, pedaling, and steering, embodied robots learn through direct physical interaction with their environment. The robot's body becomes part of its computational system, with physical dynamics contributing to intelligent behavior.
-
-## ASCII Diagram
+## Diagram
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                EMBODIED INTELLIGENCE MODEL                      │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌─────────────────┐    ┌──────────────────────────────────┐   │
-│  │   ENVIRONMENT   │    │         EMBODIED AI              │   │
-│  │                 │    │                                  │   │
-│  │  ┌───────────┐  │    │  ┌────────────────────────────┐  │   │
-│  │  │   Human   │  │    │  │    COGNITIVE PROCESSOR     │  │   │
-│  │  │  Interaction│ ◄───────►                            │  │   │
-│  │  └───────────┘  │    │  │  • Perception Processing   │  │   │
-│  │                 │    │  │  • Decision Making         │  │   │
-│  │  ┌───────────┐  │    │  │  • Learning & Adaptation   │  │   │
-│  │  │   Object  │  │    │  │  • Behavior Generation     │  │   │
-│  │  │  Manipulation│ ◄───────►                            │  │   │
-│  │  └───────────┘  │    │  └────────────────────────────┘  │   │
-│  │                 │    │                                  │   │
-│  │  ┌───────────┐  │    │  ┌────────────────────────────┐  │   │
-│  │  │  Obstacle │  │    │  │      EMBODIED BODY         │  │   │
-│  │  │  Navigation│ ◄───────►                            │  │   │
-│  │  └───────────┘  │    │  │  • Physical Form           │  │   │
-│  │                 │    │  │  • Sensors (Vision, Touch, │  │   │
-│  │  ┌───────────┐  │    │  │    Proprioception)         │  │   │
-│  │  │   Sound   │  │    │  │  • Actuators (Motors,      │  │   │
-│  │  │  Response │ ◄───────►  │    Grippers, etc.)         │  │   │
-│  │  └───────────┘  │    │  │  • Physical Dynamics       │  │   │
-│  └─────────────────┘    │  └────────────────────────────┘  │   │
-│                         └──────────────────────────────────┘   │
-│                                                                 │
-├─────────────────────────────────────────────────────────────────┤
-│              EMBODIMENT PRINCIPLES                              │
-│                                                                 │
-│  PERCEPTION ←→ ACTION COUPLING                                  │
-│  ┌─────────┐     ┌─────────────┐     ┌──────────┐              │
-│  │ SENSORS │ ──▶ │  COGNITION  │ ──▶ │ ACTUATORS│              │
-│  │         │     │             │     │          │              │
-│  │ • Vision│     │ • Decision  │     │ • Motors │              │
-│  │ • Touch │ ◀── │ • Learning  │ ◀── │ • Grips  │              │
-│  │ • Sound │     │ • Planning  │     │ • Legs   │              │
-│  └─────────┘     └─────────────┘     └──────────┘              │
-│                                                                 │
-│  MORPHOLOGICAL COMPUTATION                                      │
-│  ┌─────────────────────────────────────────────────────────────┐│
-│  │  Robot Body                                               ││
-│  │  ┌───────────────────────────────────────────────────────┐ ││
-│  │  │ • Shape influences interaction possibilities          │ ││
-│  │  │ • Material properties affect sensory feedback         │ ││
-│  │  │ • Mechanical design contributes to stability          │ ││
-│  │  │ • Physical constraints guide behavior                 │ ││
-│  │  └───────────────────────────────────────────────────────┘ ││
-│  └─────────────────────────────────────────────────────────────┘│
-└─────────────────────────────────────────────────────────────────┘
+                    EMBODIED INTELLIGENCE MODEL
+                              │
+        ┌─────────────────────┼─────────────────────┐
+        │                     │                     │
+    SENSORS              CONTROLLER            ACTUATORS
+        │                     │                     │
+    ┌───▼───┐            ┌─────▼─────┐           ┌───▼───┐
+    │Cameras│            │  Cognition│           │Motors │
+    │LIDAR  │ ◄──────────┤   &       │──────────►│Servos │
+    │IMU    │            │  Learning │           │Hydraulics│
+    │Force  │            │           │           │Pneumatics│
+    │Tactile│            └───────────┘           └────────┘
+    └───────┘                   │
+                                │
+                    ┌───────────▼───────────┐
+                    │    ENVIRONMENT        │
+                    │   (Real World)        │
+                    │                       │
+                    │  ┌─────────────────┐  │
+                    │  │  Interaction    │  │
+                    │  │  Loop           │  │
+                    │  └─────────────────┘  │
+                    └───────────────────────┘
 ```
-
-This diagram illustrates the core concept of embodied intelligence where the AI system is tightly integrated with its physical body and environment. The continuous feedback loops between sensors, cognition, and actuators enable intelligent behavior that emerges from the physical interaction.
 
 ## Real-world Analogy
 
-Think of embodied intelligence like learning to play a musical instrument. When a pianist plays, their intelligence isn't just in their brain calculating which notes to play - it's distributed across their entire body: their fingers know the feel of the keys, their arms understand the weight and resistance, their posture adapts to reach different octaves, and their ears constantly adjust their playing based on the sound produced. The piano itself becomes part of the cognitive system.
+Think of embodied intelligence like learning to ride a bicycle. Traditional AI might approach this by calculating all the physics equations, balance forces, and control theory in advance - but this would be extremely complex and likely fail in practice. Instead, learning to ride a bicycle happens through direct physical experience: feeling the balance, sensing the motion, and adjusting movements based on immediate feedback from the body and environment.
 
-In contrast, a traditional AI approach would be like a music theorist who knows all the rules and can write beautiful sheet music but has never touched a piano. While they understand the abstract patterns, they lack the embodied knowledge of how the physical instrument responds to touch, how the acoustics work in a room, or how their body can best interact with the piano to produce the desired music.
+A person riding a bicycle doesn't consciously calculate angular momentum and center of mass - instead, their body has learned to make the necessary adjustments through practice. The bicycle becomes an extension of their body, and the intelligence needed to ride emerges from the interaction between the person, the bike, and the road. Similarly, embodied intelligence in humanoid robots means the robot learns to move, balance, and interact through its physical form rather than just abstract reasoning.
 
-Embodied intelligence in robots works similarly - the robot learns not just abstract representations of the world but develops an understanding that's shaped by its specific physical form, sensors, and actuators. Just as a tall person navigates doorways differently than a short person, a robot with specific physical characteristics develops intelligence that's optimized for its particular embodiment.
-
-## Pseudo-code (ROS 2 / Python style)
+## Pseudo-code (ROS 2 / Python)
 
 ```python
-# Example Implementation of Embodied Intelligence System
+# ROS 2 Node for Embodied Intelligence Framework
 import rclpy
 from rclpy.node import Node
-from sensor_msgs.msg import Image, JointState, Imu, PointCloud2
-from geometry_msgs.msg import Twist, WrenchStamped, PoseStamped
-from std_msgs.msg import Float32MultiArray, String
-from builtin_interfaces.msg import Time
+from sensor_msgs.msg import Image, Imu, JointState, WrenchStamped
+from geometry_msgs.msg import Twist, Point
+from std_msgs.msg import String, Float64
 import numpy as np
-import tensorflow as tf
-from typing import Dict, List, Optional, Tuple, Any
-import threading
-import time
-from collections import deque
-import math
+from typing import Dict, List, Tuple
 
-class EmbodiedState:
-    """Represents the embodied state of the robot"""
+class EmbodiedIntelligenceNode(Node):
     def __init__(self):
-        self.sensory_input: Dict[str, Any] = {}
-        self.motor_commands: Dict[str, Any] = {}
-        self.body_state: Dict = {}  # Joint positions, velocities, etc.
-        self.environment_state: Dict = {}  # Objects, obstacles, humans
-        self.interaction_history: deque = deque(maxlen=100)  # Recent interactions
-        self.affordance_map: Dict = {}  # What actions are possible with objects
-        self.body_schema: Dict = {}  # Internal model of robot's physical capabilities
+        super().__init__('embodied_intelligence')
 
-class SensoryProcessor(Node):
-    """Processes sensory input from various robot sensors"""
-    def __init__(self):
-        super().__init__('sensory_processor')
+        # Sensor subscribers
+        self.image_sub = self.create_subscription(
+            Image, '/camera/image_raw', self.image_callback, 10)
+        self.imu_sub = self.create_subscription(
+            Imu, '/imu/data', self.imu_callback, 10)
+        self.joint_sub = self.create_subscription(
+            JointState, '/joint_states', self.joint_callback, 10)
+        self.force_sub = self.create_subscription(
+            WrenchStamped, '/force_sensor', self.force_callback, 10)
 
-        # Subscribe to all relevant sensors
-        self.image_sub = self.create_subscription(Image, '/camera/image_raw', self.image_callback, 10)
-        self.joint_sub = self.create_subscription(JointState, '/joint_states', self.joint_callback, 10)
-        self.imu_sub = self.create_subscription(Imu, '/imu/data', self.imu_callback, 10)
-        self.force_sub = self.create_subscription(WrenchStamped, '/wrist_force', self.force_callback, 10)
-        self.pointcloud_sub = self.create_subscription(PointCloud2, '/camera/depth/points', self.pointcloud_callback, 10)
-
-        # Publisher for processed sensory data
-        self.sensory_pub = self.create_publisher(Float32MultiArray, '/embodied_sensory_data', 10)
-
-        # Internal state
-        self.latest_sensors = {
-            'image': None,
-            'joints': None,
-            'imu': None,
-            'force': None,
-            'pointcloud': None
-        }
-
-        # Timer for processing loop
-        self.process_timer = self.create_timer(0.05, self.process_sensory_data)
-
-    def image_callback(self, msg: Image):
-        """Process camera image data"""
-        # Convert ROS Image to numpy array
-        image = np.reshape(msg.data, (msg.height, msg.width, 3))
-        self.latest_sensors['image'] = image
-
-    def joint_callback(self, msg: JointState):
-        """Process joint state data"""
-        self.latest_sensors['joints'] = {
-            'name': msg.name,
-            'position': list(msg.position),
-            'velocity': list(msg.velocity),
-            'effort': list(msg.effort)
-        }
-
-    def imu_callback(self, msg: Imu):
-        """Process IMU data"""
-        self.latest_sensors['imu'] = {
-            'orientation': (msg.orientation.x, msg.orientation.y, msg.orientation.z, msg.orientation.w),
-            'angular_velocity': (msg.angular_velocity.x, msg.angular_velocity.y, msg.angular_velocity.z),
-            'linear_acceleration': (msg.linear_acceleration.x, msg.linear_acceleration.y, msg.linear_acceleration.z)
-        }
-
-    def force_callback(self, msg: WrenchStamped):
-        """Process force/torque sensor data"""
-        self.latest_sensors['force'] = {
-            'force': (msg.wrench.force.x, msg.wrench.force.y, msg.wrench.force.z),
-            'torque': (msg.wrench.torque.x, msg.wrench.torque.y, msg.wrench.torque.z)
-        }
-
-    def pointcloud_callback(self, msg: PointCloud2):
-        """Process 3D point cloud data"""
-        # In a real implementation, this would parse the point cloud
-        # For this example, we'll simulate processing
-        self.latest_sensors['pointcloud'] = {'processed': True}
-
-    def process_sensory_data(self):
-        """Process all sensory data and publish embodied representation"""
-        # Create embodied sensory representation
-        sensory_vector = self.create_sensory_vector()
-
-        # Publish for cognitive processor
-        msg = Float32MultiArray()
-        msg.data = sensory_vector
-        self.sensory_pub.publish(msg)
-
-    def create_sensory_vector(self) -> List[float]:
-        """Create a combined sensory vector representing the embodied state"""
-        vector = []
-
-        # Add joint position information (body state)
-        if self.latest_sensors['joints']:
-            vector.extend(self.latest_sensors['joints']['position'][:10])  # First 10 joints
-
-        # Add IMU data (balance/proxy state)
-        if self.latest_sensors['imu']:
-            imu = self.latest_sensors['imu']
-            vector.extend(list(imu['orientation']))
-            vector.extend(list(imu['angular_velocity']))
-            vector.extend(list(imu['linear_acceleration']))
-
-        # Add force data (interaction state)
-        if self.latest_sensors['force']:
-            force = self.latest_sensors['force']
-            vector.extend(list(force['force']))
-            vector.extend(list(force['torque']))
-
-        # Pad vector to fixed size for consistency
-        while len(vector) < 50:
-            vector.append(0.0)
-
-        return vector[:50]  # Fixed size vector
-
-class CognitiveProcessor(Node):
-    """Processes sensory data and generates intelligent responses"""
-    def __init__(self):
-        super().__init__('cognitive_processor')
-
-        # Subscriptions
-        self.sensory_sub = self.create_subscription(
-            Float32MultiArray, '/embodied_sensory_data', self.sensory_callback, 10)
-        self.goal_sub = self.create_subscription(
-            String, '/embodied_goals', self.goal_callback, 10)
-
-        # Publishers
-        self.motor_pub = self.create_publisher(Float32MultiArray, '/embodied_motor_commands', 10)
-        self.behavior_pub = self.create_publisher(String, '/embodied_behavior', 10)
-
-        # Internal state
-        self.embodied_state = EmbodiedState()
-        self.current_goal = None
-        self.learning_model = self.initialize_learning_model()
-
-        # Timer for cognitive processing
-        self.cognition_timer = self.create_timer(0.1, self.cognition_loop)
-
-    def initialize_learning_model(self):
-        """Initialize the learning model for embodied intelligence"""
-        # In a real implementation, this would be a neural network or other ML model
-        # For this example, we'll simulate with a simple adaptive system
-        return {
-            'affordance_learning': {},  # Learned affordances
-            'motor_primitives': {},     # Learned movement patterns
-            'body_schema': {},          # Learned body model
-            'environment_model': {}     # Learned environment model
-        }
-
-    def sensory_callback(self, msg: Float32MultiArray):
-        """Process incoming sensory data"""
-        # Update embodied state with new sensory information
-        sensory_data = list(msg.data)
-
-        # Extract different types of information from sensory vector
-        joint_positions = sensory_data[0:10] if len(sensory_data) >= 10 else [0.0] * 10
-        orientation = sensory_data[10:14] if len(sensory_data) >= 14 else [0.0] * 4
-        forces = sensory_data[20:26] if len(sensory_data) >= 26 else [0.0] * 6
-
-        # Update internal state
-        self.embodied_state.body_state = {
-            'joint_positions': joint_positions,
-            'orientation': orientation,
-            'forces': forces
-        }
-
-        # Update interaction history
-        interaction = {
-            'timestamp': self.get_clock().now(),
-            'sensory_state': sensory_data,
-            'current_goal': self.current_goal
-        }
-        self.embodied_state.interaction_history.append(interaction)
-
-        # Update affordance map based on sensory data
-        self.update_affordance_map(sensory_data)
-
-    def goal_callback(self, msg: String):
-        """Process goal commands"""
-        self.current_goal = msg.data
-
-    def cognition_loop(self):
-        """Main cognitive processing loop"""
-        if self.embodied_state.body_state:
-            # Generate motor commands based on current state and goals
-            motor_commands = self.generate_motor_commands()
-
-            # Publish motor commands
-            cmd_msg = Float32MultiArray()
-            cmd_msg.data = motor_commands
-            self.motor_pub.publish(cmd_msg)
-
-            # Generate behavior description
-            behavior_msg = String()
-            behavior_msg.data = self.determine_current_behavior()
-            self.behavior_pub.publish(behavior_msg)
-
-    def update_affordance_map(self, sensory_data: List[float]):
-        """Update the affordance map based on sensory experience"""
-        # In a real implementation, this would learn what actions are possible
-        # based on sensory patterns and successful interactions
-        # For this example, we'll simulate simple affordance learning
-
-        # Example: if force sensors show contact with object, learn grasp affordance
-        forces = sensory_data[20:23] if len(sensory_data) >= 23 else [0.0, 0.0, 0.0]
-        force_magnitude = math.sqrt(sum(f**2 for f in forces))
-
-        if force_magnitude > 5.0:  # Significant contact detected
-            # Learn that this sensory pattern affords manipulation
-            sensory_pattern = tuple(sensory_data[0:10])  # First 10 elements as pattern
-            if sensory_pattern not in self.embodied_state.affordance_map:
-                self.embodied_state.affordance_map[sensory_pattern] = []
-
-            if 'grasp_possible' not in self.embodied_state.affordance_map[sensory_pattern]:
-                self.embodied_state.affordance_map[sensory_pattern].append('grasp_possible')
-
-    def generate_motor_commands(self) -> List[float]:
-        """Generate motor commands based on current state and goals"""
-        commands = []
-
-        if self.current_goal == "reach_forward":
-            # Generate reaching motion based on current joint positions
-            current_pos = self.embodied_state.body_state.get('joint_positions', [0.0] * 10)
-
-            # Simple reaching controller
-            target = [0.5, 0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]  # Example target
-
-            # Calculate desired joint changes
-            for i in range(min(len(current_pos), len(target))):
-                error = target[i] - current_pos[i]
-                commands.append(current_pos[i] + error * 0.1)  # Small step toward target
-
-        elif self.current_goal == "balance":
-            # Generate balance commands based on orientation
-            orientation = self.embodied_state.body_state.get('orientation', [0.0, 0.0, 0.0, 1.0])
-
-            # Simple balance controller based on IMU data
-            roll, pitch, yaw = self.quaternion_to_euler(orientation)
-
-            # Adjust joint positions to maintain balance
-            balance_commands = [
-                pitch * 0.1,  # Adjust hip to counter pitch
-                -roll * 0.1,  # Adjust hip to counter roll
-                0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
-            ]
-            commands = balance_commands
-
-        elif self.current_goal == "explore":
-            # Generate exploratory movements
-            # Add small random movements to discover affordances
-            current_pos = self.embodied_state.body_state.get('joint_positions', [0.0] * 10)
-            exploration = [np.random.uniform(-0.05, 0.05) for _ in range(10)]
-            commands = [pos + exp for pos, exp in zip(current_pos, exploration)]
-
-        else:
-            # Default: maintain current position
-            commands = self.embodied_state.body_state.get('joint_positions', [0.0] * 10)
-
-        # Ensure commands are within safe limits
-        commands = [max(-2.0, min(2.0, cmd)) for cmd in commands]
-
-        return commands
-
-    def quaternion_to_euler(self, quat: Tuple[float, float, float, float]) -> Tuple[float, float, float]:
-        """Convert quaternion to Euler angles"""
-        x, y, z, w = quat
-
-        # Roll (x-axis rotation)
-        sinr_cosp = 2 * (w * x + y * z)
-        cosr_cosp = 1 - 2 * (x * x + y * y)
-        roll = math.atan2(sinr_cosp, cosr_cosp)
-
-        # Pitch (y-axis rotation)
-        sinp = 2 * (w * y - z * x)
-        if abs(sinp) >= 1:
-            pitch = math.copysign(math.pi / 2, sinp)  # Use 90 degrees if out of range
-        else:
-            pitch = math.asin(sinp)
-
-        # Yaw (z-axis rotation)
-        siny_cosp = 2 * (w * z + x * y)
-        cosy_cosp = 1 - 2 * (y * y + z * z)
-        yaw = math.atan2(siny_cosp, cosy_cosp)
-
-        return roll, pitch, yaw
-
-    def determine_current_behavior(self) -> str:
-        """Determine the current behavior based on state and goals"""
-        if self.current_goal:
-            return f"executing_{self.current_goal}"
-
-        # Determine behavior from sensory patterns
-        forces = self.embodied_state.body_state.get('forces', [0.0] * 6)
-        force_magnitude = math.sqrt(sum(f**2 for f in forces))
-
-        if force_magnitude > 8.0:
-            return "contact_detected"
-        elif force_magnitude > 3.0:
-            return "light_contact"
-        else:
-            return "idle"
-
-class MotorController(Node):
-    """Controls the physical motors based on cognitive commands"""
-    def __init__(self):
-        super().__init__('motor_controller')
-
-        # Subscriptions
-        self.motor_cmd_sub = self.create_subscription(
-            Float32MultiArray, '/embodied_motor_commands', self.motor_command_callback, 10)
-        self.behavior_sub = self.create_subscription(
-            String, '/embodied_behavior', self.behavior_callback, 10)
-
-        # Publishers for actual hardware control
+        # Actuator publishers
+        self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel', 10)
         self.joint_cmd_pub = self.create_publisher(JointState, '/joint_commands', 10)
 
-        # Internal state
-        self.current_behavior = "idle"
-        self.current_motor_commands = [0.0] * 10
-        self.physical_model = self.initialize_physical_model()
-
-        # Timer for motor control loop (high frequency)
-        self.control_timer = self.create_timer(0.01, self.motor_control_loop)
-
-    def initialize_physical_model(self):
-        """Initialize model of robot's physical properties"""
-        return {
-            'joint_limits': [(-2.0, 2.0)] * 10,  # Example joint limits
-            'max_velocities': [1.0] * 10,        # Max joint velocities
-            'max_efforts': [100.0] * 10,         # Max joint efforts
-            'mass_properties': {},               # Mass, inertia, etc.
-            'kinematic_chain': {},               # Forward/inverse kinematics
-            'safety_constraints': {}             # Safety limits
+        # State tracking
+        self.current_state = {
+            'image': None,
+            'imu': None,
+            'joints': None,
+            'force': None,
+            'balance': 0.0,
+            'interaction_energy': 0.0
         }
 
-    def motor_command_callback(self, msg: Float32MultiArray):
-        """Process motor commands from cognitive processor"""
-        self.current_motor_commands = list(msg.data)
+        # Learning parameters
+        self.experience_buffer = []
+        self.learning_rate = 0.01
+        self.action_history = []
 
-        # Apply safety constraints
-        self.current_motor_commands = self.apply_safety_constraints(
-            self.current_motor_commands)
+        # Control loop
+        self.timer = self.create_timer(0.05, self.embodied_control_loop)  # 20 Hz
 
-    def behavior_callback(self, msg: String):
-        """Process behavior commands"""
-        self.current_behavior = msg.data
+    def image_callback(self, msg):
+        self.current_state['image'] = msg
+        # Process visual input for environmental understanding
 
-    def apply_safety_constraints(self, commands: List[float]) -> List[float]:
-        """Apply physical and safety constraints to motor commands"""
-        constrained = []
+    def imu_callback(self, msg):
+        self.current_state['imu'] = msg
+        # Process orientation and acceleration data for balance
+        self.update_balance_state()
 
-        for i, cmd in enumerate(commands):
-            # Apply joint limits
-            min_limit, max_limit = self.physical_model['joint_limits'][i]
-            cmd = max(min_limit, min(max_limit, cmd))
+    def joint_callback(self, msg):
+        self.current_state['joints'] = msg
+        # Process joint states for movement planning
 
-            # Apply velocity limits (rate limiting)
-            if hasattr(self, 'previous_commands'):
-                max_change = self.physical_model['max_velocities'][i] * 0.01  # 10ms dt
-                if i < len(self.previous_commands):
-                    cmd = max(self.previous_commands[i] - max_change,
-                             min(self.previous_commands[i] + max_change, cmd))
+    def force_callback(self, msg):
+        self.current_state['force'] = msg
+        # Process force feedback for interaction
 
-            constrained.append(cmd)
+    def update_balance_state(self):
+        """Calculate current balance based on IMU data"""
+        if self.current_state['imu']:
+            imu = self.current_state['imu']
+            # Calculate balance as a function of orientation and angular velocity
+            orientation = np.array([imu.orientation.x, imu.orientation.y, imu.orientation.z, imu.orientation.w])
+            angular_vel = np.array([imu.angular_velocity.x, imu.angular_velocity.y, imu.angular_velocity.z])
 
-        # Store for next iteration
-        self.previous_commands = constrained
-        return constrained
+            # Simplified balance calculation (in real systems, this would be more complex)
+            roll_pitch = np.sqrt(imu.orientation.x**2 + imu.orientation.y**2)
+            self.current_state['balance'] = max(0.0, 1.0 - roll_pitch)  # 1.0 = perfectly balanced
 
-    def motor_control_loop(self):
-        """Main motor control loop"""
-        # Create joint command message
-        joint_cmd = JointState()
-        joint_cmd.name = [f'joint_{i}' for i in range(len(self.current_motor_commands))]
-        joint_cmd.position = self.current_motor_commands
-        joint_cmd.velocity = [0.0] * len(self.current_motor_commands)  # Will be computed
-        joint_cmd.effort = [0.0] * len(self.current_motor_commands)    # Will be computed
+    def embodied_control_loop(self):
+        """Main control loop implementing embodied intelligence principles"""
+        # 1. Sense the current state
+        perception = self.sense_environment()
 
-        # Calculate velocities for smooth motion
-        if hasattr(self, 'previous_positions'):
-            dt = 0.01  # 100Hz control
-            velocities = []
-            for curr, prev in zip(joint_cmd.position, self.previous_positions):
-                velocities.append((curr - prev) / dt)
-            joint_cmd.velocity = velocities
+        # 2. Process through embodied cognition
+        cognitive_output = self.embodied_reasoning(perception)
 
-        self.previous_positions = joint_cmd.position
+        # 3. Actuate based on the processed information
+        action = self.select_action(cognitive_output)
 
-        # Publish joint commands to hardware interface
-        self.joint_cmd_pub.publish(joint_cmd)
+        # 4. Learn from the sensorimotor experience
+        self.update_learning_model(action, perception)
 
-        # Log behavior state
-        self.get_logger().debug(f'Behavior: {self.current_behavior}, Commands: {len(joint_cmd.position)} joints')
+        # 5. Execute the action
+        self.execute_action(action)
 
-class EmbodiedLearningSystem(Node):
-    """System for learning from embodied interactions"""
-    def __init__(self):
-        super().__init__('embodied_learning')
+    def sense_environment(self):
+        """Process all sensor inputs into a coherent environmental understanding"""
+        # Integrate all sensor modalities
+        sensors = self.current_state
 
-        # Subscriptions for learning data
-        self.interaction_sub = self.create_subscription(
-            String, '/embodied_interactions', self.interaction_callback, 10)
-        self.sensory_sub = self.create_subscription(
-            Float32MultiArray, '/embodied_sensory_data', self.sensory_callback_for_learning, 10)
-
-        # Publishers for learned models
-        self.model_pub = self.create_publisher(String, '/learned_models', 10)
-
-        # Internal learning state
-        self.experience_buffer = deque(maxlen=1000)  # Store interaction experiences
-        self.affordance_learner = AffordanceLearner()
-        self.motor_learner = MotorLearner()
-
-        # Timer for learning updates
-        self.learning_timer = self.create_timer(1.0, self.learning_update)
-
-    def interaction_callback(self, msg: String):
-        """Process interaction experiences for learning"""
-        try:
-            experience = eval(msg.data)  # In real code, use json.loads
-            self.experience_buffer.append(experience)
-
-            # Update learning systems
-            self.affordance_learner.update(experience)
-            self.motor_learner.update(experience)
-        except:
-            self.get_logger().error('Error processing interaction for learning')
-
-    def sensory_callback_for_learning(self, msg: Float32MultiArray):
-        """Process sensory data for learning"""
-        # Store for experience replay
-        sensory_pattern = list(msg.data)
-
-        # This could trigger learning if certain conditions are met
-        # For example, if a novel sensory pattern is detected
-        if self.is_novel_pattern(sensory_pattern):
-            self.get_logger().info('Novel sensory pattern detected - potential learning opportunity')
-
-    def is_novel_pattern(self, pattern: List[float]) -> bool:
-        """Check if a sensory pattern is novel"""
-        # In a real implementation, this would use a novelty detection algorithm
-        # For this example, we'll simulate with a simple check
-        return len(self.experience_buffer) < 10 or np.random.random() < 0.05
-
-    def learning_update(self):
-        """Periodic learning updates"""
-        if len(self.experience_buffer) > 10:
-            # Perform batch learning from experience buffer
-            experiences = list(self.experience_buffer)[-50:]  # Last 50 experiences
-
-            # Update affordance model
-            affordance_model = self.affordance_learner.get_model()
-
-            # Update motor primitives
-            motor_model = self.motor_learner.get_model()
-
-            # Publish learned models
-            learned_models = {
-                'affordances': affordance_model,
-                'motor_primitives': motor_model,
-                'timestamp': self.get_clock().now().nanoseconds
+        if all(sensors[key] is not None for key in ['image', 'imu', 'joints', 'force']):
+            # Create a multimodal perception
+            perception = {
+                'visual_scene': self.process_visual(sensors['image']),
+                'balance_state': self.current_state['balance'],
+                'joint_positions': sensors['joints'].position,
+                'force_feedback': sensors['force'],
+                'proprioception': self.calculate_proprioception(sensors['joints'])
             }
-
-            model_msg = String()
-            model_msg.data = str(learned_models)
-            self.model_pub.publish(model_msg)
-
-class AffordanceLearner:
-    """Learns what actions are possible with objects in the environment"""
-    def __init__(self):
-        self.affordance_map = {}
-        self.action_outcomes = {}
-
-    def update(self, experience: Dict):
-        """Update affordance model based on experience"""
-        # Extract sensory pattern and action outcome
-        sensory_pattern = tuple(experience.get('sensory_state', [0.0] * 10)[:5])  # First 5 dimensions
-        action = experience.get('action_taken', 'unknown')
-        outcome = experience.get('outcome', 'neutral')
-
-        # Update affordance map
-        if sensory_pattern not in self.affordance_map:
-            self.affordance_map[sensory_pattern] = {}
-
-        if action not in self.affordance_map[sensory_pattern]:
-            self.affordance_map[sensory_pattern][action] = {'success': 0, 'failure': 0}
-
-        # Update success/failure counts
-        if outcome == 'success':
-            self.affordance_map[sensory_pattern][action]['success'] += 1
+            return perception
         else:
-            self.affordance_map[sensory_pattern][action]['failure'] += 1
+            # Return minimal perception if not all sensors available
+            return {'minimal': True}
 
-    def get_model(self) -> Dict:
-        """Get the current affordance model"""
-        return self.affordance_map
+    def process_visual(self, image_msg):
+        """Process visual input (simplified for this example)"""
+        # In a real system, this would run object detection, scene understanding, etc.
+        # For this example, return simplified representation
+        return {'features': [0.1, 0.2, 0.3], 'scene_type': 'indoor'}
 
-class MotorLearner:
-    """Learns efficient motor patterns through experience"""
-    def __init__(self):
-        self.motor_primitives = {}
-        self.efficiency_metrics = {}
+    def calculate_proprioception(self, joint_state):
+        """Calculate body position awareness from joint states"""
+        if joint_state:
+            # Calculate current body configuration
+            body_config = {}
+            for i, name in enumerate(joint_state.name):
+                body_config[name] = joint_state.position[i]
+            return body_config
+        return {}
 
-    def update(self, experience: Dict):
-        """Update motor learning based on experience"""
-        # Extract motor pattern and efficiency measure
-        motor_pattern = tuple(experience.get('motor_commands', [0.0] * 10))
-        efficiency = experience.get('efficiency', 0.5)  # How well the action worked
+    def embodied_reasoning(self, perception):
+        """Perform reasoning that takes into account the physical embodiment"""
+        # The reasoning is constrained by and shaped by the robot's physical form
+        if 'minimal' in perception:
+            return {'action': 'wait_for_sensors', 'confidence': 0.5}
 
-        # Update motor primitive efficiency
-        if motor_pattern not in self.efficiency_metrics:
-            self.efficiency_metrics[motor_pattern] = []
+        # Example: Balance-based reasoning
+        if perception['balance_state'] < 0.7:  # Not well balanced
+            return {'action': 'balance_correction', 'priority': 1.0}
 
-        self.efficiency_metrics[motor_pattern].append(efficiency)
+        # Example: Interaction-based reasoning
+        force_data = perception['force_feedback']
+        if force_data.wrench.force.z < -5.0:  # Heavy downward force (maybe touching ground)
+            return {'action': 'adjust_stance', 'priority': 0.8}
 
-        # Keep only recent efficiency measures
-        if len(self.efficiency_metrics[motor_pattern]) > 10:
-            self.efficiency_metrics[motor_pattern] = self.efficiency_metrics[motor_pattern][-10:]
+        # Example: Visual goal-based reasoning
+        if perception['visual_scene']['scene_type'] == 'indoor':
+            return {'action': 'navigate_indoors', 'priority': 0.6}
 
-    def get_model(self) -> Dict:
-        """Get the current motor learning model"""
-        # Calculate average efficiency for each motor pattern
-        avg_efficiency = {}
-        for pattern, efficiencies in self.efficiency_metrics.items():
-            avg_efficiency[pattern] = sum(efficiencies) / len(efficiencies)
+        return {'action': 'idle', 'priority': 0.1}
 
-        return avg_efficiency
+    def select_action(self, cognitive_output):
+        """Select appropriate action based on cognitive output"""
+        action = cognitive_output['action']
+
+        # Store action for learning
+        self.action_history.append(action)
+
+        # Map cognitive output to physical action
+        if action == 'balance_correction':
+            return self.balance_correction_action()
+        elif action == 'adjust_stance':
+            return self.adjust_stance_action()
+        elif action == 'navigate_indoors':
+            return self.navigate_action()
+        elif action == 'wait_for_sensors':
+            return self.wait_action()
+        else:
+            return self.idle_action()
+
+    def balance_correction_action(self):
+        """Generate action to improve balance"""
+        # Calculate required joint adjustments to improve balance
+        cmd = JointState()
+        cmd.name = ['left_hip', 'right_hip', 'torso']  # Example joints
+        cmd.position = [0.1, -0.1, 0.0]  # Adjust to balance
+        return {'type': 'joint', 'command': cmd}
+
+    def adjust_stance_action(self):
+        """Adjust stance based on force feedback"""
+        cmd = JointState()
+        cmd.name = ['left_ankle', 'right_ankle']
+        cmd.position = [0.05, 0.05]  # Slight adjustment
+        return {'type': 'joint', 'command': cmd}
+
+    def navigate_action(self):
+        """Generate navigation command"""
+        cmd = Twist()
+        cmd.linear.x = 0.3  # Move forward slowly
+        cmd.angular.z = 0.0  # No turn
+        return {'type': 'velocity', 'command': cmd}
+
+    def wait_action(self):
+        """Wait action - maintain current state"""
+        return {'type': 'idle', 'command': None}
+
+    def idle_action(self):
+        """Idle action - maintain default posture"""
+        cmd = JointState()
+        cmd.name = ['left_hip', 'right_hip', 'left_knee', 'right_knee', 'torso']
+        cmd.position = [0.0, 0.0, 0.0, 0.0, 0.0]  # Default stance
+        return {'type': 'joint', 'command': cmd}
+
+    def update_learning_model(self, action, perception):
+        """Update the learning model based on sensorimotor experience"""
+        # Store experience tuple (perception, action, resulting state)
+        experience = {
+            'perception': perception,
+            'action': action,
+            'timestamp': self.get_clock().now().nanoseconds,
+            'balance': self.current_state['balance']
+        }
+
+        self.experience_buffer.append(experience)
+
+        # Keep buffer size manageable
+        if len(self.experience_buffer) > 1000:
+            self.experience_buffer.pop(0)
+
+        # Update learning model (simplified for this example)
+        # In a real system, this would use reinforcement learning, neural networks, etc.
+        self.adapt_behavior_patterns(experience)
+
+    def adapt_behavior_patterns(self, experience):
+        """Adapt behavior based on accumulated experience"""
+        # Example: If balance was poor during certain actions, modify those actions
+        recent_balance = self.current_state['balance']
+        if recent_balance < 0.5:  # Very unbalanced
+            # Adjust the balance correction threshold for future decisions
+            pass  # Simplified implementation
+
+    def execute_action(self, action):
+        """Execute the selected action"""
+        if action['type'] == 'joint':
+            self.joint_cmd_pub.publish(action['command'])
+        elif action['type'] == 'velocity':
+            self.cmd_vel_pub.publish(action['command'])
+        elif action['type'] == 'idle':
+            # No action needed
+            pass
 
 def main(args=None):
     rclpy.init(args=args)
-
-    # Create nodes for the embodied intelligence system
-    sensory_node = SensoryProcessor()
-    cognitive_node = CognitiveProcessor()
-    motor_node = MotorController()
-    learning_node = EmbodiedLearningSystem()
-
-    # Create executor and add nodes
-    executor = rclpy.executors.MultiThreadedExecutor()
-    executor.add_node(sensory_node)
-    executor.add_node(cognitive_node)
-    executor.add_node(motor_node)
-    executor.add_node(learning_node)
-
-    try:
-        executor.spin()
-    except KeyboardInterrupt:
-        pass
-    finally:
-        # Cleanup nodes
-        sensory_node.destroy_node()
-        cognitive_node.destroy_node()
-        motor_node.destroy_node()
-        learning_node.destroy_node()
-
-        rclpy.shutdown()
+    node = EmbodiedIntelligenceNode()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
@@ -654,24 +298,24 @@ if __name__ == '__main__':
 
 ## Summary
 
-Embodied Intelligence represents a fundamental shift in how we approach artificial intelligence, recognizing that intelligence emerges from the tight coupling between an agent's physical form, its sensors and actuators, and the environment it operates in. This approach challenges traditional AI models that treat perception and action as separate computational modules.
+Embodied intelligence represents a paradigm shift in how we approach AI for physical systems. Rather than treating intelligence as pure computation, embodied intelligence recognizes that intelligence emerges from the interaction between an agent's physical form, its sensors, its actuators, and its environment. This approach is particularly relevant for humanoid robots, where the human-like form naturally lends itself to human-like interactions with the world.
 
-Key principles of embodied intelligence include:
-- **Perception-Action Coupling**: Sensory input and motor output form continuous feedback loops that enable intelligent behavior
-- **Morphological Computation**: The physical body itself contributes to computation, with form influencing function
-- **Affordance Learning**: Agents learn what actions are possible in different situations through direct interaction
-- **Situated Cognition**: Intelligence is shaped by the specific environment and tasks the agent encounters
+Key insights from embodied intelligence include:
+- Intelligence is shaped by the physical body and its capabilities
+- The environment serves as a computational resource
+- Sensorimotor loops are fundamental to intelligent behavior
+- Learning happens through physical experience rather than just abstract reasoning
 
-In Physical AI systems, embodied intelligence enables robots to develop an understanding that is grounded in their physical experiences, leading to more robust and adaptive behavior. Rather than relying solely on abstract models, embodied robots learn through direct interaction with their environment, developing skills and knowledge that are optimized for their specific physical form and capabilities.
-
-This approach is particularly powerful for humanoid robots, where the human-like form factor provides affordances for interacting with human-designed environments and objects.
+In humanoid robotics, these principles translate to robots that learn to move, balance, and interact through their physical form, making them more adaptive and capable of handling the complexity of real-world environments.
 
 ## Exercises
 
-1. **Basic Understanding**: Explain the difference between traditional AI approaches and embodied intelligence. Provide an example of a task where embodied intelligence would have advantages over traditional AI.
+1. **Research Exercise**: Investigate the difference between classical AI approaches and embodied AI in robotics. Find at least three examples where embodied approaches have proven superior to classical methods.
 
-2. **Application Exercise**: Design an affordance learning system for a robot arm. What sensory information would you use to determine when grasping is possible? How would the robot learn which objects can be grasped and how?
+2. **Analysis Exercise**: Consider a humanoid robot that needs to learn to walk. Describe how the embodied intelligence approach would differ from a classical control theory approach. What advantages would each method have?
 
-3. **Implementation Exercise**: Modify the sensory processing code to include tactile sensors and implement a simple grasp stability detector that uses both force and tactile feedback.
+3. **Programming Exercise**: Extend the provided ROS 2 node to include a simple learning mechanism that adapts the robot's behavior based on successful balance maintenance.
 
-4. **Challenge Exercise**: Design a learning system that enables a robot to develop its own motor primitives (reusable movement patterns) through exploration and interaction with the environment.
+4. **Design Exercise**: Sketch how you would design a humanoid robot's learning system to incorporate embodied intelligence principles, considering which sensors would be most important for different types of physical tasks.
+
+5. **Thought Experiment**: Imagine a humanoid robot that has never interacted with the physical world (trained only in simulation). Now imagine another robot with the same learning algorithms but that learns exclusively through physical interaction. What would be the key differences in their capabilities?

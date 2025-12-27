@@ -17,3 +17,71 @@
   items:
     - name: Local Development
       href: local-development.md
+
+# Course Content
+- name: Course Overview
+  items:
+    - name: Introduction to Physical AI
+      href: intro.md
+    - name: Module 1: The Robotic Nervous System
+      href: module1-the-robotic-nervous-system.md
+    - name: Module 2: The Digital Twin
+      href: module2-the-digital-twin.md
+    - name: Module 3: The AI Robot Brain
+      href: module3-the-ai-robot-brain.md
+    - name: Module 4: Vision Language Action
+      href: module4-vision-language-action.md
+    - name: Module 5: Capstone Project
+      href: module5-capstone-project-the-autonomous-humanoid.md
+
+# ROS2 Content
+- name: ROS2 Framework
+  items:
+    - name: ROS2 Basics
+      href: ros2/ros2-basics.md
+    - name: Nodes, Topics, Services
+      href: ros2/nodes-topics-services.md
+    - name: URDF for Humanoids
+      href: ros2/urdf-humanoids.md
+
+# Simulation
+- name: Simulation Environments
+  items:
+    - name: Gazebo Simulation
+      href: simulation/gazebo.md
+    - name: Unity Simulation
+      href: simulation/unity.md
+
+# NVIDIA Isaac
+- name: NVIDIA Isaac Platform
+  items:
+    - name: Isaac Sim
+      href: nvidia-isaac/isaac-sim.md
+    - name: Isaac ROS
+      href: nvidia-isaac/isaac-ros.md
+    - name: Navigation 2
+      href: nvidia-isaac/nav2.md
+
+# VLA (Vision-Language-Action)
+- name: Vision Language Action
+  items:
+    - name: VLA Overview
+      href: vla/vision-language-action.md
+    - name: Whisper Voice Interface
+      href: vla/whisper-voice.md
+    - name: LLM Planning
+      href: vla/llm-planning.md
+
+# Physical AI Concepts
+- name: Physical AI Core Concepts
+  items:
+    - name: Embodied Intelligence
+      href: physical-ai/embodied-intelligence.md
+    - name: Sensors and Perception
+      href: physical-ai/sensors.md
+
+# Capstone Project
+- name: Capstone Project
+  items:
+    - name: Autonomous Humanoid
+      href: capstone/autonomous-humanoid.md
