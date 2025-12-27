@@ -1,0 +1,23 @@
+{
+  "id": "physical-ai/embodied-intelligence-advanced",
+  "title": "Embodied Intelligence in Physical AI (Advanced Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/advanced/physical-ai/embodied-intelligence-advanced.md",
+  "sourceDirName": "physical-ai",
+  "slug": "/physical-ai/embodied-intelligence-advanced",
+  "permalink": "/docs/personalized-advanced/physical-ai/embodied-intelligence-advanced",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "advancedSidebar",
+  "previous": {
+    "title": "URDF for Humanoid Robotics (Intermediate Level)",
+    "permalink": "/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-intermediate"
+  },
+  "next": {
+    "title": "Embodied Intelligence in Physical AI (Beginner Level)",
+    "permalink": "/docs/personalized-advanced/physical-ai/embodied-intelligence-beginner"
+  }
+}

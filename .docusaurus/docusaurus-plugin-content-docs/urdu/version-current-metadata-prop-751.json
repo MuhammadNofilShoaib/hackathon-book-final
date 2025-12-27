@@ -8,7 +8,7 @@
   "className": "docs-version-current",
   "isLast": true,
   "docsSidebars": {
-    "tutorialSidebar": [
+    "urduSidebar": [
       {
         "type": "category",
         "label": "capstone",
@@ -204,138 +204,134 @@
           }
         ]
       }
-    ],
-    "personalizedBeginnerSidebar": [],
-    "personalizedIntermediateSidebar": [],
-    "personalizedAdvancedSidebar": [],
-    "urduSidebar": []
+    ]
   },
   "docs": {
     "capstone/autonomous-humanoid": {
       "id": "capstone/autonomous-humanoid",
       "title": "autonomous-humanoid",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "intro": {
       "id": "intro",
       "title": "intro",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "module1-the-robotic-nervous-system": {
       "id": "module1-the-robotic-nervous-system",
       "title": "module1-the-robotic-nervous-system",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "module2-the-digital-twin": {
       "id": "module2-the-digital-twin",
       "title": "module2-the-digital-twin",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "module3-the-ai-robot-brain": {
       "id": "module3-the-ai-robot-brain",
       "title": "module3-the-ai-robot-brain",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "module4-vision-language-action": {
       "id": "module4-vision-language-action",
       "title": "module4-vision-language-action",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "module5-capstone-project-the-autonomous-humanoid": {
       "id": "module5-capstone-project-the-autonomous-humanoid",
       "title": "module5-capstone-project-the-autonomous-humanoid",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "nvidia-isaac/isaac-ros": {
       "id": "nvidia-isaac/isaac-ros",
       "title": "isaac-ros",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "nvidia-isaac/isaac-sim": {
       "id": "nvidia-isaac/isaac-sim",
       "title": "isaac-sim",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "nvidia-isaac/nav2": {
       "id": "nvidia-isaac/nav2",
       "title": "nav2",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "nvidia-isaac/urdf-humanoids": {
       "id": "nvidia-isaac/urdf-humanoids",
       "title": "urdf-humanoids",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "physical-ai/embodied-intelligence": {
       "id": "physical-ai/embodied-intelligence",
       "title": "embodied-intelligence",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "physical-ai/sensors": {
       "id": "physical-ai/sensors",
       "title": "sensors",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "ros2/nodes-topics-services": {
       "id": "ros2/nodes-topics-services",
       "title": "nodes-topics-services",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "ros2/ros2-basics": {
       "id": "ros2/ros2-basics",
       "title": "ros2-basics",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "ros2/urdf-humanoids": {
       "id": "ros2/urdf-humanoids",
       "title": "urdf-humanoids",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "simulation/gazebo": {
       "id": "simulation/gazebo",
       "title": "gazebo",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "simulation/unity": {
       "id": "simulation/unity",
       "title": "unity",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "vla/llm-planning": {
       "id": "vla/llm-planning",
       "title": "llm-planning",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "vla/vision-language-action": {
       "id": "vla/vision-language-action",
       "title": "vision-language-action",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     },
     "vla/whisper-voice": {
       "id": "vla/whisper-voice",
       "title": "whisper-voice",
       "description": "نوٹ: یہ اردو ترجمہ جاری ہے۔ کوڈ کے حصے انگریزی میں ہی رہیں گے۔",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "urduSidebar"
     }
   }
 }

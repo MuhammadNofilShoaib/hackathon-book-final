@@ -1,0 +1,19 @@
+{
+  "id": "capstone/autonomous-humanoid-advanced",
+  "title": "Capstone Project: Building an Autonomous Humanoid Robot (Advanced Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/beginner/capstone/autonomous-humanoid-advanced.md",
+  "sourceDirName": "capstone",
+  "slug": "/capstone/autonomous-humanoid-advanced",
+  "permalink": "/docs/personalized-beginner/capstone/autonomous-humanoid-advanced",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "beginnerSidebar",
+  "next": {
+    "title": "Capstone Project: Building an Autonomous Humanoid Robot (Beginner Level)",
+    "permalink": "/docs/personalized-beginner/capstone/autonomous-humanoid-beginner"
+  }
+}

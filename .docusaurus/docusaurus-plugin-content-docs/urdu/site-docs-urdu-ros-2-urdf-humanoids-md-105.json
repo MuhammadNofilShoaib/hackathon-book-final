@@ -11,7 +11,7 @@
   "tags": [],
   "version": "current",
   "frontMatter": {},
-  "sidebar": "tutorialSidebar",
+  "sidebar": "urduSidebar",
   "previous": {
     "title": "ros2-basics",
     "permalink": "/docs/urdu/ros2/ros2-basics"

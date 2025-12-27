@@ -11,7 +11,7 @@
   "tags": [],
   "version": "current",
   "frontMatter": {},
-  "sidebar": "tutorialSidebar",
+  "sidebar": "urduSidebar",
   "previous": {
     "title": "urdf-humanoids",
     "permalink": "/docs/urdu/nvidia-isaac/urdf-humanoids"

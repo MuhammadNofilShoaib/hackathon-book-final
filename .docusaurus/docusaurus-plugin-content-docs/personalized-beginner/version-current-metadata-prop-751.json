@@ -8,7 +8,7 @@
   "className": "docs-version-current",
   "isLast": true,
   "docsSidebars": {
-    "tutorialSidebar": [
+    "beginnerSidebar": [
       {
         "type": "category",
         "label": "capstone",
@@ -17,9 +17,23 @@
         "items": [
           {
             "type": "link",
+            "label": "Capstone Project: Building an Autonomous Humanoid Robot (Advanced Level)",
+            "href": "/docs/personalized-beginner/capstone/autonomous-humanoid-advanced",
+            "docId": "capstone/autonomous-humanoid-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
             "label": "Capstone Project: Building an Autonomous Humanoid Robot (Beginner Level)",
             "href": "/docs/personalized-beginner/capstone/autonomous-humanoid-beginner",
             "docId": "capstone/autonomous-humanoid-beginner",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Capstone Project: Building an Autonomous Humanoid Robot (Intermediate Level)",
+            "href": "/docs/personalized-beginner/capstone/autonomous-humanoid-intermediate",
+            "docId": "capstone/autonomous-humanoid-intermediate",
             "unlisted": false
           }
         ]
@@ -74,9 +88,30 @@
         "items": [
           {
             "type": "link",
+            "label": "NVIDIA Isaac ROS for Physical AI (Advanced Level)",
+            "href": "/docs/personalized-beginner/nvidia-isaac/isaac-ros-advanced",
+            "docId": "nvidia-isaac/isaac-ros-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
             "label": "NVIDIA Isaac ROS for Physical AI (Beginner Level)",
             "href": "/docs/personalized-beginner/nvidia-isaac/isaac-ros-beginner",
             "docId": "nvidia-isaac/isaac-ros-beginner",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "NVIDIA Isaac ROS for Physical AI (Intermediate Level)",
+            "href": "/docs/personalized-beginner/nvidia-isaac/isaac-ros-intermediate",
+            "docId": "nvidia-isaac/isaac-ros-intermediate",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "NVIDIA Isaac Sim for Physical AI (Advanced Level)",
+            "href": "/docs/personalized-beginner/nvidia-isaac/isaac-sim-advanced",
+            "docId": "nvidia-isaac/isaac-sim-advanced",
             "unlisted": false
           },
           {
@@ -88,6 +123,20 @@
           },
           {
             "type": "link",
+            "label": "NVIDIA Isaac Sim for Physical AI (Intermediate Level)",
+            "href": "/docs/personalized-beginner/nvidia-isaac/isaac-sim-intermediate",
+            "docId": "nvidia-isaac/isaac-sim-intermediate",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Navigation and Path Planning with Nav2 for Humanoid Robots (Advanced Level)",
+            "href": "/docs/personalized-beginner/nvidia-isaac/nav2-advanced",
+            "docId": "nvidia-isaac/nav2-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
             "label": "Navigation and Path Planning with Nav2 for Humanoid Robots (Beginner Level)",
             "href": "/docs/personalized-beginner/nvidia-isaac/nav2-beginner",
             "docId": "nvidia-isaac/nav2-beginner",
@@ -95,9 +144,30 @@
           },
           {
             "type": "link",
+            "label": "Navigation and Path Planning with Nav2 for Humanoid Robots (Intermediate Level)",
+            "href": "/docs/personalized-beginner/nvidia-isaac/nav2-intermediate",
+            "docId": "nvidia-isaac/nav2-intermediate",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "URDF for Humanoid Robotics (Advanced Level)",
+            "href": "/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-advanced",
+            "docId": "nvidia-isaac/urdf-humanoids-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
             "label": "URDF for Humanoid Robotics (Beginner Level)",
             "href": "/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-beginner",
             "docId": "nvidia-isaac/urdf-humanoids-beginner",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "URDF for Humanoid Robotics (Intermediate Level)",
+            "href": "/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-intermediate",
+            "docId": "nvidia-isaac/urdf-humanoids-intermediate",
             "unlisted": false
           }
         ]
@@ -110,6 +180,13 @@
         "items": [
           {
             "type": "link",
+            "label": "Embodied Intelligence in Physical AI (Advanced Level)",
+            "href": "/docs/personalized-beginner/physical-ai/embodied-intelligence-advanced",
+            "docId": "physical-ai/embodied-intelligence-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
             "label": "Embodied Intelligence in Physical AI (Beginner Level)",
             "href": "/docs/personalized-beginner/physical-ai/embodied-intelligence-beginner",
             "docId": "physical-ai/embodied-intelligence-beginner",
@@ -117,9 +194,30 @@
           },
           {
             "type": "link",
+            "label": "Embodied Intelligence in Physical AI (Intermediate Level)",
+            "href": "/docs/personalized-beginner/physical-ai/embodied-intelligence-intermediate",
+            "docId": "physical-ai/embodied-intelligence-intermediate",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Sensors in Physical AI & Humanoid Robotics (Advanced Level)",
+            "href": "/docs/personalized-beginner/physical-ai/sensors-advanced",
+            "docId": "physical-ai/sensors-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
             "label": "Sensors in Physical AI & Humanoid Robotics (Beginner Level)",
             "href": "/docs/personalized-beginner/physical-ai/sensors-beginner",
             "docId": "physical-ai/sensors-beginner",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Sensors in Physical AI & Humanoid Robotics (Intermediate Level)",
+            "href": "/docs/personalized-beginner/physical-ai/sensors-intermediate",
+            "docId": "physical-ai/sensors-intermediate",
             "unlisted": false
           }
         ]
@@ -132,9 +230,30 @@
         "items": [
           {
             "type": "link",
+            "label": "ROS 2 Nodes, Topics, Services & Actions (Advanced Level)",
+            "href": "/docs/personalized-beginner/ros2/nodes-topics-services-advanced",
+            "docId": "ros2/nodes-topics-services-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
             "label": "ROS 2 Nodes, Topics, Services & Actions (Beginner Level)",
             "href": "/docs/personalized-beginner/ros2/nodes-topics-services-beginner",
             "docId": "ros2/nodes-topics-services-beginner",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "ROS 2 Nodes, Topics, Services & Actions (Intermediate Level)",
+            "href": "/docs/personalized-beginner/ros2/nodes-topics-services-intermediate",
+            "docId": "ros2/nodes-topics-services-intermediate",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "ROS 2 Basics for Physical AI (Advanced Level)",
+            "href": "/docs/personalized-beginner/ros2/ros2-basics-advanced",
+            "docId": "ros2/ros2-basics-advanced",
             "unlisted": false
           },
           {
@@ -146,9 +265,30 @@
           },
           {
             "type": "link",
+            "label": "ROS 2 Basics for Physical AI (Intermediate Level)",
+            "href": "/docs/personalized-beginner/ros2/ros2-basics-intermediate",
+            "docId": "ros2/ros2-basics-intermediate",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "URDF for Humanoid Robotics (Advanced Level)",
+            "href": "/docs/personalized-beginner/ros2/urdf-humanoids-advanced",
+            "docId": "ros2/urdf-humanoids-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
             "label": "URDF for Humanoid Robotics (Beginner Level)",
             "href": "/docs/personalized-beginner/ros2/urdf-humanoids-beginner",
             "docId": "ros2/urdf-humanoids-beginner",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "URDF for Humanoid Robotics (Intermediate Level)",
+            "href": "/docs/personalized-beginner/ros2/urdf-humanoids-intermediate",
+            "docId": "ros2/urdf-humanoids-intermediate",
             "unlisted": false
           }
         ]
@@ -161,6 +301,13 @@
         "items": [
           {
             "type": "link",
+            "label": "Gazebo Simulation for Physical AI (Advanced Level)",
+            "href": "/docs/personalized-beginner/simulation/gazebo-advanced",
+            "docId": "simulation/gazebo-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
             "label": "Gazebo Simulation for Physical AI (Beginner Level)",
             "href": "/docs/personalized-beginner/simulation/gazebo-beginner",
             "docId": "simulation/gazebo-beginner",
@@ -168,9 +315,30 @@
           },
           {
             "type": "link",
+            "label": "Gazebo Simulation for Physical AI (Intermediate Level)",
+            "href": "/docs/personalized-beginner/simulation/gazebo-intermediate",
+            "docId": "simulation/gazebo-intermediate",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Unity Simulation for Physical AI (Advanced Level)",
+            "href": "/docs/personalized-beginner/simulation/unity-advanced",
+            "docId": "simulation/unity-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
             "label": "Unity Simulation for Physical AI (Beginner Level)",
             "href": "/docs/personalized-beginner/simulation/unity-beginner",
             "docId": "simulation/unity-beginner",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Unity Simulation for Physical AI (Intermediate Level)",
+            "href": "/docs/personalized-beginner/simulation/unity-intermediate",
+            "docId": "simulation/unity-intermediate",
             "unlisted": false
           }
         ]
@@ -183,9 +351,30 @@
         "items": [
           {
             "type": "link",
+            "label": "Using Large Language Models for Cognitive Planning in Robots (Advanced Level)",
+            "href": "/docs/personalized-beginner/vla/llm-planning-advanced",
+            "docId": "vla/llm-planning-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
             "label": "Using Large Language Models for Cognitive Planning in Robots (Beginner Level)",
             "href": "/docs/personalized-beginner/vla/llm-planning-beginner",
             "docId": "vla/llm-planning-beginner",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Using Large Language Models for Cognitive Planning in Robots (Intermediate Level)",
+            "href": "/docs/personalized-beginner/vla/llm-planning-intermediate",
+            "docId": "vla/llm-planning-intermediate",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Vision-Language-Action Models in Robotics (Advanced Level)",
+            "href": "/docs/personalized-beginner/vla/vision-language-action-advanced",
+            "docId": "vla/vision-language-action-advanced",
             "unlisted": false
           },
           {
@@ -197,145 +386,342 @@
           },
           {
             "type": "link",
+            "label": "Vision-Language-Action Models in Robotics (Intermediate Level)",
+            "href": "/docs/personalized-beginner/vla/vision-language-action-intermediate",
+            "docId": "vla/vision-language-action-intermediate",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Voice-to-Action Systems Using Speech Recognition (Advanced Level)",
+            "href": "/docs/personalized-beginner/vla/whisper-voice-advanced",
+            "docId": "vla/whisper-voice-advanced",
+            "unlisted": false
+          },
+          {
+            "type": "link",
             "label": "Voice-to-Action Systems Using Speech Recognition (Beginner Level)",
             "href": "/docs/personalized-beginner/vla/whisper-voice-beginner",
             "docId": "vla/whisper-voice-beginner",
             "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Voice-to-Action Systems Using Speech Recognition (Intermediate Level)",
+            "href": "/docs/personalized-beginner/vla/whisper-voice-intermediate",
+            "docId": "vla/whisper-voice-intermediate",
+            "unlisted": false
           }
         ]
       }
-    ],
-    "personalizedBeginnerSidebar": [],
-    "personalizedIntermediateSidebar": [],
-    "personalizedAdvancedSidebar": [],
-    "urduSidebar": []
+    ]
   },
   "docs": {
+    "capstone/autonomous-humanoid-advanced": {
+      "id": "capstone/autonomous-humanoid-advanced",
+      "title": "Capstone Project: Building an Autonomous Humanoid Robot (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
     "capstone/autonomous-humanoid-beginner": {
       "id": "capstone/autonomous-humanoid-beginner",
       "title": "Capstone Project: Building an Autonomous Humanoid Robot (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "capstone/autonomous-humanoid-intermediate": {
+      "id": "capstone/autonomous-humanoid-intermediate",
+      "title": "Capstone Project: Building an Autonomous Humanoid Robot (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "intro-beginner": {
       "id": "intro-beginner",
       "title": "Introduction to Physical AI & Humanoid Robotics (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
     },
     "module1-the-robotic-nervous-system-beginner": {
       "id": "module1-the-robotic-nervous-system-beginner",
       "title": "Chapter 1: The Robotic Nervous System (Beginner Level)",
       "description": "Introduction",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
     },
     "module2-the-digital-twin-beginner": {
       "id": "module2-the-digital-twin-beginner",
       "title": "Chapter 2: The Digital Twin (Beginner Level)",
       "description": "Introduction",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
     },
     "module3-the-ai-robot-brain-beginner": {
       "id": "module3-the-ai-robot-brain-beginner",
       "title": "Chapter 3: The AI-Robot Brain (Beginner Level)",
       "description": "Introduction",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
     },
     "module4-vision-language-action-beginner": {
       "id": "module4-vision-language-action-beginner",
       "title": "Chapter 4: Vision-Language-Action (Beginner Level)",
       "description": "Introduction",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
     },
     "module5-capstone-project-the-autonomous-humanoid-beginner": {
       "id": "module5-capstone-project-the-autonomous-humanoid-beginner",
       "title": "Chapter 5: The Autonomous Humanoid (Beginner Level)",
       "description": "Introduction",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "nvidia-isaac/isaac-ros-advanced": {
+      "id": "nvidia-isaac/isaac-ros-advanced",
+      "title": "NVIDIA Isaac ROS for Physical AI (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "nvidia-isaac/isaac-ros-beginner": {
       "id": "nvidia-isaac/isaac-ros-beginner",
       "title": "NVIDIA Isaac ROS for Physical AI (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "nvidia-isaac/isaac-ros-intermediate": {
+      "id": "nvidia-isaac/isaac-ros-intermediate",
+      "title": "NVIDIA Isaac ROS for Physical AI (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "nvidia-isaac/isaac-sim-advanced": {
+      "id": "nvidia-isaac/isaac-sim-advanced",
+      "title": "NVIDIA Isaac Sim for Physical AI (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "nvidia-isaac/isaac-sim-beginner": {
       "id": "nvidia-isaac/isaac-sim-beginner",
       "title": "NVIDIA Isaac Sim for Physical AI (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "nvidia-isaac/isaac-sim-intermediate": {
+      "id": "nvidia-isaac/isaac-sim-intermediate",
+      "title": "NVIDIA Isaac Sim for Physical AI (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "nvidia-isaac/nav2-advanced": {
+      "id": "nvidia-isaac/nav2-advanced",
+      "title": "Navigation and Path Planning with Nav2 for Humanoid Robots (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "nvidia-isaac/nav2-beginner": {
       "id": "nvidia-isaac/nav2-beginner",
       "title": "Navigation and Path Planning with Nav2 for Humanoid Robots (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "nvidia-isaac/nav2-intermediate": {
+      "id": "nvidia-isaac/nav2-intermediate",
+      "title": "Navigation and Path Planning with Nav2 for Humanoid Robots (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "nvidia-isaac/urdf-humanoids-advanced": {
+      "id": "nvidia-isaac/urdf-humanoids-advanced",
+      "title": "URDF for Humanoid Robotics (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "nvidia-isaac/urdf-humanoids-beginner": {
       "id": "nvidia-isaac/urdf-humanoids-beginner",
       "title": "URDF for Humanoid Robotics (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "nvidia-isaac/urdf-humanoids-intermediate": {
+      "id": "nvidia-isaac/urdf-humanoids-intermediate",
+      "title": "URDF for Humanoid Robotics (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "physical-ai/embodied-intelligence-advanced": {
+      "id": "physical-ai/embodied-intelligence-advanced",
+      "title": "Embodied Intelligence in Physical AI (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "physical-ai/embodied-intelligence-beginner": {
       "id": "physical-ai/embodied-intelligence-beginner",
       "title": "Embodied Intelligence in Physical AI (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "physical-ai/embodied-intelligence-intermediate": {
+      "id": "physical-ai/embodied-intelligence-intermediate",
+      "title": "Embodied Intelligence in Physical AI (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "physical-ai/sensors-advanced": {
+      "id": "physical-ai/sensors-advanced",
+      "title": "Sensors in Physical AI & Humanoid Robotics (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "physical-ai/sensors-beginner": {
       "id": "physical-ai/sensors-beginner",
       "title": "Sensors in Physical AI & Humanoid Robotics (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "physical-ai/sensors-intermediate": {
+      "id": "physical-ai/sensors-intermediate",
+      "title": "Sensors in Physical AI & Humanoid Robotics (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "ros2/nodes-topics-services-advanced": {
+      "id": "ros2/nodes-topics-services-advanced",
+      "title": "ROS 2 Nodes, Topics, Services & Actions (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "ros2/nodes-topics-services-beginner": {
       "id": "ros2/nodes-topics-services-beginner",
       "title": "ROS 2 Nodes, Topics, Services & Actions (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "ros2/nodes-topics-services-intermediate": {
+      "id": "ros2/nodes-topics-services-intermediate",
+      "title": "ROS 2 Nodes, Topics, Services & Actions (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "ros2/ros2-basics-advanced": {
+      "id": "ros2/ros2-basics-advanced",
+      "title": "ROS 2 Basics for Physical AI (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "ros2/ros2-basics-beginner": {
       "id": "ros2/ros2-basics-beginner",
       "title": "ROS 2 Basics for Physical AI (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "ros2/ros2-basics-intermediate": {
+      "id": "ros2/ros2-basics-intermediate",
+      "title": "ROS 2 Basics for Physical AI (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "ros2/urdf-humanoids-advanced": {
+      "id": "ros2/urdf-humanoids-advanced",
+      "title": "URDF for Humanoid Robotics (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "ros2/urdf-humanoids-beginner": {
       "id": "ros2/urdf-humanoids-beginner",
       "title": "URDF for Humanoid Robotics (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "ros2/urdf-humanoids-intermediate": {
+      "id": "ros2/urdf-humanoids-intermediate",
+      "title": "URDF for Humanoid Robotics (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "simulation/gazebo-advanced": {
+      "id": "simulation/gazebo-advanced",
+      "title": "Gazebo Simulation for Physical AI (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "simulation/gazebo-beginner": {
       "id": "simulation/gazebo-beginner",
       "title": "Gazebo Simulation for Physical AI (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "simulation/gazebo-intermediate": {
+      "id": "simulation/gazebo-intermediate",
+      "title": "Gazebo Simulation for Physical AI (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "simulation/unity-advanced": {
+      "id": "simulation/unity-advanced",
+      "title": "Unity Simulation for Physical AI (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "simulation/unity-beginner": {
       "id": "simulation/unity-beginner",
       "title": "Unity Simulation for Physical AI (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "simulation/unity-intermediate": {
+      "id": "simulation/unity-intermediate",
+      "title": "Unity Simulation for Physical AI (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "vla/llm-planning-advanced": {
+      "id": "vla/llm-planning-advanced",
+      "title": "Using Large Language Models for Cognitive Planning in Robots (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "vla/llm-planning-beginner": {
       "id": "vla/llm-planning-beginner",
       "title": "Using Large Language Models for Cognitive Planning in Robots (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "vla/llm-planning-intermediate": {
+      "id": "vla/llm-planning-intermediate",
+      "title": "Using Large Language Models for Cognitive Planning in Robots (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "vla/vision-language-action-advanced": {
+      "id": "vla/vision-language-action-advanced",
+      "title": "Vision-Language-Action Models in Robotics (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "vla/vision-language-action-beginner": {
       "id": "vla/vision-language-action-beginner",
       "title": "Vision-Language-Action Models in Robotics (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "vla/vision-language-action-intermediate": {
+      "id": "vla/vision-language-action-intermediate",
+      "title": "Vision-Language-Action Models in Robotics (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
+    },
+    "vla/whisper-voice-advanced": {
+      "id": "vla/whisper-voice-advanced",
+      "title": "Voice-to-Action Systems Using Speech Recognition (Advanced Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     },
     "vla/whisper-voice-beginner": {
       "id": "vla/whisper-voice-beginner",
       "title": "Voice-to-Action Systems Using Speech Recognition (Beginner Level)",
       "description": "Concept",
-      "sidebar": "tutorialSidebar"
+      "sidebar": "beginnerSidebar"
+    },
+    "vla/whisper-voice-intermediate": {
+      "id": "vla/whisper-voice-intermediate",
+      "title": "Voice-to-Action Systems Using Speech Recognition (Intermediate Level)",
+      "description": "Concept",
+      "sidebar": "beginnerSidebar"
     }
   }
 }

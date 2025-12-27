@@ -163,391 +163,751 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-vla-whisper-voicef-7-e-a82"
   },
-  "/docs/personalized-advanced-fa6": {
+  "/docs/personalized-advanced-2f8": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docs-personalized-advancedfa-7-e15"
     }
   },
-  "/docs/personalized-advanced-2e0": {
+  "/docs/personalized-advanced-347": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "version": "version---docs-personalized-advancedd-02-b9c"
   },
-  "/docs/personalized-advanced-f51": {
+  "/docs/personalized-advanced-8de": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/docs/personalized-advanced/capstone/autonomous-humanoid-advanced-e9a": {
+  "/docs/personalized-advanced/capstone/autonomous-humanoid-advanced-fbe": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-capstone-autonomous-humanoid-advanced-0-f-1-68d"
+    "content": "content---docs-personalized-advanced-capstone-autonomous-humanoid-advanced-6-ec-62f"
   },
-  "/docs/personalized-advanced/intro-advanced-97d": {
+  "/docs/personalized-advanced/capstone/autonomous-humanoid-beginner-185": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-intro-advanced-9-ce-9a7"
+    "content": "content---docs-personalized-advanced-capstone-autonomous-humanoid-beginner-2-a-3-71d"
   },
-  "/docs/personalized-advanced/module1-the-robotic-nervous-system-advanced-0c5": {
+  "/docs/personalized-advanced/capstone/autonomous-humanoid-intermediate-fd0": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-module-1-the-robotic-nervous-system-advanced-657-3bc"
+    "content": "content---docs-personalized-advanced-capstone-autonomous-humanoid-intermediate-3-e-3-1db"
   },
-  "/docs/personalized-advanced/module2-the-digital-twin-advanced-790": {
+  "/docs/personalized-advanced/intro-advanced-0f8": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-module-2-the-digital-twin-advanced-5-b-5-7c0"
+    "content": "content---docs-personalized-advanced-intro-advanced-91-a-8db"
   },
-  "/docs/personalized-advanced/module3-the-ai-robot-brain-advanced-75a": {
+  "/docs/personalized-advanced/module1-the-robotic-nervous-system-advanced-421": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-module-3-the-ai-robot-brain-advancedd-1-a-ada"
+    "content": "content---docs-personalized-advanced-module-1-the-robotic-nervous-system-advanced-345-2f3"
   },
-  "/docs/personalized-advanced/module4-vision-language-action-advanced-001": {
+  "/docs/personalized-advanced/module2-the-digital-twin-advanced-c8d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-module-4-vision-language-action-advanced-3-bc-f39"
+    "content": "content---docs-personalized-advanced-module-2-the-digital-twin-advanced-095-b5a"
   },
-  "/docs/personalized-advanced/module5-capstone-project-the-autonomous-humanoid-advanced-99e": {
+  "/docs/personalized-advanced/module3-the-ai-robot-brain-advanced-a3c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-module-5-capstone-project-the-autonomous-humanoid-advancedeaf-11e"
+    "content": "content---docs-personalized-advanced-module-3-the-ai-robot-brain-advanced-3-e-6-13f"
   },
-  "/docs/personalized-advanced/nvidia-isaac/isaac-ros-advanced-802": {
+  "/docs/personalized-advanced/module4-vision-language-action-advanced-5af": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-nvidia-isaac-isaac-ros-advancedb-60-52b"
+    "content": "content---docs-personalized-advanced-module-4-vision-language-action-advancede-9-a-663"
   },
-  "/docs/personalized-advanced/nvidia-isaac/isaac-sim-advanced-fad": {
+  "/docs/personalized-advanced/module5-capstone-project-the-autonomous-humanoid-advanced-adb": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-nvidia-isaac-isaac-sim-advanced-0-e-9-34f"
+    "content": "content---docs-personalized-advanced-module-5-capstone-project-the-autonomous-humanoid-advanced-5-b-2-96e"
   },
-  "/docs/personalized-advanced/nvidia-isaac/nav2-advanced-112": {
+  "/docs/personalized-advanced/nvidia-isaac/isaac-ros-advanced-f73": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-nvidia-isaac-nav-2-advancedb-53-e19"
+    "content": "content---docs-personalized-advanced-nvidia-isaac-isaac-ros-advanced-855-a00"
   },
-  "/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-advanced-2c0": {
+  "/docs/personalized-advanced/nvidia-isaac/isaac-ros-beginner-5bd": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-nvidia-isaac-urdf-humanoids-advancedbc-4-68a"
+    "content": "content---docs-personalized-advanced-nvidia-isaac-isaac-ros-beginnerf-54-313"
   },
-  "/docs/personalized-advanced/physical-ai/embodied-intelligence-advanced-0a1": {
+  "/docs/personalized-advanced/nvidia-isaac/isaac-ros-intermediate-25b": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-physical-ai-embodied-intelligence-advanced-993-230"
+    "content": "content---docs-personalized-advanced-nvidia-isaac-isaac-ros-intermediate-6-d-3-abf"
   },
-  "/docs/personalized-advanced/physical-ai/sensors-advanced-9a7": {
+  "/docs/personalized-advanced/nvidia-isaac/isaac-sim-advanced-519": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-physical-ai-sensors-advancedbdd-15c"
+    "content": "content---docs-personalized-advanced-nvidia-isaac-isaac-sim-advancedbad-c69"
   },
-  "/docs/personalized-advanced/ros2/nodes-topics-services-advanced-717": {
+  "/docs/personalized-advanced/nvidia-isaac/isaac-sim-beginner-ec2": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-ros-2-nodes-topics-services-advanced-9-be-52f"
+    "content": "content---docs-personalized-advanced-nvidia-isaac-isaac-sim-beginnerf-38-f12"
   },
-  "/docs/personalized-advanced/ros2/ros2-basics-advanced-af8": {
+  "/docs/personalized-advanced/nvidia-isaac/isaac-sim-intermediate-849": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-ros-2-ros-2-basics-advancedd-58-5ad"
+    "content": "content---docs-personalized-advanced-nvidia-isaac-isaac-sim-intermediatef-5-d-d11"
   },
-  "/docs/personalized-advanced/ros2/urdf-humanoids-advanced-85e": {
+  "/docs/personalized-advanced/nvidia-isaac/nav2-advanced-889": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-ros-2-urdf-humanoids-advanced-0-bd-9e5"
+    "content": "content---docs-personalized-advanced-nvidia-isaac-nav-2-advanced-269-66b"
   },
-  "/docs/personalized-advanced/simulation/gazebo-advanced-6e9": {
+  "/docs/personalized-advanced/nvidia-isaac/nav2-beginner-708": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-simulation-gazebo-advancedc-91-ffa"
+    "content": "content---docs-personalized-advanced-nvidia-isaac-nav-2-beginnercd-0-67d"
   },
-  "/docs/personalized-advanced/simulation/unity-advanced-fb4": {
+  "/docs/personalized-advanced/nvidia-isaac/nav2-intermediate-a3f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-simulation-unity-advancedbc-8-970"
+    "content": "content---docs-personalized-advanced-nvidia-isaac-nav-2-intermediate-0-bc-032"
   },
-  "/docs/personalized-advanced/vla/llm-planning-advanced-d45": {
+  "/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-advanced-881": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-vla-llm-planning-advanced-286-f72"
+    "content": "content---docs-personalized-advanced-nvidia-isaac-urdf-humanoids-advancededb-d50"
   },
-  "/docs/personalized-advanced/vla/vision-language-action-advanced-d30": {
+  "/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-beginner-e27": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-vla-vision-language-action-advancedd-37-213"
+    "content": "content---docs-personalized-advanced-nvidia-isaac-urdf-humanoids-beginner-93-b-517"
   },
-  "/docs/personalized-advanced/vla/whisper-voice-advanced-dba": {
+  "/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-intermediate-8ac": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-advanced-vla-whisper-voice-advancede-5-e-393"
+    "content": "content---docs-personalized-advanced-nvidia-isaac-urdf-humanoids-intermediateb-37-a46"
   },
-  "/docs/personalized-beginner-bc4": {
+  "/docs/personalized-advanced/physical-ai/embodied-intelligence-advanced-254": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-physical-ai-embodied-intelligence-advanced-8-fb-386"
+  },
+  "/docs/personalized-advanced/physical-ai/embodied-intelligence-beginner-07f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-physical-ai-embodied-intelligence-beginner-290-760"
+  },
+  "/docs/personalized-advanced/physical-ai/embodied-intelligence-intermediate-b3b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-physical-ai-embodied-intelligence-intermediate-0-c-6-58a"
+  },
+  "/docs/personalized-advanced/physical-ai/sensors-advanced-9cf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-physical-ai-sensors-advanced-406-f3f"
+  },
+  "/docs/personalized-advanced/physical-ai/sensors-beginner-bc0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-physical-ai-sensors-beginnerf-93-248"
+  },
+  "/docs/personalized-advanced/physical-ai/sensors-intermediate-25b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-physical-ai-sensors-intermediate-329-e26"
+  },
+  "/docs/personalized-advanced/ros2/nodes-topics-services-advanced-7ab": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-ros-2-nodes-topics-services-advanced-082-0f0"
+  },
+  "/docs/personalized-advanced/ros2/nodes-topics-services-beginner-585": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-ros-2-nodes-topics-services-beginner-0-c-6-098"
+  },
+  "/docs/personalized-advanced/ros2/nodes-topics-services-intermediate-b15": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-ros-2-nodes-topics-services-intermediatef-48-86a"
+  },
+  "/docs/personalized-advanced/ros2/ros2-basics-advanced-08c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-ros-2-ros-2-basics-advancedf-8-f-d60"
+  },
+  "/docs/personalized-advanced/ros2/ros2-basics-beginner-0a9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-ros-2-ros-2-basics-beginnere-5-d-0ef"
+  },
+  "/docs/personalized-advanced/ros2/ros2-basics-intermediate-f59": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-ros-2-ros-2-basics-intermediateff-8-4f3"
+  },
+  "/docs/personalized-advanced/ros2/urdf-humanoids-advanced-091": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-ros-2-urdf-humanoids-advanced-904-efc"
+  },
+  "/docs/personalized-advanced/ros2/urdf-humanoids-beginner-f90": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-ros-2-urdf-humanoids-beginnerc-42-90a"
+  },
+  "/docs/personalized-advanced/ros2/urdf-humanoids-intermediate-df5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-ros-2-urdf-humanoids-intermediate-268-664"
+  },
+  "/docs/personalized-advanced/simulation/gazebo-advanced-fe3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-simulation-gazebo-advanced-2-d-0-2c6"
+  },
+  "/docs/personalized-advanced/simulation/gazebo-beginner-172": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-simulation-gazebo-beginnerd-46-77b"
+  },
+  "/docs/personalized-advanced/simulation/gazebo-intermediate-dac": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-simulation-gazebo-intermediatedb-9-676"
+  },
+  "/docs/personalized-advanced/simulation/unity-advanced-32a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-simulation-unity-advanced-2-ec-7a8"
+  },
+  "/docs/personalized-advanced/simulation/unity-beginner-315": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-simulation-unity-beginner-3-c-2-337"
+  },
+  "/docs/personalized-advanced/simulation/unity-intermediate-123": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-simulation-unity-intermediate-3-e-2-bd6"
+  },
+  "/docs/personalized-advanced/vla/llm-planning-advanced-e3f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-vla-llm-planning-advanced-180-3e2"
+  },
+  "/docs/personalized-advanced/vla/llm-planning-beginner-714": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-vla-llm-planning-beginnercac-6e3"
+  },
+  "/docs/personalized-advanced/vla/llm-planning-intermediate-1f6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-vla-llm-planning-intermediate-83-c-9dc"
+  },
+  "/docs/personalized-advanced/vla/vision-language-action-advanced-422": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-vla-vision-language-action-advanced-1-aa-90e"
+  },
+  "/docs/personalized-advanced/vla/vision-language-action-beginner-ae0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-vla-vision-language-action-beginner-6-df-993"
+  },
+  "/docs/personalized-advanced/vla/vision-language-action-intermediate-449": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-vla-vision-language-action-intermediated-34-254"
+  },
+  "/docs/personalized-advanced/vla/whisper-voice-advanced-6b9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-vla-whisper-voice-advancedf-57-773"
+  },
+  "/docs/personalized-advanced/vla/whisper-voice-beginner-ca4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-vla-whisper-voice-beginnerc-29-7b0"
+  },
+  "/docs/personalized-advanced/vla/whisper-voice-intermediate-830": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-advanced-vla-whisper-voice-intermediatecfd-b8d"
+  },
+  "/docs/personalized-beginner-f31": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docs-personalized-beginner-917-f28"
     }
   },
-  "/docs/personalized-beginner-95d": {
+  "/docs/personalized-beginner-b22": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "version": "version---docs-personalized-beginner-4-b-7-2c0"
   },
-  "/docs/personalized-beginner-702": {
+  "/docs/personalized-beginner-82d": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/docs/personalized-beginner/capstone/autonomous-humanoid-beginner-468": {
+  "/docs/personalized-beginner/capstone/autonomous-humanoid-advanced-088": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-capstone-autonomous-humanoid-beginner-6-b-4-26a"
+    "content": "content---docs-personalized-beginner-capstone-autonomous-humanoid-advanced-70-d-6a4"
   },
-  "/docs/personalized-beginner/intro-beginner-455": {
+  "/docs/personalized-beginner/capstone/autonomous-humanoid-beginner-d8d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-intro-beginnera-1-f-e5e"
+    "content": "content---docs-personalized-beginner-capstone-autonomous-humanoid-beginnerb-62-25b"
   },
-  "/docs/personalized-beginner/module1-the-robotic-nervous-system-beginner-146": {
+  "/docs/personalized-beginner/capstone/autonomous-humanoid-intermediate-e8c": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-module-1-the-robotic-nervous-system-beginnerade-b90"
+    "content": "content---docs-personalized-beginner-capstone-autonomous-humanoid-intermediatef-44-232"
   },
-  "/docs/personalized-beginner/module2-the-digital-twin-beginner-dbd": {
+  "/docs/personalized-beginner/intro-beginner-e8d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-module-2-the-digital-twin-beginner-858-170"
+    "content": "content---docs-personalized-beginner-intro-beginner-7-d-2-2ed"
   },
-  "/docs/personalized-beginner/module3-the-ai-robot-brain-beginner-835": {
+  "/docs/personalized-beginner/module1-the-robotic-nervous-system-beginner-8b5": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-module-3-the-ai-robot-brain-beginnerec-0-54a"
+    "content": "content---docs-personalized-beginner-module-1-the-robotic-nervous-system-beginnere-5-c-fd8"
   },
-  "/docs/personalized-beginner/module4-vision-language-action-beginner-275": {
+  "/docs/personalized-beginner/module2-the-digital-twin-beginner-2aa": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-module-4-vision-language-action-beginnere-66-142"
+    "content": "content---docs-personalized-beginner-module-2-the-digital-twin-beginner-659-d93"
   },
-  "/docs/personalized-beginner/module5-capstone-project-the-autonomous-humanoid-beginner-90d": {
+  "/docs/personalized-beginner/module3-the-ai-robot-brain-beginner-749": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-module-5-capstone-project-the-autonomous-humanoid-beginnere-4-e-bdd"
+    "content": "content---docs-personalized-beginner-module-3-the-ai-robot-brain-beginner-643-19f"
   },
-  "/docs/personalized-beginner/nvidia-isaac/isaac-ros-beginner-a99": {
+  "/docs/personalized-beginner/module4-vision-language-action-beginner-87f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-nvidia-isaac-isaac-ros-beginner-4-ab-c57"
+    "content": "content---docs-personalized-beginner-module-4-vision-language-action-beginnerd-08-8de"
   },
-  "/docs/personalized-beginner/nvidia-isaac/isaac-sim-beginner-18c": {
+  "/docs/personalized-beginner/module5-capstone-project-the-autonomous-humanoid-beginner-dfb": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-nvidia-isaac-isaac-sim-beginner-95-c-89d"
+    "content": "content---docs-personalized-beginner-module-5-capstone-project-the-autonomous-humanoid-beginnerc-47-697"
   },
-  "/docs/personalized-beginner/nvidia-isaac/nav2-beginner-7be": {
+  "/docs/personalized-beginner/nvidia-isaac/isaac-ros-advanced-5ea": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-nvidia-isaac-nav-2-beginner-242-7fd"
+    "content": "content---docs-personalized-beginner-nvidia-isaac-isaac-ros-advanced-6-d-4-8b3"
   },
-  "/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-beginner-6dd": {
+  "/docs/personalized-beginner/nvidia-isaac/isaac-ros-beginner-166": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-nvidia-isaac-urdf-humanoids-beginner-3-d-2-659"
+    "content": "content---docs-personalized-beginner-nvidia-isaac-isaac-ros-beginner-241-6cd"
   },
-  "/docs/personalized-beginner/physical-ai/embodied-intelligence-beginner-da1": {
+  "/docs/personalized-beginner/nvidia-isaac/isaac-ros-intermediate-29f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-physical-ai-embodied-intelligence-beginner-0-bb-670"
+    "content": "content---docs-personalized-beginner-nvidia-isaac-isaac-ros-intermediate-749-493"
   },
-  "/docs/personalized-beginner/physical-ai/sensors-beginner-c0a": {
+  "/docs/personalized-beginner/nvidia-isaac/isaac-sim-advanced-02f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-physical-ai-sensors-beginner-90-d-85f"
+    "content": "content---docs-personalized-beginner-nvidia-isaac-isaac-sim-advanced-2-f-6-793"
   },
-  "/docs/personalized-beginner/ros2/nodes-topics-services-beginner-16e": {
+  "/docs/personalized-beginner/nvidia-isaac/isaac-sim-beginner-948": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-ros-2-nodes-topics-services-beginnereba-344"
+    "content": "content---docs-personalized-beginner-nvidia-isaac-isaac-sim-beginner-369-f91"
   },
-  "/docs/personalized-beginner/ros2/ros2-basics-beginner-b85": {
+  "/docs/personalized-beginner/nvidia-isaac/isaac-sim-intermediate-c65": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-ros-2-ros-2-basics-beginner-979-869"
+    "content": "content---docs-personalized-beginner-nvidia-isaac-isaac-sim-intermediatefa-5-d90"
   },
-  "/docs/personalized-beginner/ros2/urdf-humanoids-beginner-2a0": {
+  "/docs/personalized-beginner/nvidia-isaac/nav2-advanced-5eb": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-ros-2-urdf-humanoids-beginner-3-d-3-3f8"
+    "content": "content---docs-personalized-beginner-nvidia-isaac-nav-2-advanced-8-cf-cf7"
   },
-  "/docs/personalized-beginner/simulation/gazebo-beginner-7fb": {
+  "/docs/personalized-beginner/nvidia-isaac/nav2-beginner-4c7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-simulation-gazebo-beginner-006-63a"
+    "content": "content---docs-personalized-beginner-nvidia-isaac-nav-2-beginner-66-c-0ab"
   },
-  "/docs/personalized-beginner/simulation/unity-beginner-08f": {
+  "/docs/personalized-beginner/nvidia-isaac/nav2-intermediate-c69": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-simulation-unity-beginner-43-e-0dc"
+    "content": "content---docs-personalized-beginner-nvidia-isaac-nav-2-intermediate-419-08f"
   },
-  "/docs/personalized-beginner/vla/llm-planning-beginner-070": {
+  "/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-advanced-cd0": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-vla-llm-planning-beginnerb-83-c71"
+    "content": "content---docs-personalized-beginner-nvidia-isaac-urdf-humanoids-advanced-213-4a9"
   },
-  "/docs/personalized-beginner/vla/vision-language-action-beginner-916": {
+  "/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-beginner-2c9": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-vla-vision-language-action-beginnere-02-c4c"
+    "content": "content---docs-personalized-beginner-nvidia-isaac-urdf-humanoids-beginnere-04-e39"
   },
-  "/docs/personalized-beginner/vla/whisper-voice-beginner-aa5": {
+  "/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-intermediate-2ad": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-beginner-vla-whisper-voice-beginner-2-af-ac8"
+    "content": "content---docs-personalized-beginner-nvidia-isaac-urdf-humanoids-intermediate-765-0b2"
   },
-  "/docs/personalized-intermediate-ac8": {
+  "/docs/personalized-beginner/physical-ai/embodied-intelligence-advanced-392": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-physical-ai-embodied-intelligence-advanceda-68-d7c"
+  },
+  "/docs/personalized-beginner/physical-ai/embodied-intelligence-beginner-6ae": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-physical-ai-embodied-intelligence-beginner-07-f-d59"
+  },
+  "/docs/personalized-beginner/physical-ai/embodied-intelligence-intermediate-8d9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-physical-ai-embodied-intelligence-intermediate-146-a79"
+  },
+  "/docs/personalized-beginner/physical-ai/sensors-advanced-26f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-physical-ai-sensors-advanced-83-c-2e0"
+  },
+  "/docs/personalized-beginner/physical-ai/sensors-beginner-996": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-physical-ai-sensors-beginnerfc-8-074"
+  },
+  "/docs/personalized-beginner/physical-ai/sensors-intermediate-ce3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-physical-ai-sensors-intermediate-494-a44"
+  },
+  "/docs/personalized-beginner/ros2/nodes-topics-services-advanced-960": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-ros-2-nodes-topics-services-advanced-5-cc-573"
+  },
+  "/docs/personalized-beginner/ros2/nodes-topics-services-beginner-7ce": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-ros-2-nodes-topics-services-beginnere-52-909"
+  },
+  "/docs/personalized-beginner/ros2/nodes-topics-services-intermediate-f22": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-ros-2-nodes-topics-services-intermediated-59-567"
+  },
+  "/docs/personalized-beginner/ros2/ros2-basics-advanced-402": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-ros-2-ros-2-basics-advancedefa-843"
+  },
+  "/docs/personalized-beginner/ros2/ros2-basics-beginner-257": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-ros-2-ros-2-basics-beginnercd-5-621"
+  },
+  "/docs/personalized-beginner/ros2/ros2-basics-intermediate-fbb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-ros-2-ros-2-basics-intermediateb-61-7df"
+  },
+  "/docs/personalized-beginner/ros2/urdf-humanoids-advanced-256": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-ros-2-urdf-humanoids-advancedae-9-03a"
+  },
+  "/docs/personalized-beginner/ros2/urdf-humanoids-beginner-56c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-ros-2-urdf-humanoids-beginner-56-a-af0"
+  },
+  "/docs/personalized-beginner/ros2/urdf-humanoids-intermediate-eb3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-ros-2-urdf-humanoids-intermediatebc-9-568"
+  },
+  "/docs/personalized-beginner/simulation/gazebo-advanced-4d8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-simulation-gazebo-advanced-9-d-3-db5"
+  },
+  "/docs/personalized-beginner/simulation/gazebo-beginner-a9c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-simulation-gazebo-beginner-444-97b"
+  },
+  "/docs/personalized-beginner/simulation/gazebo-intermediate-ccf": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-simulation-gazebo-intermediatef-0-e-c01"
+  },
+  "/docs/personalized-beginner/simulation/unity-advanced-3b4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-simulation-unity-advanceda-62-858"
+  },
+  "/docs/personalized-beginner/simulation/unity-beginner-56f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-simulation-unity-beginnere-48-2b4"
+  },
+  "/docs/personalized-beginner/simulation/unity-intermediate-726": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-simulation-unity-intermediated-6-e-73b"
+  },
+  "/docs/personalized-beginner/vla/llm-planning-advanced-5fa": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-vla-llm-planning-advancedc-52-a82"
+  },
+  "/docs/personalized-beginner/vla/llm-planning-beginner-a07": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-vla-llm-planning-beginnerbe-4-4be"
+  },
+  "/docs/personalized-beginner/vla/llm-planning-intermediate-838": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-vla-llm-planning-intermediatee-86-877"
+  },
+  "/docs/personalized-beginner/vla/vision-language-action-advanced-923": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-vla-vision-language-action-advanced-15-d-7ef"
+  },
+  "/docs/personalized-beginner/vla/vision-language-action-beginner-a44": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-vla-vision-language-action-beginner-7-ff-5d8"
+  },
+  "/docs/personalized-beginner/vla/vision-language-action-intermediate-207": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-vla-vision-language-action-intermediate-2-a-2-044"
+  },
+  "/docs/personalized-beginner/vla/whisper-voice-advanced-19d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-vla-whisper-voice-advanced-944-2ca"
+  },
+  "/docs/personalized-beginner/vla/whisper-voice-beginner-66b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-vla-whisper-voice-beginner-6-b-5-2a7"
+  },
+  "/docs/personalized-beginner/vla/whisper-voice-intermediate-1ab": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-beginner-vla-whisper-voice-intermediated-11-e5c"
+  },
+  "/docs/personalized-intermediate-1ac": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docs-personalized-intermediate-662-d47"
     }
   },
-  "/docs/personalized-intermediate-6a1": {
+  "/docs/personalized-intermediate-b4e": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "version": "version---docs-personalized-intermediatef-01-5a0"
   },
-  "/docs/personalized-intermediate-b37": {
+  "/docs/personalized-intermediate-7db": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/docs/personalized-intermediate/capstone/autonomous-humanoid-intermediate-771": {
+  "/docs/personalized-intermediate/capstone/autonomous-humanoid-advanced-720": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-capstone-autonomous-humanoid-intermediate-24-b-b39"
+    "content": "content---docs-personalized-intermediate-capstone-autonomous-humanoid-advanced-331-239"
   },
-  "/docs/personalized-intermediate/intro-intermediate-b22": {
+  "/docs/personalized-intermediate/capstone/autonomous-humanoid-beginner-6ba": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-intro-intermediateca-8-981"
+    "content": "content---docs-personalized-intermediate-capstone-autonomous-humanoid-beginnerfc-9-224"
   },
-  "/docs/personalized-intermediate/module1-the-robotic-nervous-system-intermediate-78a": {
+  "/docs/personalized-intermediate/capstone/autonomous-humanoid-intermediate-209": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-module-1-the-robotic-nervous-system-intermediate-794-206"
+    "content": "content---docs-personalized-intermediate-capstone-autonomous-humanoid-intermediateb-4-f-d63"
   },
-  "/docs/personalized-intermediate/module2-the-digital-twin-intermediate-1cd": {
+  "/docs/personalized-intermediate/intro-intermediate-6a9": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-module-2-the-digital-twin-intermediate-40-b-79f"
+    "content": "content---docs-personalized-intermediate-intro-intermediateb-78-c7e"
   },
-  "/docs/personalized-intermediate/module3-the-ai-robot-brain-intermediate-74d": {
+  "/docs/personalized-intermediate/module1-the-robotic-nervous-system-intermediate-999": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-module-3-the-ai-robot-brain-intermediate-2-a-5-22b"
+    "content": "content---docs-personalized-intermediate-module-1-the-robotic-nervous-system-intermediate-010-862"
   },
-  "/docs/personalized-intermediate/module4-vision-language-action-intermediate-082": {
+  "/docs/personalized-intermediate/module2-the-digital-twin-intermediate-05f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-module-4-vision-language-action-intermediatecb-1-ff8"
+    "content": "content---docs-personalized-intermediate-module-2-the-digital-twin-intermediated-5-d-635"
   },
-  "/docs/personalized-intermediate/module5-capstone-project-the-autonomous-humanoid-intermediate-4c0": {
+  "/docs/personalized-intermediate/module3-the-ai-robot-brain-intermediate-73e": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-module-5-capstone-project-the-autonomous-humanoid-intermediatebab-97f"
+    "content": "content---docs-personalized-intermediate-module-3-the-ai-robot-brain-intermediate-8-eb-df5"
   },
-  "/docs/personalized-intermediate/nvidia-isaac/isaac-ros-intermediate-684": {
+  "/docs/personalized-intermediate/module4-vision-language-action-intermediate-289": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-nvidia-isaac-isaac-ros-intermediate-6-bd-404"
+    "content": "content---docs-personalized-intermediate-module-4-vision-language-action-intermediateffc-bdf"
   },
-  "/docs/personalized-intermediate/nvidia-isaac/isaac-sim-intermediate-8d2": {
+  "/docs/personalized-intermediate/module5-capstone-project-the-autonomous-humanoid-intermediate-08f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-nvidia-isaac-isaac-sim-intermediatec-50-19f"
+    "content": "content---docs-personalized-intermediate-module-5-capstone-project-the-autonomous-humanoid-intermediate-629-715"
   },
-  "/docs/personalized-intermediate/nvidia-isaac/nav2-intermediate-579": {
+  "/docs/personalized-intermediate/nvidia-isaac/isaac-ros-advanced-a71": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-nvidia-isaac-nav-2-intermediate-83-f-6fd"
+    "content": "content---docs-personalized-intermediate-nvidia-isaac-isaac-ros-advancedebf-108"
   },
-  "/docs/personalized-intermediate/nvidia-isaac/urdf-humanoids-intermediate-77c": {
+  "/docs/personalized-intermediate/nvidia-isaac/isaac-ros-beginner-b40": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-nvidia-isaac-urdf-humanoids-intermediate-18-c-7f7"
+    "content": "content---docs-personalized-intermediate-nvidia-isaac-isaac-ros-beginnerc-73-365"
   },
-  "/docs/personalized-intermediate/physical-ai/embodied-intelligence-intermediate-3a3": {
+  "/docs/personalized-intermediate/nvidia-isaac/isaac-ros-intermediate-c7b": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-physical-ai-embodied-intelligence-intermediate-607-1e5"
+    "content": "content---docs-personalized-intermediate-nvidia-isaac-isaac-ros-intermediatefe-0-097"
   },
-  "/docs/personalized-intermediate/physical-ai/sensors-intermediate-d21": {
+  "/docs/personalized-intermediate/nvidia-isaac/isaac-sim-advanced-ef4": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-physical-ai-sensors-intermediate-5-e-2-eee"
+    "content": "content---docs-personalized-intermediate-nvidia-isaac-isaac-sim-advanced-268-ded"
   },
-  "/docs/personalized-intermediate/ros2/nodes-topics-services-intermediate-400": {
+  "/docs/personalized-intermediate/nvidia-isaac/isaac-sim-beginner-e15": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-ros-2-nodes-topics-services-intermediate-698-cef"
+    "content": "content---docs-personalized-intermediate-nvidia-isaac-isaac-sim-beginner-64-a-bee"
   },
-  "/docs/personalized-intermediate/ros2/ros2-basics-intermediate-04b": {
+  "/docs/personalized-intermediate/nvidia-isaac/isaac-sim-intermediate-1b4": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-ros-2-ros-2-basics-intermediate-5-f-7-803"
+    "content": "content---docs-personalized-intermediate-nvidia-isaac-isaac-sim-intermediate-502-a78"
   },
-  "/docs/personalized-intermediate/ros2/urdf-humanoids-intermediate-ec1": {
+  "/docs/personalized-intermediate/nvidia-isaac/nav2-advanced-006": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-ros-2-urdf-humanoids-intermediate-7-c-2-8bb"
+    "content": "content---docs-personalized-intermediate-nvidia-isaac-nav-2-advanced-896-1bd"
   },
-  "/docs/personalized-intermediate/simulation/gazebo-intermediate-c73": {
+  "/docs/personalized-intermediate/nvidia-isaac/nav2-beginner-9ea": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-simulation-gazebo-intermediate-745-7ad"
+    "content": "content---docs-personalized-intermediate-nvidia-isaac-nav-2-beginner-603-86f"
   },
-  "/docs/personalized-intermediate/simulation/unity-intermediate-74f": {
+  "/docs/personalized-intermediate/nvidia-isaac/nav2-intermediate-fb4": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-simulation-unity-intermediate-1-aa-4a1"
+    "content": "content---docs-personalized-intermediate-nvidia-isaac-nav-2-intermediate-460-d2c"
   },
-  "/docs/personalized-intermediate/vla/llm-planning-intermediate-f44": {
+  "/docs/personalized-intermediate/nvidia-isaac/urdf-humanoids-advanced-25f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-vla-llm-planning-intermediatec-48-3d5"
+    "content": "content---docs-personalized-intermediate-nvidia-isaac-urdf-humanoids-advancedc-01-e1a"
   },
-  "/docs/personalized-intermediate/vla/vision-language-action-intermediate-32c": {
+  "/docs/personalized-intermediate/nvidia-isaac/urdf-humanoids-beginner-563": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-vla-vision-language-action-intermediate-896-b23"
+    "content": "content---docs-personalized-intermediate-nvidia-isaac-urdf-humanoids-beginnerf-55-5b9"
   },
-  "/docs/personalized-intermediate/vla/whisper-voice-intermediate-5c4": {
+  "/docs/personalized-intermediate/nvidia-isaac/urdf-humanoids-intermediate-d05": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-personalized-intermediate-vla-whisper-voice-intermediateb-9-f-ddf"
+    "content": "content---docs-personalized-intermediate-nvidia-isaac-urdf-humanoids-intermediatea-18-759"
   },
-  "/docs/urdu-51a": {
+  "/docs/personalized-intermediate/physical-ai/embodied-intelligence-advanced-ab2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-physical-ai-embodied-intelligence-advancedd-36-12f"
+  },
+  "/docs/personalized-intermediate/physical-ai/embodied-intelligence-beginner-780": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-physical-ai-embodied-intelligence-beginner-2-e-2-499"
+  },
+  "/docs/personalized-intermediate/physical-ai/embodied-intelligence-intermediate-a2c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-physical-ai-embodied-intelligence-intermediatec-9-d-487"
+  },
+  "/docs/personalized-intermediate/physical-ai/sensors-advanced-7db": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-physical-ai-sensors-advanced-122-2f9"
+  },
+  "/docs/personalized-intermediate/physical-ai/sensors-beginner-5f4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-physical-ai-sensors-beginnerff-2-376"
+  },
+  "/docs/personalized-intermediate/physical-ai/sensors-intermediate-480": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-physical-ai-sensors-intermediate-60-e-037"
+  },
+  "/docs/personalized-intermediate/ros2/nodes-topics-services-advanced-5e8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-ros-2-nodes-topics-services-advanced-41-b-36f"
+  },
+  "/docs/personalized-intermediate/ros2/nodes-topics-services-beginner-10f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-ros-2-nodes-topics-services-beginner-502-f68"
+  },
+  "/docs/personalized-intermediate/ros2/nodes-topics-services-intermediate-190": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-ros-2-nodes-topics-services-intermediate-0-a-4-992"
+  },
+  "/docs/personalized-intermediate/ros2/ros2-basics-advanced-d49": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-ros-2-ros-2-basics-advanced-5-e-7-4f1"
+  },
+  "/docs/personalized-intermediate/ros2/ros2-basics-beginner-84c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-ros-2-ros-2-basics-beginner-8-d-8-365"
+  },
+  "/docs/personalized-intermediate/ros2/ros2-basics-intermediate-2a9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-ros-2-ros-2-basics-intermediateb-24-fc5"
+  },
+  "/docs/personalized-intermediate/ros2/urdf-humanoids-advanced-a37": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-ros-2-urdf-humanoids-advanced-97-e-03b"
+  },
+  "/docs/personalized-intermediate/ros2/urdf-humanoids-beginner-51a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-ros-2-urdf-humanoids-beginnerad-0-7ba"
+  },
+  "/docs/personalized-intermediate/ros2/urdf-humanoids-intermediate-cf2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-ros-2-urdf-humanoids-intermediate-440-dc8"
+  },
+  "/docs/personalized-intermediate/simulation/gazebo-advanced-ce4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-simulation-gazebo-advanced-243-c04"
+  },
+  "/docs/personalized-intermediate/simulation/gazebo-beginner-727": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-simulation-gazebo-beginner-9-df-d3a"
+  },
+  "/docs/personalized-intermediate/simulation/gazebo-intermediate-56c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-simulation-gazebo-intermediatedf-5-c25"
+  },
+  "/docs/personalized-intermediate/simulation/unity-advanced-d22": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-simulation-unity-advanced-0-a-6-cee"
+  },
+  "/docs/personalized-intermediate/simulation/unity-beginner-5a5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-simulation-unity-beginner-847-6b0"
+  },
+  "/docs/personalized-intermediate/simulation/unity-intermediate-5da": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-simulation-unity-intermediatec-31-39c"
+  },
+  "/docs/personalized-intermediate/vla/llm-planning-advanced-b12": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-vla-llm-planning-advancedaaf-3fc"
+  },
+  "/docs/personalized-intermediate/vla/llm-planning-beginner-ed0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-vla-llm-planning-beginner-89-b-e4e"
+  },
+  "/docs/personalized-intermediate/vla/llm-planning-intermediate-fe9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-vla-llm-planning-intermediate-23-c-b65"
+  },
+  "/docs/personalized-intermediate/vla/vision-language-action-advanced-178": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-vla-vision-language-action-advanced-884-c6c"
+  },
+  "/docs/personalized-intermediate/vla/vision-language-action-beginner-407": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-vla-vision-language-action-beginner-23-e-28d"
+  },
+  "/docs/personalized-intermediate/vla/vision-language-action-intermediate-bbc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-vla-vision-language-action-intermediate-4-f-3-cfc"
+  },
+  "/docs/personalized-intermediate/vla/whisper-voice-advanced-a6c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-vla-whisper-voice-advanced-95-e-a6a"
+  },
+  "/docs/personalized-intermediate/vla/whisper-voice-beginner-efd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-vla-whisper-voice-beginner-862-a17"
+  },
+  "/docs/personalized-intermediate/vla/whisper-voice-intermediate-2b8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-personalized-intermediate-vla-whisper-voice-intermediate-1-b-5-67b"
+  },
+  "/docs/urdu-0ef": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docs-urdud-36-fcf"
     }
   },
-  "/docs/urdu-9cc": {
+  "/docs/urdu-c43": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "version": "version---docs-urdu-7-a-9-a3c"
   },
-  "/docs/urdu-e4d": {
+  "/docs/urdu-66e": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/docs/urdu/capstone/autonomous-humanoid-56c": {
+  "/docs/urdu/capstone/autonomous-humanoid-e17": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-capstone-autonomous-humanoidc-6-d-339"
   },
-  "/docs/urdu/intro-9e9": {
+  "/docs/urdu/intro-28d": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-introf-6-c-855"
   },
-  "/docs/urdu/module1-the-robotic-nervous-system-bdc": {
+  "/docs/urdu/module1-the-robotic-nervous-system-106": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-module-1-the-robotic-nervous-systemc-13-ed9"
   },
-  "/docs/urdu/module2-the-digital-twin-c98": {
+  "/docs/urdu/module2-the-digital-twin-7e3": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-module-2-the-digital-twin-424-a95"
   },
-  "/docs/urdu/module3-the-ai-robot-brain-b55": {
+  "/docs/urdu/module3-the-ai-robot-brain-88a": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-module-3-the-ai-robot-brain-293-dce"
   },
-  "/docs/urdu/module4-vision-language-action-c1f": {
+  "/docs/urdu/module4-vision-language-action-76f": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-module-4-vision-language-action-1-bf-ad0"
   },
-  "/docs/urdu/module5-capstone-project-the-autonomous-humanoid-948": {
+  "/docs/urdu/module5-capstone-project-the-autonomous-humanoid-097": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-module-5-capstone-project-the-autonomous-humanoid-8-fb-0d1"
   },
-  "/docs/urdu/nvidia-isaac/isaac-ros-2c0": {
+  "/docs/urdu/nvidia-isaac/isaac-ros-38f": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-nvidia-isaac-isaac-rosea-3-c0c"
   },
-  "/docs/urdu/nvidia-isaac/isaac-sim-633": {
+  "/docs/urdu/nvidia-isaac/isaac-sim-fbe": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-nvidia-isaac-isaac-simd-58-46e"
   },
-  "/docs/urdu/nvidia-isaac/nav2-1ac": {
+  "/docs/urdu/nvidia-isaac/nav2-e34": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-nvidia-isaac-nav-2742-a29"
   },
-  "/docs/urdu/nvidia-isaac/urdf-humanoids-762": {
+  "/docs/urdu/nvidia-isaac/urdf-humanoids-9c9": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-nvidia-isaac-urdf-humanoids-1-fc-154"
   },
-  "/docs/urdu/physical-ai/embodied-intelligence-92d": {
+  "/docs/urdu/physical-ai/embodied-intelligence-194": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-physical-ai-embodied-intelligenceddb-d28"
   },
-  "/docs/urdu/physical-ai/sensors-bc0": {
+  "/docs/urdu/physical-ai/sensors-30a": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-physical-ai-sensors-2-a-5-507"
   },
-  "/docs/urdu/ros2/nodes-topics-services-789": {
+  "/docs/urdu/ros2/nodes-topics-services-8da": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-ros-2-nodes-topics-services-59-c-5c1"
   },
-  "/docs/urdu/ros2/ros2-basics-acb": {
+  "/docs/urdu/ros2/ros2-basics-a0e": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-ros-2-ros-2-basicsd-70-cc2"
   },
-  "/docs/urdu/ros2/urdf-humanoids-8ff": {
+  "/docs/urdu/ros2/urdf-humanoids-cdf": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-ros-2-urdf-humanoids-105-3c1"
   },
-  "/docs/urdu/simulation/gazebo-62e": {
+  "/docs/urdu/simulation/gazebo-e2b": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-simulation-gazebocfe-881"
   },
-  "/docs/urdu/simulation/unity-466": {
+  "/docs/urdu/simulation/unity-465": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-simulation-unity-777-e5e"
   },
-  "/docs/urdu/vla/llm-planning-fe3": {
+  "/docs/urdu/vla/llm-planning-516": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-vla-llm-planning-9-c-5-e86"
   },
-  "/docs/urdu/vla/vision-language-action-c50": {
+  "/docs/urdu/vla/vision-language-action-61f": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-vla-vision-language-actionc-5-c-125"
   },
-  "/docs/urdu/vla/whisper-voice-e3b": {
+  "/docs/urdu/vla/whisper-voice-5fb": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-urdu-vla-whisper-voice-979-1c6"
   },

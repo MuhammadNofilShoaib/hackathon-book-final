@@ -1,0 +1,23 @@
+{
+  "id": "ros2/ros2-basics-beginner",
+  "title": "ROS 2 Basics for Physical AI (Beginner Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/advanced/ros2/ros2-basics-beginner.md",
+  "sourceDirName": "ros2",
+  "slug": "/ros2/ros2-basics-beginner",
+  "permalink": "/docs/personalized-advanced/ros2/ros2-basics-beginner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "advancedSidebar",
+  "previous": {
+    "title": "ROS 2 Basics for Physical AI (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/ros2/ros2-basics-advanced"
+  },
+  "next": {
+    "title": "ROS 2 Basics for Physical AI (Intermediate Level)",
+    "permalink": "/docs/personalized-advanced/ros2/ros2-basics-intermediate"
+  }
+}

@@ -18,7 +18,6 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/physical-ai-hackathon/spec-kit-plus/edit/main/',
-          // Setup for multiple versions of docs
           path: 'docs',
           routeBasePath: 'docs',
         },
@@ -35,33 +34,27 @@ module.exports = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'personalized-beginner',
-        path: 'docs-personalized',
+        path: 'docs-personalized/beginner', // Point to the beginner subdirectory
         routeBasePath: 'docs/personalized-beginner',
-        sidebarPath: require.resolve('./sidebars.js'),
-        // Only include beginner files
-        include: ['**/*-beginner.md'],
+        sidebarPath: require.resolve('./sidebars-beginner.js'),
       },
     ],
     [
       '@docusaurus/plugin-content-docs',
       {
         id: 'personalized-intermediate',
-        path: 'docs-personalized',
+        path: 'docs-personalized/intermediate', // Point to the intermediate subdirectory
         routeBasePath: 'docs/personalized-intermediate',
-        sidebarPath: require.resolve('./sidebars.js'),
-        // Only include intermediate files
-        include: ['**/*-intermediate.md'],
+        sidebarPath: require.resolve('./sidebars-intermediate.js'),
       },
     ],
     [
       '@docusaurus/plugin-content-docs',
       {
         id: 'personalized-advanced',
-        path: 'docs-personalized',
+        path: 'docs-personalized/advanced', // Point to the advanced subdirectory
         routeBasePath: 'docs/personalized-advanced',
-        sidebarPath: require.resolve('./sidebars.js'),
-        // Only include advanced files
-        include: ['**/*-advanced.md'],
+        sidebarPath: require.resolve('./sidebars-advanced.js'),
       },
     ],
     [
@@ -70,7 +63,7 @@ module.exports = {
         id: 'urdu',
         path: 'docs-urdu',
         routeBasePath: 'docs/urdu',
-        sidebarPath: require.resolve('./sidebars.js'),
+        sidebarPath: require.resolve('./sidebars-urdu.js'),
       },
     ],
   ],

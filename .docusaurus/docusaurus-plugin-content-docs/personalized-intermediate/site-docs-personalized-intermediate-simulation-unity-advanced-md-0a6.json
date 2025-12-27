@@ -1,0 +1,23 @@
+{
+  "id": "simulation/unity-advanced",
+  "title": "Unity Simulation for Physical AI (Advanced Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/intermediate/simulation/unity-advanced.md",
+  "sourceDirName": "simulation",
+  "slug": "/simulation/unity-advanced",
+  "permalink": "/docs/personalized-intermediate/simulation/unity-advanced",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "intermediateSidebar",
+  "previous": {
+    "title": "Gazebo Simulation for Physical AI (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/simulation/gazebo-intermediate"
+  },
+  "next": {
+    "title": "Unity Simulation for Physical AI (Beginner Level)",
+    "permalink": "/docs/personalized-intermediate/simulation/unity-beginner"
+  }
+}

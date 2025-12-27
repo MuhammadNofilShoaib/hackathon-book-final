@@ -1,0 +1,23 @@
+{
+  "id": "vla/vision-language-action-advanced",
+  "title": "Vision-Language-Action Models in Robotics (Advanced Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/advanced/vla/vision-language-action-advanced.md",
+  "sourceDirName": "vla",
+  "slug": "/vla/vision-language-action-advanced",
+  "permalink": "/docs/personalized-advanced/vla/vision-language-action-advanced",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "advancedSidebar",
+  "previous": {
+    "title": "Using Large Language Models for Cognitive Planning in Robots (Intermediate Level)",
+    "permalink": "/docs/personalized-advanced/vla/llm-planning-intermediate"
+  },
+  "next": {
+    "title": "Vision-Language-Action Models in Robotics (Beginner Level)",
+    "permalink": "/docs/personalized-advanced/vla/vision-language-action-beginner"
+  }
+}

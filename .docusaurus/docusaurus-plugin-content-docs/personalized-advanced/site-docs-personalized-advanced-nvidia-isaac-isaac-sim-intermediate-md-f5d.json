@@ -1,0 +1,23 @@
+{
+  "id": "nvidia-isaac/isaac-sim-intermediate",
+  "title": "NVIDIA Isaac Sim for Physical AI (Intermediate Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/advanced/nvidia-isaac/isaac-sim-intermediate.md",
+  "sourceDirName": "nvidia-isaac",
+  "slug": "/nvidia-isaac/isaac-sim-intermediate",
+  "permalink": "/docs/personalized-advanced/nvidia-isaac/isaac-sim-intermediate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "advancedSidebar",
+  "previous": {
+    "title": "NVIDIA Isaac Sim for Physical AI (Beginner Level)",
+    "permalink": "/docs/personalized-advanced/nvidia-isaac/isaac-sim-beginner"
+  },
+  "next": {
+    "title": "Navigation and Path Planning with Nav2 for Humanoid Robots (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/nvidia-isaac/nav2-advanced"
+  }
+}

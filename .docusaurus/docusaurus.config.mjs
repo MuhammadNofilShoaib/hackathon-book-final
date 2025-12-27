@@ -35,36 +35,27 @@ export default {
       "@docusaurus/plugin-content-docs",
       {
         "id": "personalized-beginner",
-        "path": "docs-personalized",
+        "path": "docs-personalized/beginner",
         "routeBasePath": "docs/personalized-beginner",
-        "sidebarPath": "D:\\physical-ai-hackathon\\spec-kit-plus\\sidebars.js",
-        "include": [
-          "**/*-beginner.md"
-        ]
+        "sidebarPath": "D:\\physical-ai-hackathon\\spec-kit-plus\\sidebars-beginner.js"
       }
     ],
     [
       "@docusaurus/plugin-content-docs",
       {
         "id": "personalized-intermediate",
-        "path": "docs-personalized",
+        "path": "docs-personalized/intermediate",
         "routeBasePath": "docs/personalized-intermediate",
-        "sidebarPath": "D:\\physical-ai-hackathon\\spec-kit-plus\\sidebars.js",
-        "include": [
-          "**/*-intermediate.md"
-        ]
+        "sidebarPath": "D:\\physical-ai-hackathon\\spec-kit-plus\\sidebars-intermediate.js"
       }
     ],
     [
       "@docusaurus/plugin-content-docs",
       {
         "id": "personalized-advanced",
-        "path": "docs-personalized",
+        "path": "docs-personalized/advanced",
         "routeBasePath": "docs/personalized-advanced",
-        "sidebarPath": "D:\\physical-ai-hackathon\\spec-kit-plus\\sidebars.js",
-        "include": [
-          "**/*-advanced.md"
-        ]
+        "sidebarPath": "D:\\physical-ai-hackathon\\spec-kit-plus\\sidebars-advanced.js"
       }
     ],
     [
@@ -73,7 +64,7 @@ export default {
         "id": "urdu",
         "path": "docs-urdu",
         "routeBasePath": "docs/urdu",
-        "sidebarPath": "D:\\physical-ai-hackathon\\spec-kit-plus\\sidebars.js"
+        "sidebarPath": "D:\\physical-ai-hackathon\\spec-kit-plus\\sidebars-urdu.js"
       }
     ]
   ],

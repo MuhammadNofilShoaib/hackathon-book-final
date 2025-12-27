@@ -1,0 +1,23 @@
+{
+  "id": "vla/vision-language-action-beginner",
+  "title": "Vision-Language-Action Models in Robotics (Beginner Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/intermediate/vla/vision-language-action-beginner.md",
+  "sourceDirName": "vla",
+  "slug": "/vla/vision-language-action-beginner",
+  "permalink": "/docs/personalized-intermediate/vla/vision-language-action-beginner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "intermediateSidebar",
+  "previous": {
+    "title": "Vision-Language-Action Models in Robotics (Advanced Level)",
+    "permalink": "/docs/personalized-intermediate/vla/vision-language-action-advanced"
+  },
+  "next": {
+    "title": "Vision-Language-Action Models in Robotics (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/vla/vision-language-action-intermediate"
+  }
+}

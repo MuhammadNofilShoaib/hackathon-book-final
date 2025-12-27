@@ -1,0 +1,23 @@
+{
+  "id": "nvidia-isaac/isaac-ros-advanced",
+  "title": "NVIDIA Isaac ROS for Physical AI (Advanced Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/intermediate/nvidia-isaac/isaac-ros-advanced.md",
+  "sourceDirName": "nvidia-isaac",
+  "slug": "/nvidia-isaac/isaac-ros-advanced",
+  "permalink": "/docs/personalized-intermediate/nvidia-isaac/isaac-ros-advanced",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "intermediateSidebar",
+  "previous": {
+    "title": "Chapter 5: The Autonomous Humanoid (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/module5-capstone-project-the-autonomous-humanoid-intermediate"
+  },
+  "next": {
+    "title": "NVIDIA Isaac ROS for Physical AI (Beginner Level)",
+    "permalink": "/docs/personalized-intermediate/nvidia-isaac/isaac-ros-beginner"
+  }
+}

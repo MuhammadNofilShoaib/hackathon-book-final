@@ -11,7 +11,7 @@
   "tags": [],
   "version": "current",
   "frontMatter": {},
-  "sidebar": "tutorialSidebar",
+  "sidebar": "urduSidebar",
   "previous": {
     "title": "vision-language-action",
     "permalink": "/docs/urdu/vla/vision-language-action"

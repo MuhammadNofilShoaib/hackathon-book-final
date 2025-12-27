@@ -1,0 +1,23 @@
+{
+  "id": "ros2/urdf-humanoids-beginner",
+  "title": "URDF for Humanoid Robotics (Beginner Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/advanced/ros2/urdf-humanoids-beginner.md",
+  "sourceDirName": "ros2",
+  "slug": "/ros2/urdf-humanoids-beginner",
+  "permalink": "/docs/personalized-advanced/ros2/urdf-humanoids-beginner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "advancedSidebar",
+  "previous": {
+    "title": "URDF for Humanoid Robotics (Advanced Level)",
+    "permalink": "/docs/personalized-advanced/ros2/urdf-humanoids-advanced"
+  },
+  "next": {
+    "title": "URDF for Humanoid Robotics (Intermediate Level)",
+    "permalink": "/docs/personalized-advanced/ros2/urdf-humanoids-intermediate"
+  }
+}

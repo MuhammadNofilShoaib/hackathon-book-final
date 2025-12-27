@@ -1,0 +1,23 @@
+{
+  "id": "physical-ai/sensors-beginner",
+  "title": "Sensors in Physical AI & Humanoid Robotics (Beginner Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/beginner/physical-ai/sensors-beginner.md",
+  "sourceDirName": "physical-ai",
+  "slug": "/physical-ai/sensors-beginner",
+  "permalink": "/docs/personalized-beginner/physical-ai/sensors-beginner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "beginnerSidebar",
+  "previous": {
+    "title": "Sensors in Physical AI & Humanoid Robotics (Advanced Level)",
+    "permalink": "/docs/personalized-beginner/physical-ai/sensors-advanced"
+  },
+  "next": {
+    "title": "Sensors in Physical AI & Humanoid Robotics (Intermediate Level)",
+    "permalink": "/docs/personalized-beginner/physical-ai/sensors-intermediate"
+  }
+}

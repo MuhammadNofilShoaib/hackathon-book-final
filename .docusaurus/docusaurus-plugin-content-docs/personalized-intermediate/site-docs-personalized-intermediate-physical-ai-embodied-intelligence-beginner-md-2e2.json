@@ -1,0 +1,23 @@
+{
+  "id": "physical-ai/embodied-intelligence-beginner",
+  "title": "Embodied Intelligence in Physical AI (Beginner Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/intermediate/physical-ai/embodied-intelligence-beginner.md",
+  "sourceDirName": "physical-ai",
+  "slug": "/physical-ai/embodied-intelligence-beginner",
+  "permalink": "/docs/personalized-intermediate/physical-ai/embodied-intelligence-beginner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "intermediateSidebar",
+  "previous": {
+    "title": "Embodied Intelligence in Physical AI (Advanced Level)",
+    "permalink": "/docs/personalized-intermediate/physical-ai/embodied-intelligence-advanced"
+  },
+  "next": {
+    "title": "Embodied Intelligence in Physical AI (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/physical-ai/embodied-intelligence-intermediate"
+  }
+}

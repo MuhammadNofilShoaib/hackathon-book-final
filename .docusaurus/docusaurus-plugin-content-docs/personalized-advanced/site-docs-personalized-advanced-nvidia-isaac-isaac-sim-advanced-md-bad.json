@@ -1,0 +1,23 @@
+{
+  "id": "nvidia-isaac/isaac-sim-advanced",
+  "title": "NVIDIA Isaac Sim for Physical AI (Advanced Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/advanced/nvidia-isaac/isaac-sim-advanced.md",
+  "sourceDirName": "nvidia-isaac",
+  "slug": "/nvidia-isaac/isaac-sim-advanced",
+  "permalink": "/docs/personalized-advanced/nvidia-isaac/isaac-sim-advanced",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "advancedSidebar",
+  "previous": {
+    "title": "NVIDIA Isaac ROS for Physical AI (Intermediate Level)",
+    "permalink": "/docs/personalized-advanced/nvidia-isaac/isaac-ros-intermediate"
+  },
+  "next": {
+    "title": "NVIDIA Isaac Sim for Physical AI (Beginner Level)",
+    "permalink": "/docs/personalized-advanced/nvidia-isaac/isaac-sim-beginner"
+  }
+}

@@ -219,141 +219,321 @@ export default [
   },
   {
     path: '/docs/personalized-advanced',
-    component: ComponentCreator('/docs/personalized-advanced', 'fa6'),
+    component: ComponentCreator('/docs/personalized-advanced', '2f8'),
     routes: [
       {
         path: '/docs/personalized-advanced',
-        component: ComponentCreator('/docs/personalized-advanced', '2e0'),
+        component: ComponentCreator('/docs/personalized-advanced', '347'),
         routes: [
           {
             path: '/docs/personalized-advanced',
-            component: ComponentCreator('/docs/personalized-advanced', 'f51'),
+            component: ComponentCreator('/docs/personalized-advanced', '8de'),
             routes: [
               {
                 path: '/docs/personalized-advanced/capstone/autonomous-humanoid-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/capstone/autonomous-humanoid-advanced', 'e9a'),
+                component: ComponentCreator('/docs/personalized-advanced/capstone/autonomous-humanoid-advanced', 'fbe'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/capstone/autonomous-humanoid-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/capstone/autonomous-humanoid-beginner', '185'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/capstone/autonomous-humanoid-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/capstone/autonomous-humanoid-intermediate', 'fd0'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/intro-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/intro-advanced', '97d'),
+                component: ComponentCreator('/docs/personalized-advanced/intro-advanced', '0f8'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/module1-the-robotic-nervous-system-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/module1-the-robotic-nervous-system-advanced', '0c5'),
+                component: ComponentCreator('/docs/personalized-advanced/module1-the-robotic-nervous-system-advanced', '421'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/module2-the-digital-twin-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/module2-the-digital-twin-advanced', '790'),
+                component: ComponentCreator('/docs/personalized-advanced/module2-the-digital-twin-advanced', 'c8d'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/module3-the-ai-robot-brain-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/module3-the-ai-robot-brain-advanced', '75a'),
+                component: ComponentCreator('/docs/personalized-advanced/module3-the-ai-robot-brain-advanced', 'a3c'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/module4-vision-language-action-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/module4-vision-language-action-advanced', '001'),
+                component: ComponentCreator('/docs/personalized-advanced/module4-vision-language-action-advanced', '5af'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/module5-capstone-project-the-autonomous-humanoid-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/module5-capstone-project-the-autonomous-humanoid-advanced', '99e'),
+                component: ComponentCreator('/docs/personalized-advanced/module5-capstone-project-the-autonomous-humanoid-advanced', 'adb'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/nvidia-isaac/isaac-ros-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/isaac-ros-advanced', '802'),
+                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/isaac-ros-advanced', 'f73'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/nvidia-isaac/isaac-ros-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/isaac-ros-beginner', '5bd'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/nvidia-isaac/isaac-ros-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/isaac-ros-intermediate', '25b'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/nvidia-isaac/isaac-sim-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/isaac-sim-advanced', 'fad'),
+                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/isaac-sim-advanced', '519'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/nvidia-isaac/isaac-sim-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/isaac-sim-beginner', 'ec2'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/nvidia-isaac/isaac-sim-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/isaac-sim-intermediate', '849'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/nvidia-isaac/nav2-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/nav2-advanced', '112'),
+                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/nav2-advanced', '889'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/nvidia-isaac/nav2-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/nav2-beginner', '708'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/nvidia-isaac/nav2-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/nav2-intermediate', 'a3f'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-advanced', '2c0'),
+                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-advanced', '881'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-beginner', 'e27'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/nvidia-isaac/urdf-humanoids-intermediate', '8ac'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/physical-ai/embodied-intelligence-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/physical-ai/embodied-intelligence-advanced', '0a1'),
+                component: ComponentCreator('/docs/personalized-advanced/physical-ai/embodied-intelligence-advanced', '254'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/physical-ai/embodied-intelligence-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/physical-ai/embodied-intelligence-beginner', '07f'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/physical-ai/embodied-intelligence-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/physical-ai/embodied-intelligence-intermediate', 'b3b'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/physical-ai/sensors-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/physical-ai/sensors-advanced', '9a7'),
+                component: ComponentCreator('/docs/personalized-advanced/physical-ai/sensors-advanced', '9cf'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/physical-ai/sensors-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/physical-ai/sensors-beginner', 'bc0'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/physical-ai/sensors-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/physical-ai/sensors-intermediate', '25b'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/ros2/nodes-topics-services-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/ros2/nodes-topics-services-advanced', '717'),
+                component: ComponentCreator('/docs/personalized-advanced/ros2/nodes-topics-services-advanced', '7ab'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/ros2/nodes-topics-services-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/ros2/nodes-topics-services-beginner', '585'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/ros2/nodes-topics-services-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/ros2/nodes-topics-services-intermediate', 'b15'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/ros2/ros2-basics-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/ros2/ros2-basics-advanced', 'af8'),
+                component: ComponentCreator('/docs/personalized-advanced/ros2/ros2-basics-advanced', '08c'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/ros2/ros2-basics-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/ros2/ros2-basics-beginner', '0a9'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/ros2/ros2-basics-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/ros2/ros2-basics-intermediate', 'f59'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/ros2/urdf-humanoids-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/ros2/urdf-humanoids-advanced', '85e'),
+                component: ComponentCreator('/docs/personalized-advanced/ros2/urdf-humanoids-advanced', '091'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/ros2/urdf-humanoids-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/ros2/urdf-humanoids-beginner', 'f90'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/ros2/urdf-humanoids-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/ros2/urdf-humanoids-intermediate', 'df5'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/simulation/gazebo-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/simulation/gazebo-advanced', '6e9'),
+                component: ComponentCreator('/docs/personalized-advanced/simulation/gazebo-advanced', 'fe3'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/simulation/gazebo-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/simulation/gazebo-beginner', '172'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/simulation/gazebo-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/simulation/gazebo-intermediate', 'dac'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/simulation/unity-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/simulation/unity-advanced', 'fb4'),
+                component: ComponentCreator('/docs/personalized-advanced/simulation/unity-advanced', '32a'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/simulation/unity-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/simulation/unity-beginner', '315'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/simulation/unity-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/simulation/unity-intermediate', '123'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/vla/llm-planning-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/vla/llm-planning-advanced', 'd45'),
+                component: ComponentCreator('/docs/personalized-advanced/vla/llm-planning-advanced', 'e3f'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/vla/llm-planning-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/vla/llm-planning-beginner', '714'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/vla/llm-planning-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/vla/llm-planning-intermediate', '1f6'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/vla/vision-language-action-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/vla/vision-language-action-advanced', 'd30'),
+                component: ComponentCreator('/docs/personalized-advanced/vla/vision-language-action-advanced', '422'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/vla/vision-language-action-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/vla/vision-language-action-beginner', 'ae0'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/vla/vision-language-action-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/vla/vision-language-action-intermediate', '449'),
+                exact: true,
+                sidebar: "advancedSidebar"
               },
               {
                 path: '/docs/personalized-advanced/vla/whisper-voice-advanced',
-                component: ComponentCreator('/docs/personalized-advanced/vla/whisper-voice-advanced', 'dba'),
+                component: ComponentCreator('/docs/personalized-advanced/vla/whisper-voice-advanced', '6b9'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/vla/whisper-voice-beginner',
+                component: ComponentCreator('/docs/personalized-advanced/vla/whisper-voice-beginner', 'ca4'),
+                exact: true,
+                sidebar: "advancedSidebar"
+              },
+              {
+                path: '/docs/personalized-advanced/vla/whisper-voice-intermediate',
+                component: ComponentCreator('/docs/personalized-advanced/vla/whisper-voice-intermediate', '830'),
+                exact: true,
+                sidebar: "advancedSidebar"
               }
             ]
           }
@@ -363,141 +543,321 @@ export default [
   },
   {
     path: '/docs/personalized-beginner',
-    component: ComponentCreator('/docs/personalized-beginner', 'bc4'),
+    component: ComponentCreator('/docs/personalized-beginner', 'f31'),
     routes: [
       {
         path: '/docs/personalized-beginner',
-        component: ComponentCreator('/docs/personalized-beginner', '95d'),
+        component: ComponentCreator('/docs/personalized-beginner', 'b22'),
         routes: [
           {
             path: '/docs/personalized-beginner',
-            component: ComponentCreator('/docs/personalized-beginner', '702'),
+            component: ComponentCreator('/docs/personalized-beginner', '82d'),
             routes: [
               {
-                path: '/docs/personalized-beginner/capstone/autonomous-humanoid-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/capstone/autonomous-humanoid-beginner', '468'),
+                path: '/docs/personalized-beginner/capstone/autonomous-humanoid-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/capstone/autonomous-humanoid-advanced', '088'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/capstone/autonomous-humanoid-beginner',
+                component: ComponentCreator('/docs/personalized-beginner/capstone/autonomous-humanoid-beginner', 'd8d'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/capstone/autonomous-humanoid-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/capstone/autonomous-humanoid-intermediate', 'e8c'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/intro-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/intro-beginner', '455'),
+                component: ComponentCreator('/docs/personalized-beginner/intro-beginner', 'e8d'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/module1-the-robotic-nervous-system-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/module1-the-robotic-nervous-system-beginner', '146'),
+                component: ComponentCreator('/docs/personalized-beginner/module1-the-robotic-nervous-system-beginner', '8b5'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/module2-the-digital-twin-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/module2-the-digital-twin-beginner', 'dbd'),
+                component: ComponentCreator('/docs/personalized-beginner/module2-the-digital-twin-beginner', '2aa'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/module3-the-ai-robot-brain-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/module3-the-ai-robot-brain-beginner', '835'),
+                component: ComponentCreator('/docs/personalized-beginner/module3-the-ai-robot-brain-beginner', '749'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/module4-vision-language-action-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/module4-vision-language-action-beginner', '275'),
+                component: ComponentCreator('/docs/personalized-beginner/module4-vision-language-action-beginner', '87f'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/module5-capstone-project-the-autonomous-humanoid-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/module5-capstone-project-the-autonomous-humanoid-beginner', '90d'),
+                component: ComponentCreator('/docs/personalized-beginner/module5-capstone-project-the-autonomous-humanoid-beginner', 'dfb'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/nvidia-isaac/isaac-ros-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/isaac-ros-advanced', '5ea'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/nvidia-isaac/isaac-ros-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/isaac-ros-beginner', 'a99'),
+                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/isaac-ros-beginner', '166'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/nvidia-isaac/isaac-ros-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/isaac-ros-intermediate', '29f'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/nvidia-isaac/isaac-sim-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/isaac-sim-advanced', '02f'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/nvidia-isaac/isaac-sim-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/isaac-sim-beginner', '18c'),
+                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/isaac-sim-beginner', '948'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/nvidia-isaac/isaac-sim-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/isaac-sim-intermediate', 'c65'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/nvidia-isaac/nav2-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/nav2-advanced', '5eb'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/nvidia-isaac/nav2-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/nav2-beginner', '7be'),
+                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/nav2-beginner', '4c7'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/nvidia-isaac/nav2-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/nav2-intermediate', 'c69'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-advanced', 'cd0'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-beginner', '6dd'),
+                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-beginner', '2c9'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/nvidia-isaac/urdf-humanoids-intermediate', '2ad'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/physical-ai/embodied-intelligence-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/physical-ai/embodied-intelligence-advanced', '392'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/physical-ai/embodied-intelligence-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/physical-ai/embodied-intelligence-beginner', 'da1'),
+                component: ComponentCreator('/docs/personalized-beginner/physical-ai/embodied-intelligence-beginner', '6ae'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/physical-ai/embodied-intelligence-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/physical-ai/embodied-intelligence-intermediate', '8d9'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/physical-ai/sensors-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/physical-ai/sensors-advanced', '26f'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/physical-ai/sensors-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/physical-ai/sensors-beginner', 'c0a'),
+                component: ComponentCreator('/docs/personalized-beginner/physical-ai/sensors-beginner', '996'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/physical-ai/sensors-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/physical-ai/sensors-intermediate', 'ce3'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/ros2/nodes-topics-services-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/ros2/nodes-topics-services-advanced', '960'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/ros2/nodes-topics-services-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/ros2/nodes-topics-services-beginner', '16e'),
+                component: ComponentCreator('/docs/personalized-beginner/ros2/nodes-topics-services-beginner', '7ce'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/ros2/nodes-topics-services-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/ros2/nodes-topics-services-intermediate', 'f22'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/ros2/ros2-basics-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/ros2/ros2-basics-advanced', '402'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/ros2/ros2-basics-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/ros2/ros2-basics-beginner', 'b85'),
+                component: ComponentCreator('/docs/personalized-beginner/ros2/ros2-basics-beginner', '257'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/ros2/ros2-basics-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/ros2/ros2-basics-intermediate', 'fbb'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/ros2/urdf-humanoids-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/ros2/urdf-humanoids-advanced', '256'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/ros2/urdf-humanoids-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/ros2/urdf-humanoids-beginner', '2a0'),
+                component: ComponentCreator('/docs/personalized-beginner/ros2/urdf-humanoids-beginner', '56c'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/ros2/urdf-humanoids-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/ros2/urdf-humanoids-intermediate', 'eb3'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/simulation/gazebo-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/simulation/gazebo-advanced', '4d8'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/simulation/gazebo-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/simulation/gazebo-beginner', '7fb'),
+                component: ComponentCreator('/docs/personalized-beginner/simulation/gazebo-beginner', 'a9c'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/simulation/gazebo-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/simulation/gazebo-intermediate', 'ccf'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/simulation/unity-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/simulation/unity-advanced', '3b4'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/simulation/unity-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/simulation/unity-beginner', '08f'),
+                component: ComponentCreator('/docs/personalized-beginner/simulation/unity-beginner', '56f'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/simulation/unity-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/simulation/unity-intermediate', '726'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/vla/llm-planning-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/vla/llm-planning-advanced', '5fa'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/vla/llm-planning-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/vla/llm-planning-beginner', '070'),
+                component: ComponentCreator('/docs/personalized-beginner/vla/llm-planning-beginner', 'a07'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/vla/llm-planning-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/vla/llm-planning-intermediate', '838'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/vla/vision-language-action-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/vla/vision-language-action-advanced', '923'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/vla/vision-language-action-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/vla/vision-language-action-beginner', '916'),
+                component: ComponentCreator('/docs/personalized-beginner/vla/vision-language-action-beginner', 'a44'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/vla/vision-language-action-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/vla/vision-language-action-intermediate', '207'),
+                exact: true,
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/vla/whisper-voice-advanced',
+                component: ComponentCreator('/docs/personalized-beginner/vla/whisper-voice-advanced', '19d'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               },
               {
                 path: '/docs/personalized-beginner/vla/whisper-voice-beginner',
-                component: ComponentCreator('/docs/personalized-beginner/vla/whisper-voice-beginner', 'aa5'),
+                component: ComponentCreator('/docs/personalized-beginner/vla/whisper-voice-beginner', '66b'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "beginnerSidebar"
+              },
+              {
+                path: '/docs/personalized-beginner/vla/whisper-voice-intermediate',
+                component: ComponentCreator('/docs/personalized-beginner/vla/whisper-voice-intermediate', '1ab'),
+                exact: true,
+                sidebar: "beginnerSidebar"
               }
             ]
           }
@@ -507,141 +867,321 @@ export default [
   },
   {
     path: '/docs/personalized-intermediate',
-    component: ComponentCreator('/docs/personalized-intermediate', 'ac8'),
+    component: ComponentCreator('/docs/personalized-intermediate', '1ac'),
     routes: [
       {
         path: '/docs/personalized-intermediate',
-        component: ComponentCreator('/docs/personalized-intermediate', '6a1'),
+        component: ComponentCreator('/docs/personalized-intermediate', 'b4e'),
         routes: [
           {
             path: '/docs/personalized-intermediate',
-            component: ComponentCreator('/docs/personalized-intermediate', 'b37'),
+            component: ComponentCreator('/docs/personalized-intermediate', '7db'),
             routes: [
               {
-                path: '/docs/personalized-intermediate/capstone/autonomous-humanoid-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/capstone/autonomous-humanoid-intermediate', '771'),
+                path: '/docs/personalized-intermediate/capstone/autonomous-humanoid-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/capstone/autonomous-humanoid-advanced', '720'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/capstone/autonomous-humanoid-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/capstone/autonomous-humanoid-beginner', '6ba'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/capstone/autonomous-humanoid-intermediate',
+                component: ComponentCreator('/docs/personalized-intermediate/capstone/autonomous-humanoid-intermediate', '209'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/intro-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/intro-intermediate', 'b22'),
+                component: ComponentCreator('/docs/personalized-intermediate/intro-intermediate', '6a9'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/module1-the-robotic-nervous-system-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/module1-the-robotic-nervous-system-intermediate', '78a'),
+                component: ComponentCreator('/docs/personalized-intermediate/module1-the-robotic-nervous-system-intermediate', '999'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/module2-the-digital-twin-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/module2-the-digital-twin-intermediate', '1cd'),
+                component: ComponentCreator('/docs/personalized-intermediate/module2-the-digital-twin-intermediate', '05f'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/module3-the-ai-robot-brain-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/module3-the-ai-robot-brain-intermediate', '74d'),
+                component: ComponentCreator('/docs/personalized-intermediate/module3-the-ai-robot-brain-intermediate', '73e'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/module4-vision-language-action-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/module4-vision-language-action-intermediate', '082'),
+                component: ComponentCreator('/docs/personalized-intermediate/module4-vision-language-action-intermediate', '289'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/module5-capstone-project-the-autonomous-humanoid-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/module5-capstone-project-the-autonomous-humanoid-intermediate', '4c0'),
+                component: ComponentCreator('/docs/personalized-intermediate/module5-capstone-project-the-autonomous-humanoid-intermediate', '08f'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/nvidia-isaac/isaac-ros-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/isaac-ros-advanced', 'a71'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/nvidia-isaac/isaac-ros-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/isaac-ros-beginner', 'b40'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/nvidia-isaac/isaac-ros-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/isaac-ros-intermediate', '684'),
+                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/isaac-ros-intermediate', 'c7b'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/nvidia-isaac/isaac-sim-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/isaac-sim-advanced', 'ef4'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/nvidia-isaac/isaac-sim-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/isaac-sim-beginner', 'e15'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/nvidia-isaac/isaac-sim-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/isaac-sim-intermediate', '8d2'),
+                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/isaac-sim-intermediate', '1b4'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/nvidia-isaac/nav2-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/nav2-advanced', '006'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/nvidia-isaac/nav2-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/nav2-beginner', '9ea'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/nvidia-isaac/nav2-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/nav2-intermediate', '579'),
+                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/nav2-intermediate', 'fb4'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/nvidia-isaac/urdf-humanoids-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/urdf-humanoids-advanced', '25f'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/nvidia-isaac/urdf-humanoids-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/urdf-humanoids-beginner', '563'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/nvidia-isaac/urdf-humanoids-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/urdf-humanoids-intermediate', '77c'),
+                component: ComponentCreator('/docs/personalized-intermediate/nvidia-isaac/urdf-humanoids-intermediate', 'd05'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/physical-ai/embodied-intelligence-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/physical-ai/embodied-intelligence-advanced', 'ab2'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/physical-ai/embodied-intelligence-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/physical-ai/embodied-intelligence-beginner', '780'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/physical-ai/embodied-intelligence-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/physical-ai/embodied-intelligence-intermediate', '3a3'),
+                component: ComponentCreator('/docs/personalized-intermediate/physical-ai/embodied-intelligence-intermediate', 'a2c'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/physical-ai/sensors-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/physical-ai/sensors-advanced', '7db'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/physical-ai/sensors-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/physical-ai/sensors-beginner', '5f4'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/physical-ai/sensors-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/physical-ai/sensors-intermediate', 'd21'),
+                component: ComponentCreator('/docs/personalized-intermediate/physical-ai/sensors-intermediate', '480'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/ros2/nodes-topics-services-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/ros2/nodes-topics-services-advanced', '5e8'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/ros2/nodes-topics-services-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/ros2/nodes-topics-services-beginner', '10f'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/ros2/nodes-topics-services-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/ros2/nodes-topics-services-intermediate', '400'),
+                component: ComponentCreator('/docs/personalized-intermediate/ros2/nodes-topics-services-intermediate', '190'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/ros2/ros2-basics-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/ros2/ros2-basics-advanced', 'd49'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/ros2/ros2-basics-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/ros2/ros2-basics-beginner', '84c'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/ros2/ros2-basics-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/ros2/ros2-basics-intermediate', '04b'),
+                component: ComponentCreator('/docs/personalized-intermediate/ros2/ros2-basics-intermediate', '2a9'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/ros2/urdf-humanoids-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/ros2/urdf-humanoids-advanced', 'a37'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/ros2/urdf-humanoids-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/ros2/urdf-humanoids-beginner', '51a'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/ros2/urdf-humanoids-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/ros2/urdf-humanoids-intermediate', 'ec1'),
+                component: ComponentCreator('/docs/personalized-intermediate/ros2/urdf-humanoids-intermediate', 'cf2'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/simulation/gazebo-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/simulation/gazebo-advanced', 'ce4'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/simulation/gazebo-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/simulation/gazebo-beginner', '727'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/simulation/gazebo-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/simulation/gazebo-intermediate', 'c73'),
+                component: ComponentCreator('/docs/personalized-intermediate/simulation/gazebo-intermediate', '56c'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/simulation/unity-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/simulation/unity-advanced', 'd22'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/simulation/unity-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/simulation/unity-beginner', '5a5'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/simulation/unity-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/simulation/unity-intermediate', '74f'),
+                component: ComponentCreator('/docs/personalized-intermediate/simulation/unity-intermediate', '5da'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/vla/llm-planning-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/vla/llm-planning-advanced', 'b12'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/vla/llm-planning-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/vla/llm-planning-beginner', 'ed0'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/vla/llm-planning-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/vla/llm-planning-intermediate', 'f44'),
+                component: ComponentCreator('/docs/personalized-intermediate/vla/llm-planning-intermediate', 'fe9'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/vla/vision-language-action-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/vla/vision-language-action-advanced', '178'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/vla/vision-language-action-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/vla/vision-language-action-beginner', '407'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/vla/vision-language-action-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/vla/vision-language-action-intermediate', '32c'),
+                component: ComponentCreator('/docs/personalized-intermediate/vla/vision-language-action-intermediate', 'bbc'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/vla/whisper-voice-advanced',
+                component: ComponentCreator('/docs/personalized-intermediate/vla/whisper-voice-advanced', 'a6c'),
+                exact: true,
+                sidebar: "intermediateSidebar"
+              },
+              {
+                path: '/docs/personalized-intermediate/vla/whisper-voice-beginner',
+                component: ComponentCreator('/docs/personalized-intermediate/vla/whisper-voice-beginner', 'efd'),
+                exact: true,
+                sidebar: "intermediateSidebar"
               },
               {
                 path: '/docs/personalized-intermediate/vla/whisper-voice-intermediate',
-                component: ComponentCreator('/docs/personalized-intermediate/vla/whisper-voice-intermediate', '5c4'),
+                component: ComponentCreator('/docs/personalized-intermediate/vla/whisper-voice-intermediate', '2b8'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "intermediateSidebar"
               }
             ]
           }
@@ -651,141 +1191,141 @@ export default [
   },
   {
     path: '/docs/urdu',
-    component: ComponentCreator('/docs/urdu', '51a'),
+    component: ComponentCreator('/docs/urdu', '0ef'),
     routes: [
       {
         path: '/docs/urdu',
-        component: ComponentCreator('/docs/urdu', '9cc'),
+        component: ComponentCreator('/docs/urdu', 'c43'),
         routes: [
           {
             path: '/docs/urdu',
-            component: ComponentCreator('/docs/urdu', 'e4d'),
+            component: ComponentCreator('/docs/urdu', '66e'),
             routes: [
               {
                 path: '/docs/urdu/capstone/autonomous-humanoid',
-                component: ComponentCreator('/docs/urdu/capstone/autonomous-humanoid', '56c'),
+                component: ComponentCreator('/docs/urdu/capstone/autonomous-humanoid', 'e17'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/intro',
-                component: ComponentCreator('/docs/urdu/intro', '9e9'),
+                component: ComponentCreator('/docs/urdu/intro', '28d'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/module1-the-robotic-nervous-system',
-                component: ComponentCreator('/docs/urdu/module1-the-robotic-nervous-system', 'bdc'),
+                component: ComponentCreator('/docs/urdu/module1-the-robotic-nervous-system', '106'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/module2-the-digital-twin',
-                component: ComponentCreator('/docs/urdu/module2-the-digital-twin', 'c98'),
+                component: ComponentCreator('/docs/urdu/module2-the-digital-twin', '7e3'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/module3-the-ai-robot-brain',
-                component: ComponentCreator('/docs/urdu/module3-the-ai-robot-brain', 'b55'),
+                component: ComponentCreator('/docs/urdu/module3-the-ai-robot-brain', '88a'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/module4-vision-language-action',
-                component: ComponentCreator('/docs/urdu/module4-vision-language-action', 'c1f'),
+                component: ComponentCreator('/docs/urdu/module4-vision-language-action', '76f'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/module5-capstone-project-the-autonomous-humanoid',
-                component: ComponentCreator('/docs/urdu/module5-capstone-project-the-autonomous-humanoid', '948'),
+                component: ComponentCreator('/docs/urdu/module5-capstone-project-the-autonomous-humanoid', '097'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/nvidia-isaac/isaac-ros',
-                component: ComponentCreator('/docs/urdu/nvidia-isaac/isaac-ros', '2c0'),
+                component: ComponentCreator('/docs/urdu/nvidia-isaac/isaac-ros', '38f'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/nvidia-isaac/isaac-sim',
-                component: ComponentCreator('/docs/urdu/nvidia-isaac/isaac-sim', '633'),
+                component: ComponentCreator('/docs/urdu/nvidia-isaac/isaac-sim', 'fbe'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/nvidia-isaac/nav2',
-                component: ComponentCreator('/docs/urdu/nvidia-isaac/nav2', '1ac'),
+                component: ComponentCreator('/docs/urdu/nvidia-isaac/nav2', 'e34'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/nvidia-isaac/urdf-humanoids',
-                component: ComponentCreator('/docs/urdu/nvidia-isaac/urdf-humanoids', '762'),
+                component: ComponentCreator('/docs/urdu/nvidia-isaac/urdf-humanoids', '9c9'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/physical-ai/embodied-intelligence',
-                component: ComponentCreator('/docs/urdu/physical-ai/embodied-intelligence', '92d'),
+                component: ComponentCreator('/docs/urdu/physical-ai/embodied-intelligence', '194'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/physical-ai/sensors',
-                component: ComponentCreator('/docs/urdu/physical-ai/sensors', 'bc0'),
+                component: ComponentCreator('/docs/urdu/physical-ai/sensors', '30a'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/ros2/nodes-topics-services',
-                component: ComponentCreator('/docs/urdu/ros2/nodes-topics-services', '789'),
+                component: ComponentCreator('/docs/urdu/ros2/nodes-topics-services', '8da'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/ros2/ros2-basics',
-                component: ComponentCreator('/docs/urdu/ros2/ros2-basics', 'acb'),
+                component: ComponentCreator('/docs/urdu/ros2/ros2-basics', 'a0e'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/ros2/urdf-humanoids',
-                component: ComponentCreator('/docs/urdu/ros2/urdf-humanoids', '8ff'),
+                component: ComponentCreator('/docs/urdu/ros2/urdf-humanoids', 'cdf'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/simulation/gazebo',
-                component: ComponentCreator('/docs/urdu/simulation/gazebo', '62e'),
+                component: ComponentCreator('/docs/urdu/simulation/gazebo', 'e2b'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/simulation/unity',
-                component: ComponentCreator('/docs/urdu/simulation/unity', '466'),
+                component: ComponentCreator('/docs/urdu/simulation/unity', '465'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/vla/llm-planning',
-                component: ComponentCreator('/docs/urdu/vla/llm-planning', 'fe3'),
+                component: ComponentCreator('/docs/urdu/vla/llm-planning', '516'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/vla/vision-language-action',
-                component: ComponentCreator('/docs/urdu/vla/vision-language-action', 'c50'),
+                component: ComponentCreator('/docs/urdu/vla/vision-language-action', '61f'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               },
               {
                 path: '/docs/urdu/vla/whisper-voice',
-                component: ComponentCreator('/docs/urdu/vla/whisper-voice', 'e3b'),
+                component: ComponentCreator('/docs/urdu/vla/whisper-voice', '5fb'),
                 exact: true,
-                sidebar: "tutorialSidebar"
+                sidebar: "urduSidebar"
               }
             ]
           }

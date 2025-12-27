@@ -1,0 +1,23 @@
+{
+  "id": "vla/llm-planning-advanced",
+  "title": "Using Large Language Models for Cognitive Planning in Robots (Advanced Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/advanced/vla/llm-planning-advanced.md",
+  "sourceDirName": "vla",
+  "slug": "/vla/llm-planning-advanced",
+  "permalink": "/docs/personalized-advanced/vla/llm-planning-advanced",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "advancedSidebar",
+  "previous": {
+    "title": "Unity Simulation for Physical AI (Intermediate Level)",
+    "permalink": "/docs/personalized-advanced/simulation/unity-intermediate"
+  },
+  "next": {
+    "title": "Using Large Language Models for Cognitive Planning in Robots (Beginner Level)",
+    "permalink": "/docs/personalized-advanced/vla/llm-planning-beginner"
+  }
+}

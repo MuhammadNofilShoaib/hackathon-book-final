@@ -1,0 +1,23 @@
+{
+  "id": "module1-the-robotic-nervous-system-intermediate",
+  "title": "Chapter 1: The Robotic Nervous System (Intermediate Level)",
+  "description": "Introduction",
+  "source": "@site/docs-personalized/intermediate/module1-the-robotic-nervous-system-intermediate.md",
+  "sourceDirName": ".",
+  "slug": "/module1-the-robotic-nervous-system-intermediate",
+  "permalink": "/docs/personalized-intermediate/module1-the-robotic-nervous-system-intermediate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "intermediateSidebar",
+  "previous": {
+    "title": "Introduction to Physical AI & Humanoid Robotics (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/intro-intermediate"
+  },
+  "next": {
+    "title": "Chapter 2: The Digital Twin (Intermediate Level)",
+    "permalink": "/docs/personalized-intermediate/module2-the-digital-twin-intermediate"
+  }
+}

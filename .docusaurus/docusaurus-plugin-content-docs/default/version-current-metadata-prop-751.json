@@ -246,11 +246,7 @@
           }
         ]
       }
-    ],
-    "personalizedBeginnerSidebar": [],
-    "personalizedIntermediateSidebar": [],
-    "personalizedAdvancedSidebar": [],
-    "urduSidebar": []
+    ]
   },
   "docs": {
     "capstone/autonomous-humanoid": {

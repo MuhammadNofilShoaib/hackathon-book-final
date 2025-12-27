@@ -1,0 +1,23 @@
+{
+  "id": "nvidia-isaac/isaac-ros-intermediate",
+  "title": "NVIDIA Isaac ROS for Physical AI (Intermediate Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/beginner/nvidia-isaac/isaac-ros-intermediate.md",
+  "sourceDirName": "nvidia-isaac",
+  "slug": "/nvidia-isaac/isaac-ros-intermediate",
+  "permalink": "/docs/personalized-beginner/nvidia-isaac/isaac-ros-intermediate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "beginnerSidebar",
+  "previous": {
+    "title": "NVIDIA Isaac ROS for Physical AI (Beginner Level)",
+    "permalink": "/docs/personalized-beginner/nvidia-isaac/isaac-ros-beginner"
+  },
+  "next": {
+    "title": "NVIDIA Isaac Sim for Physical AI (Advanced Level)",
+    "permalink": "/docs/personalized-beginner/nvidia-isaac/isaac-sim-advanced"
+  }
+}

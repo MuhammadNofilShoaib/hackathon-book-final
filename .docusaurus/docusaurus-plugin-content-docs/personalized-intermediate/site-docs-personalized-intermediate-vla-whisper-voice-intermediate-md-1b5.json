@@ -1,0 +1,19 @@
+{
+  "id": "vla/whisper-voice-intermediate",
+  "title": "Voice-to-Action Systems Using Speech Recognition (Intermediate Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/intermediate/vla/whisper-voice-intermediate.md",
+  "sourceDirName": "vla",
+  "slug": "/vla/whisper-voice-intermediate",
+  "permalink": "/docs/personalized-intermediate/vla/whisper-voice-intermediate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "intermediateSidebar",
+  "previous": {
+    "title": "Voice-to-Action Systems Using Speech Recognition (Beginner Level)",
+    "permalink": "/docs/personalized-intermediate/vla/whisper-voice-beginner"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "vla/llm-planning-intermediate",
+  "title": "Using Large Language Models for Cognitive Planning in Robots (Intermediate Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/intermediate/vla/llm-planning-intermediate.md",
+  "sourceDirName": "vla",
+  "slug": "/vla/llm-planning-intermediate",
+  "permalink": "/docs/personalized-intermediate/vla/llm-planning-intermediate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "intermediateSidebar",
+  "previous": {
+    "title": "Using Large Language Models for Cognitive Planning in Robots (Beginner Level)",
+    "permalink": "/docs/personalized-intermediate/vla/llm-planning-beginner"
+  },
+  "next": {
+    "title": "Vision-Language-Action Models in Robotics (Advanced Level)",
+    "permalink": "/docs/personalized-intermediate/vla/vision-language-action-advanced"
+  }
+}

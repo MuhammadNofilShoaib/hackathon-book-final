@@ -1,0 +1,23 @@
+{
+  "id": "module4-vision-language-action-beginner",
+  "title": "Chapter 4: Vision-Language-Action (Beginner Level)",
+  "description": "Introduction",
+  "source": "@site/docs-personalized/beginner/module4-vision-language-action-beginner.md",
+  "sourceDirName": ".",
+  "slug": "/module4-vision-language-action-beginner",
+  "permalink": "/docs/personalized-beginner/module4-vision-language-action-beginner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "beginnerSidebar",
+  "previous": {
+    "title": "Chapter 3: The AI-Robot Brain (Beginner Level)",
+    "permalink": "/docs/personalized-beginner/module3-the-ai-robot-brain-beginner"
+  },
+  "next": {
+    "title": "Chapter 5: The Autonomous Humanoid (Beginner Level)",
+    "permalink": "/docs/personalized-beginner/module5-capstone-project-the-autonomous-humanoid-beginner"
+  }
+}

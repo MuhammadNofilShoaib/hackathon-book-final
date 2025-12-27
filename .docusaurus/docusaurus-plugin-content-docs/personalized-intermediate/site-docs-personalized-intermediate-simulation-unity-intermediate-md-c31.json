@@ -1,0 +1,23 @@
+{
+  "id": "simulation/unity-intermediate",
+  "title": "Unity Simulation for Physical AI (Intermediate Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/intermediate/simulation/unity-intermediate.md",
+  "sourceDirName": "simulation",
+  "slug": "/simulation/unity-intermediate",
+  "permalink": "/docs/personalized-intermediate/simulation/unity-intermediate",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "intermediateSidebar",
+  "previous": {
+    "title": "Unity Simulation for Physical AI (Beginner Level)",
+    "permalink": "/docs/personalized-intermediate/simulation/unity-beginner"
+  },
+  "next": {
+    "title": "Using Large Language Models for Cognitive Planning in Robots (Advanced Level)",
+    "permalink": "/docs/personalized-intermediate/vla/llm-planning-advanced"
+  }
+}

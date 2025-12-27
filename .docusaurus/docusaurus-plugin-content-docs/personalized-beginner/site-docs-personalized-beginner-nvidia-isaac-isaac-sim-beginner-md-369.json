@@ -1,0 +1,23 @@
+{
+  "id": "nvidia-isaac/isaac-sim-beginner",
+  "title": "NVIDIA Isaac Sim for Physical AI (Beginner Level)",
+  "description": "Concept",
+  "source": "@site/docs-personalized/beginner/nvidia-isaac/isaac-sim-beginner.md",
+  "sourceDirName": "nvidia-isaac",
+  "slug": "/nvidia-isaac/isaac-sim-beginner",
+  "permalink": "/docs/personalized-beginner/nvidia-isaac/isaac-sim-beginner",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "beginnerSidebar",
+  "previous": {
+    "title": "NVIDIA Isaac Sim for Physical AI (Advanced Level)",
+    "permalink": "/docs/personalized-beginner/nvidia-isaac/isaac-sim-advanced"
+  },
+  "next": {
+    "title": "NVIDIA Isaac Sim for Physical AI (Intermediate Level)",
+    "permalink": "/docs/personalized-beginner/nvidia-isaac/isaac-sim-intermediate"
+  }
+}
